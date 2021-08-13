@@ -219,6 +219,7 @@ makePage <- function(directory, style,pageTitle) {
   makeIndex(fileData,pageTitle)
 }
 
+#Set it up. Make it go. 
 directory = dirname(sys.frame(1)$ofile)
 setwd(directory)
 style = paste(c(directory,"/style/style.css"),collapse="")
