@@ -32,7 +32,7 @@ jobs:
           R -e 'renv::restore()'
       - name: Make Page
         run: |
-          source("pageMaker.R")
+          source("pageMakerLinux.R")
         shell: Rscript {0} 
 
       - name: Pushes to another repository

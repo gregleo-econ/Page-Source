@@ -27,17 +27,17 @@ list.dirs <- function(path = ".",
 
 #Get Folders in Markdown Directory
 getFolders <- function(directory) {
-  markdownDirectory = paste(c(directory, "//markdown"), collapse = "")
+  markdownDirectory = paste(c(directory, "/markdown"), collapse = "")
   folders = list.dirs(markdownDirectory)
 }
 
 #Get Files in Markdown Directory Folder
 getFiles <- function(folder, directory) {
-  markdownDirectory = paste(c(directory, "//markdown"), collapse = "")
-  staticDirectory = paste(c(directory, "//static"), collapse = "")
-  currentDirectoryMarkdown = paste(c(markdownDirectory, "//", folder), collapse =
+  markdownDirectory = paste(c(directory, "/markdown"), collapse = "")
+  staticDirectory = paste(c(directory, "/static"), collapse = "")
+  currentDirectoryMarkdown = paste(c(markdownDirectory, "/", folder), collapse =
                                      "")
-  currentDirectory = paste(c(staticDirectory, "//", folder), collapse =
+  currentDirectory = paste(c(staticDirectory, "/", folder), collapse =
                              "")
   temp = list.files(currentDirectoryMarkdown, pattern = "*.md$")
   temp
@@ -68,8 +68,8 @@ addBack <- function(fileInfo){
 
 #Setup the Static Folder
 makeStaticFolder <- function(folder, directory) {
-  staticDirectory = paste(c(directory, "//static"), collapse = "")
-  currentDirectory = paste(c(staticDirectory, "//", folder), collapse =
+  staticDirectory = paste(c(directory, "/static"), collapse = "")
+  currentDirectory = paste(c(staticDirectory, "/", folder), collapse =
                              "")
   dir.create(currentDirectory)
 }
@@ -79,22 +79,22 @@ setupStatic <- function(directory, folders) {
 
 #Setup the Temp Folder
 setupTemp <- function(directory) {
-  tempDirectory = paste(c(directory, "//temp"), collapse = "")
+  tempDirectory = paste(c(directory, "/temp"), collapse = "")
   dir.create(tempDirectory)
 }
 
 #Get Full Path to Markdown File
 getMarkdownPath <- function(file, folder, directory) {
-  paste(c(directory, "//markdown//", folder, "//", file), collapse = "")
+  paste(c(directory, "/markdown/", folder, "/", file), collapse = "")
 }
 
 #Get Full Path to Static File
 getStaticPath <- function(file, folder, directory) {
   paste(c(
     directory,
-    "//static//",
+    "/static/",
     folder,
-    "//",
+    "/",
     substr(file, 1, nchar(file) - 2),
     "html"
   ),
@@ -127,10 +127,10 @@ makeIndex <- function(fileData,pageTitle) {
       indexText <- c(indexText,makeLink(subsetFiles[i,]))
     }
   }
-  writeLines(indexText, paste(directory, "//markdown//index.md", sep = ""))
+  writeLines(indexText, paste(directory, "/markdown/index.md", sep = ""))
   knit2html(
-    paste(directory, "//markdown//index.md", sep = ""),
-    paste(directory, "//static//index.md", sep = ""),
+    paste(directory, "/markdown/index.md", sep = ""),
+    paste(directory, "/static/index.md", sep = ""),
     stylesheet = style
   )
 }
@@ -148,7 +148,7 @@ addBack <- function(fileInfo){
 makeHtml <- function(fileInfo,style,directory) {
   message("Making",fileInfo$title)
   fileInfo <- addBack(fileInfo)
-  tempFile <- paste(directory, "//temp//temp.md", sep = "")
+  tempFile <- paste(directory, "/temp/temp.md", sep = "")
   writeLines(fileInfo$content, tempFile, sep = "")
   knit2html(tempFile, output=fileInfo$fullStaticPath, stylesheet = style)
   setwd(directory)
@@ -197,7 +197,7 @@ makeFileData <- function(directory){
 #Make sure the directory structure of the site is ok. 
 setupSite <- function(directory){
   setwd(directory)
-  dir.create(paste(c(directory, "//static//"), collapse = ""))
+  dir.create(paste(c(directory, "/static/"), collapse = ""))
   folders <- getFolders(directory)
   setupTemp(directory)
   setupStatic(directory, folders)
@@ -221,6 +221,6 @@ makePage <- function(directory, style,pageTitle) {
 
 directory = dirname(sys.frame(1)$ofile)
 setwd(directory)
-style = paste(c(directory,"//style//style.css"),collapse="")
+style = paste(c(directory,"/style/style.css"),collapse="")
 makePage(directory,style,"Greg Leo")
 
