@@ -25,10 +25,20 @@ jobs:
         run: |
           R -e 'install.packages(c("knitr","fs","stringr","dplyr","stringi","magrittr","renv"))'
           R -e 'renv::restore()'
+
       - name: Make Page
-        run : Rscript pageMaker.R
+        run : Rscript /pageMaker.R
 
-
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'static'
+          destination-github-username: 'gleo-repo'
+          destination-repository-name: 'gregleo-econ.github.io'
+          user-email: g.leo@vanderbilt.edu
+          target-branch: main
 
 
       
