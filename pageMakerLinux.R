@@ -116,8 +116,9 @@ makeLink <- function(fileInfo) {
 }
 
 #Create the Index Page
-makeIndex <- function(fileData,pageTitle) {
+makeIndex <- function(fileData,pageTitle,indexHeader) {
   indexText <- c(paste("# ",pageTitle,sep=""))
+  indexText <- c(indexText,indexHeader)
   folders <- fileData %>% pull(folder) %>% unique
   for(currentFolder in folders){
     indexText <- c(indexText,paste("## ",toupper(substring(currentFolder,3)),sep=""))
@@ -205,7 +206,7 @@ setupSite <- function(directory){
 
 
 #Put it All Together to Make Page
-makePage <- function(directory, style,pageTitle) {
+makePage <- function(directory, style,pageTitle,indexHeader) {
   print("Setting Up Site")
   setupSite(directory)
   print("Getting File Data")
@@ -216,12 +217,13 @@ makePage <- function(directory, style,pageTitle) {
     makeHtml(fileData[i,],style = style,directory=directory)
   }
   print("Making Index")
-  makeIndex(fileData,pageTitle)
+  makeIndex(fileData,pageTitle,indexHeader)
 }
 
 #Set it up. Make it go. 
+header = "Economist. Vanderbilt University.
 directory = dirname(sys.frame(1)$ofile)
 setwd(directory)
 style = paste(c(directory,"/style/style.css"),collapse="")
-makePage(directory,style,"Greg Leo")
+makePage(directory,style,"Greg Leo",header)
 
