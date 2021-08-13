@@ -6,7 +6,7 @@ I participate in inline speed skating. To keep track of my progress, I follow ho
 
 ```{r setup, include=FALSE}
 library(txtplot)
-data <- read.csv(file = 'skating.csv') 
+data <- read.csv(file = 'https://raw.githubusercontent.com/gregleo-econ/data/master/skating.csv') 
 ```
 
 ## ASCII 5 Mile Skate Times
