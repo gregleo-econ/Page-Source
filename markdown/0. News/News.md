@@ -4,9 +4,9 @@
 
 ## 8/13/2021
 
-This page now builds automatically using github actions! This lets me update the page and add content from *anywhere*. In fact, I posted this update from my [Pocket C.H.I.P]. 
+This page now builds automatically using github actions! This lets me update the page and add content from *anywhere*. In fact, I posted this update from my [Pocket C.H.I.P](https://opensource.com/article/17/2/pocketchip-or-pi).
 
-![Pocket CHIP](../files/Imgaes/pocketchip.jpeg)
+![Pocket CHIP](../files/Images/pocketchip.jpeg)
 
 I will update the R projects page with more info on the setup. 
 
