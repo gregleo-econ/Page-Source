@@ -157,7 +157,7 @@ makeHtml <- function(fileInfo,style,directory) {
 
 #Remove Priority String
 removePriority <- function(content){
-  content <- str_remove(content,"[+][0-9]{1,10}\r\n")
+  content <- str_remove(content,"[+][0-9]{1,10}")
   content
 }
 
