@@ -4,7 +4,7 @@
 
 ## 8/13/2021
 
-This page now builds automatically using github actions!
+This page now builds automatically using github actions! I will update the R projects page with more info on the setup.
 
 ## 8/12/2021
 
