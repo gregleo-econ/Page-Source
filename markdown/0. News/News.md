@@ -4,7 +4,11 @@
 
 ## 8/13/2021
 
-This page now builds automatically using github actions! I will update the R projects page with more info on the setup.
+This page now builds automatically using github actions! This lets me update the page and add content from *anywhere*. In fact, I posted this update from my [Pocket C.H.I.P]. 
+
+![Pocket CHIP](../files/imgaes/pocketchip.jpg)
+
+I will update the R projects page with more info on the setup. 
 
 ## 8/12/2021
 
