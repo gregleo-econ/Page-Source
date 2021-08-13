@@ -43,7 +43,7 @@ jobs:
           destination-github-username: 'gregleo-econ'
           destination-repository-name: 'gregleo-econ.github.io'
           user-email: g.leo@vanderbilt.edu
-          target-branch: main
+          target-branch: master
 
 
       
