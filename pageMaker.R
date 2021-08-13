@@ -219,7 +219,7 @@ makePage <- function(directory, style,pageTitle) {
   makeIndex(fileData,pageTitle)
 }
 
-directory="~/"
+directory="/"
 setwd(directory)
 style = paste(c(directory,"//style/style.css"),collapse="")
 makePage(directory,style,"Greg Leo")
