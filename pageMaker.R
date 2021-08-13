@@ -206,9 +206,16 @@ setupSite <- function(directory){
 
 #Put it All Together to Make Page
 makePage <- function(directory, style,pageTitle) {
+  print("Setting Up Site")
   setupSite(directory)
+  print("Getting File Data")
   fileData <- makeFileData(directory)
-  for(i in 1:dim(fileData)[1]){makeHtml(fileData[i,],style = style,directory=directory)}
+  for(i in 1:dim(fileData)[1]){
+    print("Setting up Page")
+    print(fileData[i,]$title)
+    makeHtml(fileData[i,],style = style,directory=directory)
+  }
+  print("Making Index")
   makeIndex(fileData,pageTitle)
 }
 
