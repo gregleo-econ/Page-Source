@@ -1,0 +1,752 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #b5bd68
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+8100 Lecture- 
+\begin_inset Quotes eld
+\end_inset
+
+J
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose firms have the following technology:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f\left(x_{1},x_{2}\right)=x_{1}^{\frac{1}{2}}x_{2}^{\frac{1}{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prices of inputs are:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w_{1}=4,w_{2}=1
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's now assume all firms have 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ fixed at 
+\begin_inset Formula $x_{2}=1$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $c\left(q\right)=4q^{2}+1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $mc\left(q\right)=\frac{\partial\left(4q^{2}+1\right)}{\partial q}=8q$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The supply function of the firm is: 
+\begin_inset Formula $mc\left(q\right)=p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+q=\frac{1}{8}p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are 
+\begin_inset Formula $J$
+\end_inset
+
+ firms, and so market supply is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q_{s}=\frac{J}{8}p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose the demand is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q_{d}=\frac{294}{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equilibrium is such that 
+\begin_inset Formula $Q_{d}=Q_{s}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{J}{8}p=\frac{294}{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equilibrium price is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p=\frac{28\sqrt{3}}{\sqrt{J}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The equilibrium quantity is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{J}{8}\frac{28\sqrt{3}}{\sqrt{J}} & = & \frac{7\sqrt{3}\sqrt{J}}{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Individual firm quantity is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{8}\frac{28\sqrt{3}}{\sqrt{J}} & = & \frac{7\sqrt{3}}{2\sqrt{J}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Individual firm profit:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{7\sqrt{3}}{2\sqrt{J}}\frac{28\sqrt{3}}{\sqrt{J}}-\left(4\left(\frac{7\sqrt{3}}{2\sqrt{J}}\right)^{2}+1\right) & = & \frac{147}{J}-1
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+2. & 72.5\\
+3. & 48.\\
+5. & 28.4\\
+10. & 13.7\\
+100. & 0.47\\
+1000. & -0.85
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let's see how good our assumption is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi'\left(q\right)=p'\left(q\right)q+p-c'\left(q\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We assume that 
+\begin_inset Formula $p'\left(q\right)=0$
+\end_inset
+
+.
+ Is this 
+\begin_inset Quotes eld
+\end_inset
+
+valid
+\begin_inset Quotes erd
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial p\left(q\right)}{\partial q}=\frac{\partial\left(\frac{294}{q}\right)}{\partial q}=-\frac{294}{q^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's plug in for 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+-\frac{294}{\left(\frac{7\sqrt{3}\sqrt{J}}{2}\right)^{2}} & = & -\frac{8}{J}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+2. & 4.\\
+3. & 2.67\\
+5. & 1.6\\
+10. & 0.8\\
+100. & 0.08\\
+1000. & 0.01
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let's assume there is a monopolist.
+ 
+\begin_inset Formula $J=1$
+\end_inset
+
+.
+ This firm's profit function is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{294}{q}q-\left(4q^{2}+1\right) & = & 293-4q^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is no maximum, however, profit is decreasing in 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ The monopolist wants to set 
+\begin_inset Formula $q=0$
+\end_inset
+
+.
+ On the other hand, if they assume price is fixed:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+q=\frac{7.0\sqrt{3}}{2}=6.06218
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Profit under the assumption that price does not depend on 
+\begin_inset Formula $q$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+146
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now suppose we return to 
+\begin_inset Formula $J$
+\end_inset
+
+ firms, but they take serious that price is determined by the inverse demand
+ function.
+ 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ is the quantity of firm 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\begin_inset Formula $i\in\left\{ 1,2,...,J\right\} $
+\end_inset
+
+.
+ Profit is given by 
+\begin_inset Formula $q_{-i}=\left(\sum_{i=1}^{J}q_{i}\right)-q_{i}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi_{i}\left(q_{i},q_{-i}\right)=\frac{294}{q_{i}+q_{-i}}q_{i}-\left(4q_{i}^{2}+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The stationary condition for firm 
+\begin_inset Formula $i$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\left(\frac{294}{q_{i}+q_{-i}}q_{i}-\left(4q_{i}^{2}+1\right)\right)}{\partial q_{i}} & = & \left(\frac{294}{q_{-i}+q_{i}}-\frac{294q_{i}}{\left(q_{-i}+q_{i}\right){}^{2}}\right)-8q_{i}=MR-MC
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The optimal level of 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\frac{294}{q_{-i}+q_{i}}-\frac{294q_{i}}{\left(q_{-i}+q_{i}\right){}^{2}}\right)-8q_{i}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's assume 
+\begin_inset Formula $q_{i}=q_{j}\forall i,j$
+\end_inset
+
+.
+ Call 
+\begin_inset Formula $q$
+\end_inset
+
+, the quantity for an individual firm.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\frac{294}{\left(J\right)q}-\frac{294q}{\left(J*q\right){}^{2}}\right)-8q=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+q=\frac{7\sqrt{3}\sqrt{J-1}}{2J}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Market quantity is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q_{s}=\frac{7\sqrt{3}\sqrt{J-1}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equilibrium price:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p=\frac{294}{\frac{7\sqrt{3}\sqrt{J-1}}{2}}=\frac{28\sqrt{3}}{\sqrt{J-1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Individual firm profit is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{28\sqrt{3}}{\sqrt{J-1}}\frac{7\sqrt{3}\sqrt{J-1}}{2J}-\left(4\left(\frac{7\sqrt{3}\sqrt{J-1}}{2J}\right)^{2}+1\right) & = & \frac{294}{J}-\frac{147(J-1)}{J^{2}}-1
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Recall that under the assumption of perfect competition, firm profit was:
+\end_layout
+
+\begin_layout Standard
+Individual firm profit:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{7\sqrt{3}}{2\sqrt{J}}\frac{28\sqrt{3}}{\sqrt{J}}-\left(4\left(\frac{7\sqrt{3}}{2\sqrt{J}}\right)^{2}+1\right) & = & \frac{147}{J}-1
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tables in terms of 
+\begin_inset Formula $J$
+\end_inset
+
+.
+ Cournot model first.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+2. & 109.25\\
+3. & 64.33\\
+5. & 34.28\\
+10. & 15.17\\
+100. & 0.48\\
+1000. & -0.85
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+2. & 72.5\\
+3. & 48.\\
+5. & 28.4\\
+10. & 13.7\\
+100. & 0.47\\
+1000. & -0.85
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's now compare the market quantities to determine the distortion introduced
+ by the price-taking assumption:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q_{cournot}=\frac{7\sqrt{3}\sqrt{J-1}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q_{comptition}=\frac{7\sqrt{3}\sqrt{J}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{Q_{cournot}}{Q_{competition}}=\frac{\sqrt{J-1}}{\sqrt{J}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A table of this in terms of 
+\begin_inset Formula $J$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+2. & 0.71\\
+3. & 0.82\\
+5. & 0.89\\
+10. & 0.95\\
+100. & 0.99\\
+1000. & 1.
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $TableForm[Round[Table[\{J,\frac{7\sqrt{3}}{2\sqrt{J}},\frac{7\sqrt{3}\sqrt{J}}{2},\frac{147}{J}-1\},\{J,\{2,3,5,10,100,1000\}\}],.01]]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,39 @@
+Key Concepts
+
+This list is provided to guide your studying. It is not absolutely exhaustive, but I have tried to include everything I think is key. Please let me know if there is a concept that I have covered in class that does not appear here. Either I will include it or tell you that it is not an important concept to study for the exam. Where appropriate, you should be able to solve problems analytically and demonstrate the concepts graphically. 
+
+• Construct the budget line/set.
+
+• Understand and demonstrate how changes in prices and income affect the budget line (set).
+
+• Construct the budget and understand how it changes under more advanced scenarios such as quotas, taxes, quantity discounts, etc.
+
+• Understand what a preference relation is and how to use it to represent preferences.
+
+• Understand the properties that preferences can have such as reflexivity, completeness, monotonicity, transitivity, and convexity.
+
+• Know what properties are needed to construct a utility function and how a utility function can be used to represent preferences.
+
+• Understand what indifference curves represent and how they can be used to “graph” consumer preferences.
+
+• Construct indifference curves from a utility function or description of preferences. Understand how the properties of a preference relation translate into different shapes of indifference curves. 
+
+• Know the classical utility functions: perfect compliments, perfect substitutes, quasi-linear and Cobb-douglass and what kind of preferences they represent. 
+
+• Understand the concepts of marginal utility and marginal rates of substitution as well as how to find these form a utility function and what they mean.
+
+• Be able to solve choice problems by maximizing utility to find demand under a variety of scenarios and using all of the classical utility functions.
+
+• Understand both the mathematics and the intuition for why and when the marginal rate of substitution being equal to the ratio of prices is necessary for a utility maximizing bundle.
+
+• Draw income offer curves, Engel curves, price offer curves, demand and inverse demand graphs.
+
+• Understand properties of demand such as whether goods are normal, inferior, ordinary, Giffen, compliments, substitutes, etc.
+
+• Be able to find and use inverse demand functions, know what they mean and why they are useful.
+
+• Understand the Slutsky equation and know how to decompose changes in demand into substitution and income effects (do this graphically as well).
+
+• Understand how to solve choice problems, find demand and it's properties when income is not in terms of money, but endowments of goods. 
+
+• Solve intertemporal choice problems (consumption today, consumption tomorrow). Be able to work with (and graph) the budget equation and transform between present and future value. 

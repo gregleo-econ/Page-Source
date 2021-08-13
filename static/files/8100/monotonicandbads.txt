@@ -1,0 +1,5 @@
+Can preferences with a "bad" be strictly monotonic?  
+
+No.  
+
+Suppose preferences inclue a "bad" such that $(x_1-\epislon,x_2) \succ (x_1,x_2)$
