@@ -6,7 +6,7 @@
 
 This page now builds automatically using github actions! This lets me update the page and add content from *anywhere*. In fact, I posted this update from my [Pocket C.H.I.P]. 
 
-![Pocket CHIP](../files/Imgaes/pocketchip.jpg)
+![Pocket CHIP](../files/Imgaes/pocketchip.jpeg)
 
 I will update the R projects page with more info on the setup. 
 
