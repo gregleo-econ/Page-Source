@@ -5,7 +5,7 @@ body {
 	font-weight: 500;
 	color: #fff;
 	-webkit-font-smoothing: antialiased;
-	font-size: 12pt;
+	font-size: 14pt;
 	width: 900px;
 	line-height: 16pt;
 	padding-left: 5pt;
@@ -20,13 +20,13 @@ h1 {
 	font-family: "Rubik Mono One", sans-serif;
 	background: #fff;
 	color: #2637dd;
-	font-size: 22px;
+	font-size: 24pt;
 	text-transform: uppercase;
 	display: inline-block;
 	margin-top: 15px;
 	margin-bottom: 10px;
 	font-weight: bold;
-	line-height: 20pt;
+	line-height: 26pt;
 	padding: 2px 2px;
 }
 
@@ -34,28 +34,28 @@ h2 {
 	font-family: "Rubik Mono One", sans-serif;
 	background: #fff;
 	color: #2637dd;
-	font-size: 16px;
+	font-size: 20pt;
 	text-transform: uppercase;
 	margin-top: 15px;
 	margin-bottom: 10px;
 	font-weight: bold;
-	line-height: 20pt;
+	line-height: 22pt;
 	padding: 2px 2px;
 }
 
 h3 {
-	margin-top: 15px;
+	margin-top: 16px;
 	margin-bottom: 5px;
 }
 
 h4 {
-	margin-top: 15px;
+	margin-top: 16px;
 	margin-bottom: 5px;
 }
 
 title {
 	font-weight: bold;
-	line-height: 20pt;
+	line-height: 26pt;
 }
 
 p.subheader {
