@@ -73,6 +73,7 @@ a {
 	color: inherit;
 	text-shadow: 1px 1px #2637dd, -1px -1px #2637dd;
 	text-decoration: underline;
+	font-size: 16pt;
 }
 
 a:link,
