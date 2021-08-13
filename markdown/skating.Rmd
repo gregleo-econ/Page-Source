@@ -1,0 +1,103 @@
+# Skating 
+
+```{r, data,eval=TRUE}
+
+library(dplyr)
+library(magrittr)
+require(timelineR)
+setwd("C://workouts//all")
+temp = list.files(pattern="*data.csv")
+distanceForSplit <- 5
+dates <- c()
+bestTimes <- c()
+efforts <- list()
+j <- 1
+for(file in temp){
+  
+  data <- read.csv(file)
+  data %<>% filter(record.distance.m. > 0)
+  data %<>% mutate(record.distance.m. = record.distance.m. *0.000621371)
+  distance <- data %>% pull(record.distance.m.) %>% max
+  
+  if(distance > distanceForSplit){
+  
+    splitIndex <- c()
+    splitTime <- c()
+    for(i in 1:dim(data)[1]){
+      distances <- data %>% pull(record.distance.m.)
+      times <- data %>% pull(record.timestamp.s.)
+      startTime <- times[i]
+      startDist <- distances[i] 
+      splitIndex[i] <- min(which((distances - startDist)>distanceForSplit))
+      
+      
+      
+      if(!is.infinite(splitIndex[i])){
+        splitTime[i] <- times[splitIndex[i]]-startTime
+      }else{splitTime[i]<-1000000000}
+    }
+   time<- data[1,]%>%pull(file_id.time_created)
+   time <- time + 631065600 
+   
+   dates[j]  <- as.POSIXct(time, origin = "1970-01-01")
+   bestTimes[j] <- min(splitTime)/60
+   bestIndexStart <- which(splitTime == min(splitTime))[1]
+   bestIndexEnd <- splitIndex[bestIndexStart]
+   efforts[[j]] <- distances[bestIndexStart:bestIndexEnd]-distances[bestIndexStart]
+   j <- j+1
+  }
+  
+}
+
+bestTimes <- bestTimes[order(dates)]
+dates <- dates[order(dates)]
+bestTimesNew <- bestTimes
+
+j<-2
+while(j < length(bestTimesNew)){
+  
+    if(bestTimesNew[j]>bestTimesNew[j-1]){
+      bestTimesNew<-bestTimesNew[-j]
+      dates<-dates[-j]
+      efforts <- efforts[-j]
+      j<-j-1
+    }
+  j<-j+1
+}  
+
+
+data <- data.frame(dates=as.POSIXct(dates, origin = "1970-01-01"),bestTimes = bestTimesNew)
+plot_timeline(data,numeric_plot_type = "line")
+
+
+
+cl <- rainbow(5)
+
+for (i in 1:length(efforts)){
+  lines(1:length(efforts[[i]]),efforts[[i]],col = cl[i],type = 'l')
+}
+
+
+
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

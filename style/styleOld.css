@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+  font-size: 12pt;
+  font-family: 'Share Tech Mono', monospace;
+  color: #00ff00;
+  width: 900px;
+  line-height: 16pt;
+  padding-left: 5pt;
+  padding-right: 5pt;
+  padding-top: 5pt;
+  margin: auto;
+  background: #000000;
+}
+
+
+h1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  line-height: 20pt;
+}
+
+h2 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+title {
+  font-weight: bold;
+  line-height: 20pt;
+}
+
+
+p.subheader {
+  font-weight: bold;
+  color: #593d87;
+}
+
+
+img {
+  padding: 3pt;
+  float: right;
+}
+
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+a:link, a:visited {
+    color: #ffffff;
+}
+
+
+
+a:hover, a:active {
+  color: #ffff33;
+}
+
+
+p {
+  margin: 0px;
+}
+
+div.footer {
+  font-size: 9pt;
+  font-style: italic;
+  line-height: 12pt;
+  text-align: center;
+  padding-top: 30pt;
+}

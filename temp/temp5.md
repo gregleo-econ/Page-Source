@@ -1,0 +1,107 @@
+[Back](../index.html) 
+ 
+# Econ 3012
+
+## Intro
+
+This is the course website for Vanderbilt Economics 3012. This course focuses on the formal analysis of the behavior of individuals and firms and how these behaviors aggregate in a market. We will analyze market performance and determine how performance is influenced by various changes. This page will be continuously updated throughout the semester. Please check it on a regular basis. Consider subscribing to changes using a service such as [Visual Ping](visualping.io) or [Wachete](wachete.com).
+
+
+## Mathematical Level 
+
+Some concepts and formulas from differential calculus will be used, but most of the presentations, homework and exams will involve diagrams, algebra and analytical reasoning. A review of the relevant mathematical concepts will occur on the first day of class.
+
+
+## Textbook(s)
+
+**Intermediate Microeconomics with Calculus: A Modern Approach** by Hal R. Varian.
+**Workouts in Intermediate Microeconomics** (Ninth Edition), by Theodore C. Bergstrom and Hal R. Varian.
+
+
+## Problem Sets 
+
+Problem sets will consist of selections from problems in the “Workouts” book, as well as problems written by the instructor. The problem sets will be posted on this page in the schedule below. I encourage working on the homework in groups. The homework will be graded by the teaching assistant, and reviewed by the instructor.
+
+
+## Exams and Grading 
+
+There will be one midterm and a final exam. They are tentatively placed in the schedule below.  Grading will be based 30% on midterm exam, 50% on the final exam, and 20% on homework.
+
+
+## Office Hours / Teaching Assistant 
+
+My office hours: Tuesday 11:00-12:00pm on zoom and by appointment.
+TA: Terry Kim. Office Hours: Mon 10:30-11:30am
+All office hours held on zoom. For links, see brightspace.
+
+
+## Schedule 
+
+Week 1: Overview of Syllabus & Chapter 2.1-2.7: Budget Constraint.
+Please Read: [Review of Functions](../files/3010/MathReviewFunctions.pdf).
+[Problem Set](../files/3010/MathProblems.pdf) [Due Sept. 1. Please scan your work and upload to Brightspace.]
+
+Week 2 (Sept 1,3):  Chapter 3.1-3.8: Preferences
+[Problem Set 1](../files/3010/Problem\_Set\_1.pdf) (Due Sept 22)
+[Problem Set 0 and 1 Solutions](../files/3010/Hw\_0\_and\_1\_solutions.pdf)
+
+Week 3 (Sept 8,10): Chapter 4.1-4.5: Utility
+
+Week 4 (Sept 15,17): Chapter 5.1-3&5.5 (Skip Lagrange Method).
+
+Week 5 (Sept 22,24): Chapter 6.1-6.8: Demand. Chapter 8.1-8.7: Slutsky Equation
+
+Problem Set 2: (Due Oct. 6)
+Workouts:
+6.1, 6.3, 6.5, 6.7, 8.1, 8.5, 8.10, 8.11, 9.1, 9.3, 9.11
+[Problem Set 2 Solutions](../files/3010/Hw\_2\_solutions.pdf)
+
+For additional practice try 6.11 and 8.7 (No need to turn these two problems in.)
+
+Week 6 (Sept 29, Oct 1): Chapter 9.1-9.4: Buying and Selling and Chapter 10.1-10.5: Intertemporal Choice
+
+Week 7 (Oct 6, Oct 8): Chapter 15.1-15.2,15.5-15.6,15.8,15.11: Market Demand
+
+Problem Set 3 (Due Nov 3):
+Workouts:
+Chapter 10 (Intertemproal Choice): 10.1,10.3,10.9
+Chapter 15 (Market Demand): 15.1-15.4 & 15.7
+Chapter 16 (Equilibrium): 16.1, 16.3, 16.5, 16.7, 16.9, 16.11.
+Chapter 19 (Technology): 19.0, 19.1, 19.3, 19.5, 19.9, 19.11.
+[Problem Set 2 Solutions](../files/3010/Hw\_2\_solutions.pdf)
+
+****Midterm Exam Oct 15****
+Midterm exam covering Chapters 1-6 & 8,9,10
+[UPDATED: Key Concepts](/Drafts/3010/keyconceptsexam1.txt.preview.html)
+[Solutions](../files/3010/3012MidtermSolutions.pdf)
+
+Week 8 (Oct 13): Chapter 16.1-16.9: Equilibrium, Midterm Exam
+
+Week 9 (Oct 20): Chapter 16.1-16.9: Equilibrium Continued
+
+Week 10 (Oct 27): Chapter 19:.1-19.10 Technology
+
+Problem Set 4 (Due Nov 19):
+Workouts:
+Chapter 20 (Profit Maximization): 20.1, 20.3, 20.6, 20.7, 20.11
+Chapter 21 (Cost Minimization): 21.1,  21.3, 21.5, 21.7, 21.9
+Chapter 22 (Cost Curves): 22.1, 22.3, 22.5, 22.9
+Chapter 23 (Firm Supply): 23.1, 23.3, 23.7, 23.9
+Chapter 24 (Industry Supply): 24.0, 24.5, 24.7, 24.11
+
+Week 11 (Nov 3): Chapter 20.1,20.5-20.10: Profit Maximization Chapter 21.1,21.3-21.6: Cost Minimization
+
+Week 12 (Nov 10): Chapter 22.1-22.3,22.5,22.7: Cost Curves, Chapter 23.1-23.9: Firm Supply
+
+Week 13 (Nov 17): Chapter 24.1-24.6: Industry Supply, Chapter 25.1-25.7: Monopoly
+
+Week 14 (Dec 1): Chapter 26.1-26.6: Monopoly Behavior, Chapter 32.1-32.7, 32.9-32.13: Exchange
+
+Extra Practice Problems
+[Lots of Practice Problems](../files/3010/PracticeProblems.pdf)
+
+Selected Solutions for Practice Problems
+[Solution](files/3010/ProblemPage7.pdf)
+
+Final Exam: cumulative exam. Thursday, December 10 9:00
+Key Concepts
