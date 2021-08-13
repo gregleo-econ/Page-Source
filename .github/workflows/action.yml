@@ -22,10 +22,9 @@ jobs:
       - name: Cache Renv packages
         uses: actions/cache@v2
         with:
-          path: $HOME/.local/share/renv
-          key: r-${{ hashFiles('renv.lock') }}
-          restore-keys: r-
-
+           path: ${{ env.R_LIBS_USER }} 
+           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }} 
+           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1- 
       - name: Install packages
         run: |
           R -e 'install.packages(c("knitr","fs","stringr","dplyr","stringi","magrittr","renv","txtplot"))'
