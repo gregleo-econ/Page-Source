@@ -14,7 +14,7 @@ data <- read.csv(file = 'https://raw.githubusercontent.com/gregleo-econ/data/mas
 Here are my best times over 5 miles. Of course, the x-axis is the number of seconds since *1970-01-01*. What else would it be?
 
 ```{r output, echo=FALSE}
-txtplot(as.numeric(as.POSIXct(data$dates, origin = "1970-01-01")),as.numeric(data$bestTimes),width=75)
+txtplot(as.numeric(as.POSIXct(data$dates, origin = "1970-01-01")),as.numeric(data$bestTimes),width=60)
 ```
 
 ## Code to Extract Best X Mile Times
