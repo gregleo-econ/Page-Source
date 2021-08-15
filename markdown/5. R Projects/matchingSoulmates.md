@@ -40,9 +40,12 @@ p %r% rank
 In [Matching Soulmates](../2.%20Working%20Papers/MatchingSoulmates.html), my co-authors and I study a a recursive process in matching that
 forms coalitions that are mutually most-preferred by members of that coalition. We call this process the iterated matching of soulmates: *IMS*. We show that mechanisms that implement IMS have strong properties among those who are matched by IMS.  
 
-How many people can "usually" be matched by IMS? This depends a lot on the environment and structure of preferences. But what about in totally unstructured environments? 
+
+How many people can "usually" be matched by IMS? This depends a lot on the environment and structure of preferences. But what about in totally unstructured environments?   
+
 
 Here is some R code that takes advantage of R's array-centric functions and some custom operators to count the number of people that can be matched as soulmates in 10000 random 10-person [stable roommates problems](https://en.wikipedia.org/wiki/Stable_roommates_problem).  
+
 
 The core of this code is contained in the *whos_a_soulmate* function. This function is somewhat non-standard R code. It is inspired by the type of programming normally done in one of R's predecessors [APL](https://tryapl.org). Here is the function:
 
@@ -59,6 +62,7 @@ p
 
 Plyer 1 likes 2 best, player 2 likes 1 best, player 3 likes 2 best. Note that 1 and 2 are soulmates.  
 
+
 The first step of the function ensures the matrix "p" is a ranking matrix. We apply the "rank" function to the "p" matrix by row using the by-row operator created here.
 
 ```{r, step1, eval=TRUE}
@@ -71,15 +75,18 @@ Now we rake this matrix and take its Hadamard product with its own transpose by 
 p %r% rank %>% hadamard
 ```
 
-Note how off diagonal 1's in this matrix represent positions where both players prefer eachother most.
+Note how off diagonal 1's in this matrix represent positions where both players prefer eachother most.  
 
-Now we look for players who have a soulmatr by taking the min of each row (using the by-row operator). If a 1 is present, that player has a soulmate. 
+
+Now we look for players who have a soulmatr by taking the min of each row (using the by-row operator). If a 1 is present, that player has a soulmate.  
+
 
 ```{r, step3, eval=TRUE}
 p %r% rank %>% hadamard %r% min
 ```
 
-Now we compare this vector to 1. The indicies that are equal to 1 are players who have a soulmate. 
+Now we compare this vector to 1. The indicies that are equal to 1 are players who have a soulmate.  
+
 
 ```{r, step4, eval=TRUE}
 p %r% rank %>% hadamard %r% min == 1
