@@ -1,11 +1,12 @@
 +3
 
-# My Nano Config
+# My Nano Edtior Config
 
 I like to use the nano editor on-the-go. After a few years of using emacs, I appreciate the minimalism. The combination of macros and regex find/replace make it a perfectly usable system.
 
-## My Config
+## Config
 
+```{r,nano,eval=FALSE, echo=TRUE}
 set autoindent
 set constantshow
 set minibar
@@ -39,4 +40,4 @@ bind M-n prevword main
 bind M-o end main
 bind M-q exit main
 bind M-u home main
-
+```
