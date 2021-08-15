@@ -38,55 +38,74 @@ p %r% rank
 ## Intro
 
 In [Matching Soulmates](../2.%20Working%20Papers/MatchingSoulmates.html), my co-authors and I study a a recursive process in matching that
-forms coalitions that are mutually most-preferred by members of that coalition. We call this process the iterated matching of soulmates: *IMS*. We show that mechanisms that implement IMS have strong properties among those who are matched by IMS. /
+forms coalitions that are mutually most-preferred by members of that coalition. We call this process the iterated matching of soulmates: *IMS*. We show that mechanisms that implement IMS have strong properties among those who are matched by IMS. 
 
-How many people can "usually" be matched by IMS? This depends a lot on the environment and structure of preferences. But what about in totally unstructured environments? /
+How many people can "usually" be matched by IMS? This depends a lot on the environment and structure of preferences. But what about in totally unstructured environments? 
 
-Here is some R code that takes advantage of R's array-centric functions and some custom operators to count the number of people that can be matched as soulmates in 10000 random 10-person [stable roommates problems](https://en.wikipedia.org/wiki/Stable_roommates_problem). /
+Here is some R code that takes advantage of R's array-centric functions and some custom operators to count the number of people that can be matched as soulmates in 10000 random 10-person [stable roommates problems](https://en.wikipedia.org/wiki/Stable_roommates_problem). 
 
-The core of this code is contained in the *whos_a_soulmate* function. This function is somewhat non-standard R code. It is inspired by the type of programming normally done in one of R's predecessors [APL](https://tryapl.org). Here is the function: /
+The core of this code is contained in the *whos_a_soulmate* function. This function is somewhat non-standard R code. It is inspired by the type of programming normally done in one of R's predecessors [APL](https://tryapl.org). Here is the function: 
 
 ```{r, whos, eval=FALSE}
 whos_a_soulmate <- function(p){which((p%r%rank%>%hadamard%r%min)==1)}
 ```
 
-Let's setup an example preference matrix. /
+Let's setup an example preference matrix. 
 
 ```{r, setupp, eval=TRUE}
 p <- matrix(c(3,1,2,1,3,2,2,1,3),3,3,byrow=TRUE)
 p
 ```
 
-Plyer 1 likes 2 best, player 2 likes 1 best, player 3 likes 2 best. Note that 1 and 2 are soulmates. /
+Plyer 1 likes 2 best, player 2 likes 1 best, player 3 likes 2 best. Note that 1 and 2 are soulmates. We should find that 1 and 2 are soulmates in the first round of IMS. 
 
-The first step of the function ensures the matrix "p" is a ranking matrix. We apply the "rank" function to the "p" matrix by row using the by-row operator created here. /
+The first step of the function ensures the matrix "p" is a ranking matrix. We apply the "rank" function to the "p" matrix by row using the by-row operator created here. Since "p" is already a ranking matrix, this does not do anything. It is more important once some players have been removed and we need to re-rank. 
 
 ```{r, step1, eval=TRUE}
 p %r% rank
 ```
 
-Now we rake this matrix and take its Hadamard product with its own transpose by piping it to our "hadamard" function with the built-in R pipe. /
+Now we take take [Hadamard product](https://en.wikipedia.org/wiki/Hadamard_product) of the preference matrix with its own transpose by piping it to our "hadamard" function with the built-in R pipe. 
 
 ```{r, step2, eval=TRUE}
 p %r% rank %>% hadamard
 ```
 
-Note how off diagonal 1's in this matrix represent positions where both players prefer eachother most. /
-
-
-Now we look for players who have a soulmatr by taking the min of each row (using the by-row operator). If a 1 is present, that player has a soulmate. /
+Note how off diagonal 1's in this matrix represent positions where both players prefer eachother most. We want to pull these players who have a 1 in their row. To do this, we pipe what we have to the "min" function using our by-row operator. If a 1 is present, that player has a soulmate. 
 
 
 ```{r, step3, eval=TRUE}
 p %r% rank %>% hadamard %r% min
 ```
 
-Now we compare this vector to 1. The indicies that are equal to 1 are players who have a soulmate. /
+Note that 1 and 2 have a "1" here, indicating that players 1 and 2 have a soulmate from this group. Select just these players, we compare this vector to 1. The indicies that map to "TRUE" are players who have a soulmate. 
 
 
 ```{r, step4, eval=TRUE}
 p %r% rank %>% hadamard %r% min == 1
 ```
+
+We see now that players 1 and 2 have a soulmate. We can now remove these players by using our remove operator "%rm%". 
+
+```{r, step5, eval=TRUE}
+p <- p %rm% whos_a_soulmate(p) %>% as.matrix
+p
+```
+
+What we get is the remainder of the preference matrix "p" after removing soulmates. We only have player 3 left. Note that player 3 originally ranked being "alone" as third-best. That's why a 3 shows up here. Let's pipe this to rank again to have the player(s) rerank their potential partners.
+
+```{r, step5, eval=TRUE}
+p %r% rank
+```
+
+Now we can run the process again.
+
+```{r, step6, eval=TRUE}
+p <- p %rm% whos_a_soulmate(p)
+p
+```
+
+Since being alone is the only outcome left, player 3 is a solemate-group-of-one and is removed. This demonstrates how the "IMS" function proceeds. It calls "remove_soulmates". If anyone is removed, "IMS" calls itself. If there is no one to remove or no one further can be removed, the function returns the remaining preference matrix.  
 
 ## Code
 
@@ -100,9 +119,6 @@ p %r% rank %>% hadamard %r% min == 1
 #Operator applies function "f" across list "l" with sapply.
 `%s%` <- function(l,f){sapply(l,match.fun(f))}
 
-#Ensures objects is a matrix.
-matrixify <- function(m){as.matrix(m)}
-
 #Returns Hadamard product of matrix m with its transpose.
 hadamard <- function(m){m * t(m)}
 
@@ -110,7 +126,7 @@ hadamard <- function(m){m * t(m)}
 whos_a_soulmate <- function(p){which((p%r%rank%>%hadamard%r%min)==1)}
 
 #Removes first order soulmates from preference matrix p.
-remove_soulmates <- function(p){p %rm% whos_a_soulmate(p) %>% matrixify}
+remove_soulmates <- function(p){p %rm% whos_a_soulmate(p) %>% as.matrix}
 
 #Recursively applies remove_soulmates until there's none left to remove.
 ims <- function(p){if(dim(p)[1]==0 || identical(remove_soulmates(p),p)){p}else{ims(remove_soulmates(p))}}
