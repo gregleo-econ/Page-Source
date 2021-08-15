@@ -38,11 +38,13 @@ p %r% rank
 ## Intro
 
 In [Matching Soulmates](../2.%20Working%20Papers/MatchingSoulmates.html), my co-authors and I study a a recursive process in matching that
-forms coalitions that are mutually most-preferred by members of that coalition. We call this process the iterated matching of soulmates: *IMS*. We show that mechanisms that implement this process have strong properties among those who are matched by this process.  
+forms coalitions that are mutually most-preferred by members of that coalition. We call this process the iterated matching of soulmates: *IMS*. We show that mechanisms that implement IMS have strong properties among those who are matched by IMS.  
 
-So, how many people can be matched by IMS? Here is some R code that takes advantage of R's array-centric functions and some custom operators to count the number of people that can be matched as soulmates in 10000 random 10-person [stable roommates problems](https://en.wikipedia.org/wiki/Stable_roommates_problem).  
+How many people can "usually" be matched by IMS? This depends a lot on the environment and structure of preferences. But what about in totally unstructured environments? 
 
-The core of this code is contained in the *whos_a_soulmate* function. 
+Here is some R code that takes advantage of R's array-centric functions and some custom operators to count the number of people that can be matched as soulmates in 10000 random 10-person [stable roommates problems](https://en.wikipedia.org/wiki/Stable_roommates_problem).  
+
+The core of this code is contained in the *whos_a_soulmate* function. This function is somewhat non-standard R code. It is inspired by the type of programming normally done in one of R's predecessors [APL](https://tryapl.org). Here is the function:
 
 ```{r, whos, eval=FALSE}
 whos_a_soulmate <- function(p){which((p%r%rank%>%hadamard%r%min)==1)}
