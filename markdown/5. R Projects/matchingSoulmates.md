@@ -60,7 +60,7 @@ Plyer 1 likes 2 best, player 2 likes 1 best, player 3 likes 2 best. Note that 1 
 The first step of the function ensures the matrix "p" is a ranking matrix. We apply the "rank" function to the "p" matrix by row using the by-row operator created here.
 
 ```{r, step1, eval=TRUE}
-`p %r% rank
+p %r% rank
 ```
 
 Now we rake this matrix and take its Hadamard product with its own transpose by piping it to our "hadamard" function with the built-in R pipe. 
@@ -74,13 +74,13 @@ Note how off diagonal 1's in this matrix represent positions where both players 
 Now we look for players who have a soulmatr by taking the min of each row (using the by-row operator). If a 1 is present, that player has a soulmate. 
 
 ```{r, step3, eval=TRUE}
-`p %r% rank %>% hadamard %r% min
+p %r% rank %>% hadamard %r% min
 ```
 
 Now we compare this vector to 1. The indicies that are equal to 1 are players who have a soulmate. 
 
 ```{r, step4, eval=TRUE}
-`p %r% rank %>% hadamard %r% min == 1
+p %r% rank %>% hadamard %r% min == 1
 ```
 
 ## Code
