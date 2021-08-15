@@ -53,7 +53,7 @@ whos_a_soulmate <- function(p){which((p%r%rank%>%hadamard%r%min)==1)}
 Let's setup an example preference matrix. 
 
 ```{r, setupp, eval=TRUE}
-p <- matrix(c(3,1,2,1,3,2,2,1,3),3,3)
+p <- matrix(c(3,1,2,1,3,2,2,1,3),3,3,byrow=TRUE)
 p
 ```
 
@@ -114,7 +114,7 @@ ims <- function(p){if(dim(p)[1]==0 || identical(remove_soulmates(p),p)){p}else{i
 
 #Create a random roommates preference matrix with "dim" players.
 create_preference <- function(dim){
-p <- matrix(runif(dim*dim),dim,dim)
+p <- matrix(runif(dim*dim),dim,dim,byrow=TRUE)
 diag(p)<- 1
 p %r% rank
 }
