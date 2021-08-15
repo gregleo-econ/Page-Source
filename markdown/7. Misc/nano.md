@@ -4,7 +4,13 @@
 
 I like to use the nano editor on-the-go. After a few years of using emacs, I appreciate the minimalism. The combination of macros and regex find/replace make it a perfectly usable system.
 
+## Screenshot 
+
+![Nano Editor](../files/Images/nano.JPG)
+
 ## Config
+
+Note: Some of these features (such as minibar and macros) are only available in the latest versions of nano. 
 
 ```{r,nano,eval=FALSE, echo=TRUE}
 set autoindent
