@@ -47,3 +47,7 @@ bind M-o end main
 bind M-q exit main
 bind M-u home main
 ```
+
+## Syntax Highlighting
+
+I highly reccomend the syntax highlighting config available from [Scopatz github](https://github.com/scopatz/nanorc).
