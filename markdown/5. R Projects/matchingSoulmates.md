@@ -45,35 +45,43 @@ So, how many people can be matched by IMS? Here is some R code that takes advant
 The core of this code is contained in the *whos_a_soulmate* function. 
 
 ```{r, whos, eval=FALSE}
-whos_a_spulmate <- function(p){which((p%r%rank%>%hadamard%r%min)==1)}
+whos_a_soulmate <- function(p){which((p%r%rank%>%hadamard%r%min)==1)}
 ```
 
 Let's setup an example preference matrix. 
 
-`r p <- matrix(c(3,1,2,1,3,2,2,1,3),3,3)`
-
-`r p`
+```{r, setupp, eval=TRUE}
+p <- matrix(c(3,1,2,1,3,2,2,1,3),3,3)`
+p
+```
 
 Plyer 1 likes 2 best, player 2 likes 1 best, player 3 likes 2 best. Note that 1 and 2 are soulmates.  
 
 The first step of the function ensures the matrix "p" is a ranking matrix. We apply the "rank" function to the "p" matrix by row using the by-row operator created here.
 
+```{r, step1, eval=TRUE}
 `p %r% rank`
+```
 
 Now we rake this matrix and take its Hadamard product with its own transpose by piping it to our "hadamard" function with the built-in R pipe. 
 
+```{r, step2, eval=TRUE}
 `p %r% rank %>% hadamard`
+```
 
 Note how off diagonal 1's in this matrix represent positions where both players prefer eachother most.
 
 Now we look for players who have a soulmatr by taking the min of each row (using the by-row operator). If a 1 is present, that player has a soulmate. 
 
+```{r, step3, eval=TRUE}
 `p %r% rank %>% hadamard %r% min`
+```
 
 Now we compare this vector to 1. The indicies that are equal to 1 are players who have a soulmate. 
 
+```{r, step4, eval=TRUE}
 `p %r% rank %>% hadamard %r% min == 1`
-
+```
 
 ## Code
 
