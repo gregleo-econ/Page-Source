@@ -66,7 +66,7 @@ p %r% rank
 Now we rake this matrix and take its Hadamard product with its own transpose by piping it to our "hadamard" function with the built-in R pipe. 
 
 ```{r, step2, eval=TRUE}
-`p %r% rank %>% hadamard
+p %r% rank %>% hadamard
 ```
 
 Note how off diagonal 1's in this matrix represent positions where both players prefer eachother most.
