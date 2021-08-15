@@ -51,7 +51,7 @@ whos_a_soulmate <- function(p){which((p%r%rank%>%hadamard%r%min)==1)}
 Let's setup an example preference matrix. 
 
 ```{r, setupp, eval=TRUE}
-p <- matrix(c(3,1,2,1,3,2,2,1,3),3,3)`
+p <- matrix(c(3,1,2,1,3,2,2,1,3),3,3)
 p
 ```
 
