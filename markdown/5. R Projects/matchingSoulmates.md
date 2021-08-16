@@ -94,13 +94,13 @@ p
 
 What we get is the remainder of the preference matrix "p" after removing soulmates. We only have player 3 left. Note that player 3 originally ranked being "alone" as third-best. That's why a 3 shows up here. Let's pipe this to rank again to have the player(s) rerank their potential partners.
 
-```{r, step5, eval=TRUE}
+```{r, step6, eval=TRUE}
 p %r% rank
 ```
 
 Now we can run the process again.
 
-```{r, step6, eval=TRUE}
+```{r, step7, eval=TRUE}
 p <- p %rm% whos_a_soulmate(p)
 p
 ```
