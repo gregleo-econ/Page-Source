@@ -1,6 +1,12 @@
 +4
 
-# Code Golf: Abundant Numbers
+# t(t(a[((!outer(a,a,"%%"))%*%a)>=2*a]))
+
+## Code Golf
+
+The goal in *code golf* is to produce a program that solves a problem with as few characters as possible. Here is a code golf problem where R does pretty well. 
+
+## Abundant Numbers
 
 This problem comes from [Here](<https://code.golf/abundant-numbers>](https://code.golf/abundant-numbers).
 
