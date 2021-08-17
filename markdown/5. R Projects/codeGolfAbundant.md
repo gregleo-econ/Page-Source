@@ -8,11 +8,12 @@ This problem comes from [Here](<https://code.golf/abundant-numbers>](https://cod
 
 *Print all the abundant numbers from **1** to **200** inclusive, each on their own line.*
 
-## Code: (69 Characters)
+## Code: (50 Characters)
 
-This code takes advantage of R's matrix functions and operators. It uses both the outer function outer() as well as the outer product %o%.
+This code takes advantage of R's matrix functions and operators.
 
 ```{r abundant}
-a=1:200
-t(t(a[rowSums((outer(a,a,"%%")==0)*t(a%o%rep(1,200)))>=2*a]))
+a = 1:200
+t(t(a[((outer(a,a,"%%")==0)%*%a)>=2*a]))
 ```
+
