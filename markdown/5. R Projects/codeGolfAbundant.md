@@ -1,6 +1,12 @@
 +4
 
-# Code Golf: Abundant Numbers
+# t(t(a[((!outer(a,a,"%%"))%*%a)>=2*a]))
+
+## Code Golf
+
+The goal in *code golf* is to produce a program that solves a problem with as few characters as possible. Here is a code golf problem where R does pretty well. 
+
+## Abundant Numbers
 
 This problem comes from [Here](<https://code.golf/abundant-numbers>](https://code.golf/abundant-numbers).
 
@@ -8,11 +14,12 @@ This problem comes from [Here](<https://code.golf/abundant-numbers>](https://cod
 
 *Print all the abundant numbers from **1** to **200** inclusive, each on their own line.*
 
-## Code: (69 Characters)
+## Code: (46 Characters)
 
-This code takes advantage of R's matrix functions and operators. It uses both the outer function outer() as well as the outer product %o%.
+This code takes advantage of R's matrix functions and operators.
 
 ```{r abundant}
 a=1:200
-t(t(a[rowSums((outer(a,a,"%%")==0)*t(a%o%rep(1,200)))>=2*a]))
+t(t(a[((!outer(a,a,"%%"))%*%a)>=2*a]))
 ```
+
