@@ -4,7 +4,7 @@
 
 ## Citation 
 
-Leo, Greg and Lou, Jian and Van der Linden, Martin and Vorobeychik, Yevgeniy and Wooders, Myrna H., "Matching Soulmates." *forthcoming*
+Leo, Greg and Lou, Jian and Van der Linden, Martin and Vorobeychik, Yevgeniy and Wooders, Myrna H., "Matching Soulmates." Journal of Public Economic Theory. *forthcoming*
 
 ## Link 
 
