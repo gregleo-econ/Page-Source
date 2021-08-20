@@ -2,6 +2,14 @@
 
 # News
 
+## 8/20/2021
+
+[Matching Soulmates] has been accepted in the Journal of Public Economic Theory. The latest version of the paper is available [here](https://gregcleo.com/files/Papers/PUB_Matching-Soulmates.pdf)  
+
+![xkcd 770](https://imgs.xkcd.com/comics/all_the_girls.png)
+
+
+
 ## 8/13/2021
 
 This page now builds automatically using github actions! This lets me update the page and add content from *anywhere*. In fact, I posted this update from my [Pocket C.H.I.P](https://opensource.com/article/17/2/pocketchip-or-pi).
