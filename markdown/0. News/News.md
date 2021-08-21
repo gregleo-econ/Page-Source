@@ -7,6 +7,8 @@
 [Matching Soulmates](https://gregcleo.com/1.%20Papers/MatchingSoulmates.html) has been accepted in the Journal of Public Economic Theory. The latest version of the paper is available [here](https://gregcleo.com/files/Papers/PUB_Matching-Soulmates.pdf).  
 
 ![xkcd 770](https://imgs.xkcd.com/comics/all_the_girls.png)
+<center>[xkcd #770](https://xkcd.com/770/)</center>
+
 
 
 
