@@ -18,12 +18,10 @@ jobs:
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v1
-	with:
-	  r-version: release
 
       - name: Install packages
         run: |
-          R -e 'install.packages(c("knitr","fs","stringr","dplyr","stringi","magrittr","renv","txtplot"))'
+          R -e 'install.packages(c("knitr","fs","stringr","dplyr","stringi","magrittr","renv","txtplot","markdown"))'
           R -e 'renv::restore()'
 
       - name: Make Page
