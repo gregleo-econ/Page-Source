@@ -8,4 +8,4 @@ Leo, Greg and Lou, Jian and Van der Linden, Martin and Vorobeychik, Yevgeniy and
 
 ## Link 
 
-[Matching Soulmates](../files/Papers/WP_Matching-Soulmates.pdf)
+[Matching Soulmates](https://onlinelibrary.wiley.com/doi/10.1111/jpet.12542)
