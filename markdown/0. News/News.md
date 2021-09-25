@@ -2,6 +2,11 @@
 
 # News
 
+## 9/25/2021
+
+I will be presenting "Minimal Experiments" (joint with PJ Healy) on 9/4/2021 at The University of Tennessee.
+
+
 ## 8/20/2021
 
 [Matching Soulmates](https://gregcleo.com/1.%20Papers/MatchingSoulmates.html) has been accepted in the Journal of Public Economic Theory. The latest version of the paper is available [here](https://gregcleo.com/files/Papers/PUB_Matching-Soulmates.pdf).  
