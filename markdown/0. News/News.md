@@ -4,7 +4,7 @@
 
 ## 9/25/2021
 
-I will be presenting "Minimal Experiments" (joint with PJ Healy) on 9/4/2021 at The University of Tennessee.
+I will be presenting "Minimal Experiments" (joint with PJ Healy) on 10/4/2021 at The University of Tennessee.
 
 
 ## 8/20/2021
