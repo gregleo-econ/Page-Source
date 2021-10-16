@@ -2,6 +2,10 @@
 
 # News
 
+## 10/16/2021
+
+I will be attending ESA North America meetings in Tucson. 
+
 ## 9/25/2021
 
 I will be presenting "Minimal Experiments" (joint with PJ Healy) on 10/4/2021 at The University of Tennessee.
@@ -23,7 +27,7 @@ This page now builds automatically using github actions! This lets me update the
 
 ![Pocket CHIP](../files/Images/pocketchip.jpeg)
 
-I will update the R projects page with more info on the setup. 
+I will update the R projects page with more info on the setup.
 
 ## 8/12/2021
 
