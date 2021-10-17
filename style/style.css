@@ -97,7 +97,7 @@ pre {
 a:hover,
 a:active {
 	text-decoration: none;
-	text-decoration: line-through;
+	/*text-decoration: line-through;*/
 }
 
 p {
