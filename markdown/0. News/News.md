@@ -2,7 +2,7 @@
 
 # News
 
-## 10/16/2021
+## 10/17/2021
 
 I have added an updated working paper [Subgame Perfect Coalition Formation](https://gregcleo.com/2.%20Working%20Papers/SPGS.html) (joint with Eugene Vorobeychik and Myrna Wooders).
 
