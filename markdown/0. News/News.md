@@ -6,6 +6,7 @@
 
 I have added an updated working paper [Subgame Perfect Coalition Formation](https://gregcleo.com/2.%20Working%20Papers/SPGS.html) (joint with Eugene Vorobeychik and Myrna Wooders).
 
+In this paper, we analyze a dynamic coalition formation game, the "seqeuential proposer game". A player proposes a coalition. The players in that coalition accpet or reject the proposal. As long as each player is able to make enough proposals, the equilibrium outcome is Pareto optimal.  
 
 ## 9/25/2021
 
