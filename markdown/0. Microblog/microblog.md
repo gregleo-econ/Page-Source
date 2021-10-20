@@ -8,9 +8,8 @@ I am happy to announce **VU Meets and Joins** a new Theory/Experimental brown ba
 
 Our first meeting is tomorrow 10/20/2021:  
 
-Myrna Wooders will be presenting *Own Experience and Discrimination; Labor Market Model and Experiment*  
-
-I will be presenting *Minimal Experiments*  
+- Myrna Wooders will be presenting *Own Experience and Discrimination; Labor Market Model and Experiment*  
+- I will be presenting *Minimal Experiments*  
 
 If you are interested in presenting to our group, reach out to me. We are open to outside speakers either in-person or via zoom.
 
