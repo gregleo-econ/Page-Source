@@ -1,9 +1,5 @@
 # Microblog
 
-## Oct 19, 2021 at 8:50 PM
-
-Test
-
 ## 10/17/2021
 
 I have added an updated working paper [Subgame Perfect Coalition Formation](https://gregcleo.com/2.%20Working%20Papers/SPGS.html) (joint with Eugene Vorobeychik and Myrna Wooders).
