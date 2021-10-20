@@ -9,6 +9,7 @@ I generate this site from a directory of markdown files using a script written i
 
 Your directory should have a folder called "markdown". This folder must contain one folder for each category of page you want on the index page of the site. I have, for instance "papers" and "teaching" as subfolders. Each subfolder must have one markdown file per page you want on the site. The markdown files should start with a single blank line and then a header `# Title`. This header will be used as the title of the page on the index.  
 
+
 Pull the code from "Background Code" into a .R file in your directory and save it as "background.R". You might also want to put a styleshee (css) file in the directory as well. I keep mine in a /style subdirectory. The content of my stylesheet is also provided below. 
 
 ## Running the code.
