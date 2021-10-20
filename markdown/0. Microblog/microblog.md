@@ -4,15 +4,15 @@
 
 ## 10/19/21, 9:33 PM
 
-I am happy to announce **VU Meets and Joins** a new Theory/Experimental brown bag series at Vanderbilt. We meet every other Wednesday at 12pm in Calhoun 413B. 
+I am happy to announce **VU Meets and Joins** a new Theory/Experimental brown bag series at Vanderbilt. We meet every other Wednesday at 12pm in Calhoun 413B.  
 
-Our first meeting is tomorrow 10/20/2021:
+Our first meeting is tomorrow 10/20/2021:  
 
-Myrna Wooders will be presenting *Own Experience and Discrimination; Labor Market Model and Experiment*
+Myrna Wooders will be presenting *Own Experience and Discrimination; Labor Market Model and Experiment*  
 
-I will be presenting *Minimal Experiments*
+I will be presenting *Minimal Experiments*  
 
-If you are interested in presenting to our group, reach out to me. We are open to outside speakers either in-person or via zoom. 
+If you are interested in presenting to our group, reach out to me. We are open to outside speakers either in-person or via zoom.
 
 ## 10/19/21, 9:01 PM
 
