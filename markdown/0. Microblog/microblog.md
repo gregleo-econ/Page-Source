@@ -12,7 +12,7 @@ Myrna Wooders will be presenting *Own Experience and Discrimination; Labor Marke
 
 I will be presenting *Minimal Experiments*
 
-If you are interesting in presenting to our group, reach out to me. We are open to outside speakers either in-person or via zoom. 
+If you are interested in presenting to our group, reach out to me. We are open to outside speakers either in-person or via zoom. 
 
 ## 10/19/21, 9:01 PM
 
