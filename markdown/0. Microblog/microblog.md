@@ -2,6 +2,10 @@
 
 # Microblog  
 
+## 10/19/21, 9:01 PM
+
+News is now **Microblog**. I can post right from my phone via an iOS shortcut. Now I’ve got nothing to say and an easy way to say it!
+
 ## 10/16/2021
 
 I have added an updated working paper [Subgame Perfect Coalition Formation](https://gregcleo.com/2.%20Working%20Papers/SPGS.html) (joint with Eugene Vorobeychik and Myrna Wooders).
