@@ -1,15 +1,19 @@
-+1 
++1
 
-# Microblog  
+# Microblog
+
+## 10/23/21, 8:14 PM
+
+I am now on gopherspace at [gopher://gopher.gregcleo.com:70/](gopher://gopher.gregcleo.com:70/). 
 
 ## 10/19/21, 9:33 PM
 
-I am happy to announce **VU Meets and Joins** a new Theory/Experimental brown bag series at Vanderbilt. We meet every other Wednesday at 12pm in Calhoun 413B.  
+I am happy to announce **VU Meets and Joins** a new Theory/Experimental brown bag series at Vanderbilt. We meet every other Wednesday at 12pm in Calhoun 413B.
 
-Our first meeting is tomorrow 10/20/2021:  
+Our first meeting is tomorrow 10/20/2021:
 
-- Myrna Wooders will be presenting *Own Experience and Discrimination; Labor Market Model and Experiment*  
-- I will be presenting *Minimal Experiments*  
+- Myrna Wooders will be presenting *Own Experience and Discrimination; Labor Market Model and Experiment*
+- I will be presenting *Minimal Experiments*
 
 If you are interested in presenting to our group, reach out to me. We are open to outside speakers either in-person or via zoom.
 
@@ -21,7 +25,7 @@ News is now **Microblog**. I can post right from my phone via an iOS shortcut. N
 
 I have added an updated working paper [Subgame Perfect Coalition Formation](https://gregcleo.com/2.%20Working%20Papers/SPGS.html) (joint with Eugene Vorobeychik and Myrna Wooders).
 
-In this paper, we analyze a dynamic coalition formation game, the "seqeuential proposer game". A player proposes a coalition. The players in that coalition accpet or reject the proposal. As long as each player is able to make enough proposals, the equilibrium outcome is Pareto optimal.  
+In this paper, we analyze a dynamic coalition formation game, the "seqeuential proposer game". A player proposes a coalition. The players in that coalition accpet or reject the proposal. As long as each player is able to make enough proposals, the equilibrium outcome is Pareto optimal.
 
 ## 9/25/2021
 
@@ -29,7 +33,7 @@ I will be presenting "Minimal Experiments" (joint with PJ Healy) on 10/4/2021 at
 
 ## 8/20/2021
 
-[Matching Soulmates](https://gregcleo.com/1.%20Papers/MatchingSoulmates.html) has been accepted in the Journal of Public Economic Theory. The latest version of the paper is available [here](https://gregcleo.com/files/Papers/PUB_Matching-Soulmates.pdf).  
+[Matching Soulmates](https://gregcleo.com/1.%20Papers/MatchingSoulmates.html) has been accepted in the Journal of Public Economic Theory. The latest version of the paper is available [here](https://gregcleo.com/files/Papers/PUB_Matching-Soulmates.pdf).
 
 ![xkcd 770](https://imgs.xkcd.com/comics/all_the_girls.png)
 <center>[xkcd #770](https://xkcd.com/770/)</center>
