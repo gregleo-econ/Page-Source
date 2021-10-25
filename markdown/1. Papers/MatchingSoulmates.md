@@ -10,8 +10,6 @@ Leo, Greg and Lou, Jian and Van der Linden, Martin and Vorobeychik, Yevgeniy and
 
 [Matching Soulmates](https://onlinelibrary.wiley.com/doi/10.1111/jpet.12542)
 
-+2
-
 ## Matching Soulmates in R
 
 ```{r, IMSsetup, echo=FALSE}
