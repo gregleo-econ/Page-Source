@@ -4,3 +4,5 @@
     (___// (_(/_(_)_  (/___/(/_(_)
                  /|               
                 (/                
+  
+[Gopher Phlog](gopher://gopher.gregcleo.com:70/). 

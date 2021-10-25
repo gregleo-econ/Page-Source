@@ -141,7 +141,7 @@ makeIndex <- function(fileData,pageTitle,indexHeader) {
 #Add a "back" link to each page.
 addBack <- function(fileInfo){
   headerPath <- paste(directory, "/markdown/header.md", sep = "")
-  header <- readChar(headerPath, file.info(indexHeaderPath)$size)
+  header <- readChar(headerPath, file.info(headerPath)$size)
   content <- fileInfo$content
   content <- paste(header, content, collapse = "")
   fileInfo$content <- content
