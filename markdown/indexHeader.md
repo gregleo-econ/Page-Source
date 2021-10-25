@@ -1,3 +1,5 @@
+<title>Greg Leo</title>
+
        ,___             __          Greg Leo
       /   /            ( /          Economic Theory | Experimental
      /  ___   _  _,     /    _  __  Vanderbilt University
