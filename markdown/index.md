@@ -1,9 +1,13 @@
-       ,___             __        
-      /   /            ( /        
-     /  ___   _  _,     /    _  __
-    (___// (_(/_(_)_  (/___/(/_(_)
-                 /|               
-                (/                
+<title>Greg Leo</title>
+
+       ,___             __             ************************************
+      /   /            ( /             * Greg Leo                         *
+     /  ___   _  _,     /    _  __     * Economic Theory  |  Experimental *
+    (___// (_(/_(_)_  (/___/(/_(_)     * Vanderbilt University            *
+                 /|                    * g|dot|leo|at|vanderbilt|dot|edu  *
+                (/                     ************************************
+  
+**Other protocols** | [Gopher](gopher://gopher.gregcleo.com:70/) | 
 
 ##  MICROBLOG
 [Microblog](0. Microblog/microblog.html)
@@ -38,28 +42,17 @@
 [A Generalization of Teicher's Poisson Tail Inequality](3. Math Working Papers/Teicher.html)
 
 ##  TEACHING
+[Econ 3012](4. Teaching/econ3012.html)
+
 [Econ 8100](4. Teaching/econ8100.html)
 
-[Econ 3012](4. Teaching/econ3012.html)
+[Workouts- Shape of Functions](4. Teaching/workouts.html)
 
 ##  R PROJECTS
 [t(t(a[((!outer(a,a,"%%"))%*%a)>=2*a]))](5. R Projects/codeGolfAbundant.html)
 
 [How I Generate This Webpage  ](5. R Projects/page maker.html)
 
-[Inline Skate Times](5. R Projects/inline.html)
-
-[Matching Soulmates in R](5. R Projects/matchingSoulmates.html)
-
-##  WORKOUTS - SHAPE OF FUNCTIONS
-[$\left(\frac{1}{x}+\frac{1}{y}\right)^\alpha$](6. Workouts - Shape of Functions/1_2.html)
-
-[$\left(1+\frac{1}{x}\right)^{x}$](6. Workouts - Shape of Functions/1_1.html)
-
-##  MISC
-[My Nano Edtior Config](7. Misc/nano.html)
-
-[ARTSEY.io One Handed Keyboard System](7. Misc/ARTSEY.html)
-
-[Retrocomputing - ChiWriter](7. Misc/Retrocomputing - ChiWriter.html)
+##  NON-ACADEMIC PROJECTS
+[ARTSEY.io - One Handed Keyboard Layout](6. Non-academic Projects/ARTSEY.html)
 
