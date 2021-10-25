@@ -2,7 +2,7 @@
 
 # Microblog
 
-## 10/25/21, 12:34
+## 10/25/21, 12:34 PM
 
 ChiWriter is a document editor for MsDos with built-in math fonts written by Cay Horstmann in 1986. It is available as abandonware on [Cay Hortsmann's Website.](https://horstmann.com/ChiWriter/) 
 

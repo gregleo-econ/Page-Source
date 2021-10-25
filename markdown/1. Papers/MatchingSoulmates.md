@@ -45,8 +45,6 @@ p %r% rank
 }
 ```
 
-## Intro
-
 In [Matching Soulmates](../2.%20Working%20Papers/MatchingSoulmates.html), my co-authors and I study a a recursive process in matching that
 forms coalitions that are mutually most-preferred by members of that coalition. We call this process the iterated matching of soulmates: *IMS*. We show that mechanisms that implement IMS have strong properties among those who are matched by IMS. 
 
