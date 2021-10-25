@@ -6,7 +6,7 @@ I participate in inline speed skating. To keep track of my progress, I follow ho
 
 ```{r setup, include=FALSE}
 library(txtplot)
-data <- read.csv(file = paste(dirname(sys.frame(1)$ofile),'skating.csv',collapse="/") 
+data <- read.csv(file = 'https://raw.githubusercontent.com/gregleo-econ/data/master/skating.csv') 
 ```
 
 ## ASCII 5 Mile Skate Times
@@ -14,7 +14,7 @@ data <- read.csv(file = paste(dirname(sys.frame(1)$ofile),'skating.csv',collapse
 Here are my best times over 5 miles. Of course, the x-axis is the number of seconds since *1970-01-01*. What else would it be?
 
 ```{r output, echo=FALSE}
-txtplot(as.numeric(as.POSIXct(data$dates, origin = "1970-01-01")),as.numeric(data$bestTimes),width=75)
+txtplot(as.numeric(as.POSIXct(data$dates, origin = "1970-01-01")),as.numeric(data$bestTimes),width=60)
 ```
 
 ## Code to Extract Best X Mile Times

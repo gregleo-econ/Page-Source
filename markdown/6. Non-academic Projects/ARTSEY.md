@@ -1,6 +1,6 @@
 +1
 
-# ARTSEY.io One Handed Keyboard System
+# ARTSEY.io - My One Handed Keyboard Layout
 
 I created and develop a one-handed system called [ARTSEY.io](http://artsey.io).
 
