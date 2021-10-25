@@ -117,9 +117,12 @@ makeLink <- function(fileInfo) {
 
 #Create the Index Page
 makeIndex <- function(fileData,pageTitle,indexHeader) {
-  indexText <- c(paste("# ",pageTitle,sep=""))
+  indexHeaderPath <-  paste(directory, "/markdown/indexHeader.md", sep = "")
+  indexHeader <-  readChar(indexHeaderPath, file.info(indexHeaderPath)$size)
+  indexText <- c(indexHeader,sep="")
   folders <- fileData %>% pull(folder) %>% unique
   for(currentFolder in folders){
+    
     indexText <- c(indexText,paste("## ",toupper(substring(currentFolder,3)),sep=""))
     subsetFiles <- fileData %>% filter(folder==currentFolder) %>% arrange(desc(priority))
     for(i in 1:dim(subsetFiles)[1]){
@@ -137,9 +140,10 @@ makeIndex <- function(fileData,pageTitle,indexHeader) {
 
 #Add a "back" link to each page.
 addBack <- function(fileInfo){
+  headerPath <- paste(directory, "/markdown/header.md", sep = "")
+  header <- readChar(headerPath, file.info(indexHeaderPath)$size)
   content <- fileInfo$content
-  content <- 
-    content <- paste("[Back](../index.html) \r\n", content, collapse = "")
+  content <- paste(header, content, collapse = "")
   fileInfo$content <- content
   fileInfo
 }
