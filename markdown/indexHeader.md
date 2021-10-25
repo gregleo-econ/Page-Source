@@ -5,4 +5,4 @@
                  /|               
                 (/                
   
-[Gopher Phlog](gopher://gopher.gregcleo.com:70/). 
+**Other protocols** | [Gopher Phlog](gopher://gopher.gregcleo.com:70/) | 
