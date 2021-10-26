@@ -134,7 +134,8 @@ makeIndex <- function(fileData,pageTitle,indexHeader) {
   knit2html(
     paste(directory, "/markdown/index.md", sep = ""),
     paste(directory, "/static/index.md", sep = ""),
-    stylesheet = style
+    stylesheet = style,
+    title=pageTitle
   )
 }
 
