@@ -1,6 +1,12 @@
-+1
++1 
 
-# Microblog
+# Microblog  
+
+## 10/26/21, 7:12 PM
+
+iOS has built-in to run scripts over ssh as part of the shortcuts app. I’ve set up a shortcut to log into my home raspberry pi server and update my gopher “phlog” with text from the share sheet. 
+
+Currently my gopher server is the only thing running on my home server, but I am eager to explore the possibility of linking phone automations with a persistent linux server. 
 
 ## 10/25/21, 12:34 PM
 
