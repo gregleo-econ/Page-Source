@@ -6,8 +6,10 @@
              /|                  * g|dot|leo|at|vanderbilt|dot|edu  *
             (/                   ************************************
 ```
-**ESA Tucson** | Friday | 10:00 AM | Palm Room | [Minimal Experiments](https://gregleo-econ.shinyapps.io/minimalexperiments/)  
 
+| **ESA Presentation** | Friday 10:00 AM | Palm Room |  
+ 
+@@@@ [Minimal Experiments App](https://gregleo-econ.shinyapps.io/minimalexperiments/) @@@@   
 
 
 
