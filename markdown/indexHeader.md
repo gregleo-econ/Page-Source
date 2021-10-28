@@ -6,5 +6,8 @@
              /|                  * g|dot|leo|at|vanderbilt|dot|edu  *
             (/                   ************************************
 ```
-  
-**Other protocols** | [Gopher](gopher://gopher.gregcleo.com:70/) | 
+**ESA Tucson** | Friday | 10:00 AM | Palm Room | [Minimal Experiments](https://gregleo-econ.shinyapps.io/minimalexperiments/)  
+
+
+
+
