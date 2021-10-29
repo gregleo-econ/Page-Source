@@ -7,18 +7,15 @@
             (/                   ************************************
 ```
 
-| **ESA Presentation** | Friday 10:00 AM | Palm Room |  
- 
-@@@@ [Minimal Experiments App](https://gregleo-econ.shinyapps.io/minimalexperiments/) @@@@   
+| **ESA Presentation** | [Slides/PDF](files/Presentations/MinEx20.pdf) | Friday 10:00 AM | Palm Room |  
 
-
-
+@@@@ [Minimal Experiments App](https://gregleo-econ.shinyapps.io/minimalexperiments/) @@@@
 
 
 ##  MICROBLOG
 [Gopher Log](0. Microblog/gopher.html)
 
-[Microblog  ](0. Microblog/microblog.html)
+[Microblog](0. Microblog/microblog.html)
 
 ##  PAPERS
 [Matching Soulmates](1. Papers/MatchingSoulmates.html)
