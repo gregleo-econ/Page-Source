@@ -1,11 +1,11 @@
 ```
 
-   ,___             __           ************************************
-  /   /            ( /           * Greg Leo                         *
- /  ___   _  _,     /    _  __   * Economic Theory  |  Experimental *
- ___// (_(/_(_)_  (/___/(/_(_)   * Vanderbilt University            *
-             /|                  * g|dot|leo|at|vanderbilt|dot|edu  *
-            (/                   ************************************
+   ,___             __           ***************************
+  /   /            ( /           * Greg Leo                *
+ /  ___   _  _,     /    _  __   * Vanderbilt Economics    *
+ ___// (_(/_(_)_  (/___/(/_(_)   * Theory | Experimental   *
+             /|                  * g.leo@vanderbilt.edu    *
+            (/                   ***************************
 
 ```
 | **ESA Presentation** | Friday 10:00 AM | Palm Room |  
