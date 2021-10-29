@@ -127,7 +127,7 @@ makeIndex <- function(fileData,pageTitle,indexHeader) {
     subsetFiles <- fileData %>% filter(folder==currentFolder) %>% arrange(desc(priority))
     for(i in 1:dim(subsetFiles)[1]){
       
-      indexText <- c(indexText,makeLink(subsetFiles[i,]))
+      indexText <- c(indexText,amakeLink(subsetFiles[i,]))
     }
   }
   indexText <- c(indexText,"```",timestamp(),"```")

@@ -119,7 +119,7 @@ makeLink <- function(fileInfo) {
 makeIndex <- function(fileData,pageTitle,indexHeader) {
   indexHeaderPath <-  paste(directory, "/markdown/indexHeader.md", sep = "")
   indexHeader <-  readChar(indexHeaderPath, file.info(indexHeaderPath)$size)
-  indexText <- c(indexHeader,sep="")
+  indexText <- indexHeader
   folders <- fileData %>% pull(folder) %>% unique
   for(currentFolder in folders){
     
