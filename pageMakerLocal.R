@@ -230,7 +230,7 @@ makePage <- function(directory, style,pageTitle,indexHeader) {
 
 # Local Building
 directory = getwd()
-
+ 
 
 style = paste(c(directory,"/style/style.css"),collapse="")
 makePage(directory,style,"Greg Leo")
