@@ -119,7 +119,7 @@ makeLink <- function(fileInfo) {
 makeIndex <- function(fileData,pageTitle,indexHeader) {
   indexHeaderPath <-  paste(directory, "/markdown/indexHeader.md", sep = "")
   indexHeader <-  readChar(indexHeaderPath, file.info(indexHeaderPath)$size)
-  indexText <- c(indexHeader,sep="")
+  indexText <- indexHeader
   folders <- fileData %>% pull(folder) %>% unique
   for(currentFolder in folders){
     
@@ -130,6 +130,7 @@ makeIndex <- function(fileData,pageTitle,indexHeader) {
       indexText <- c(indexText,makeLink(subsetFiles[i,]))
     }
   }
+  indexText <- c(indexText,"```",timestamp(),"```")
   writeLines(indexText, paste(directory, "/markdown/index.md", sep = ""))
   knit2html(
     paste(directory, "/markdown/index.md", sep = ""),

@@ -130,6 +130,7 @@ makeIndex <- function(fileData,pageTitle,indexHeader) {
       indexText <- c(indexText,makeLink(subsetFiles[i,]))
     }
   }
+  indexText <- c(indexText,"```",timestamp(),"```")
   writeLines(indexText, paste(directory, "/markdown/index.md", sep = ""))
   knit2html(
     paste(directory, "/markdown/index.md", sep = ""),

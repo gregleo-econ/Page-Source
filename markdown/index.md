@@ -8,8 +8,8 @@
 ```
 
 | **ESA Presentation** | Friday 10:00 AM | Palm Room |
+
 | [Slides/PDF](files/Presentations/MinEx20.pdf) | [Minimal Experiments App](https://gregleo-econ.shinyapps.io/minimalexperiments/) |
-
 
 ##  MICROBLOG
 [Gopher Log](0. Microblog/gopher.html)
@@ -60,3 +60,6 @@
 ##  NON-ACADEMIC PROJECTS
 [ARTSEY.io - One Handed Keyboard Layout](6. Non-academic Projects/ARTSEY.html)
 
+```
+##------ Thu Oct 28 19:34:27 2021 ------##
+```
