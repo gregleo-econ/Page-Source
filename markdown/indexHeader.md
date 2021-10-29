@@ -7,9 +7,6 @@
             (/                   ************************************
 ```
 
-| **ESA Presentation** | Friday 10:00 AM | Palm Room |  
- 
-@@@@ [Minimal Experiments App](https://gregleo-econ.shinyapps.io/minimalexperiments/) @@@@   
+| **ESA Presentation** | [Slides/PDF](files/Presentations/MinEx20.pdf) | Friday 10:00 AM | Palm Room |  
 
-
-
+@@@@ [Minimal Experiments App](https://gregleo-econ.shinyapps.io/minimalexperiments/) @@@@

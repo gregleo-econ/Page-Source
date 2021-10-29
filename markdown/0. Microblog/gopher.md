@@ -14,4 +14,4 @@ You have a few options. If you have Linux, you can use the Lynx browser, which s
 
 ## Why?
 
-I remember Gopher vaguely from my childhood, so there is an element of nostalgia. I also really like working in and consuming plain text. 
+I remember Gopher vaguely from my childhood, so there is an element of nostalgia. I also really like working in and consuming plain text.
