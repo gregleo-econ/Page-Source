@@ -7,3 +7,4 @@
             (/
 ```
 
+**New**: [Reduction in Belief Elicitation](2. Working Papers/Reduction.html)
