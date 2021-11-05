@@ -14,6 +14,6 @@ conditions for equilibrium to implement core coalition structures.
 
 Leo, Greg, Eugene Vorobeychik and Myrna Wooders, Subgame Perfect Coalition Formation; Pareto Optimality, Individual Rationality, and Matching Soulmates
 
-## Link
+## Paper
 
 [Subgame Perfect Coalition Formation; Pareto Optimality, Individual Rationality, and Matching Soulmates](../files/Papers/WP_SPGS.pdf)
