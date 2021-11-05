@@ -4,7 +4,7 @@
 
 ## 11/4/21, 7:14 PM @academic
 
-Andrew Dustan, Kristine Koutout and I have completed a new working papge: [Reduction in Belief Elicitations](2. Working Papers/Reduction.html).
+Andrew Dustan, Kristine Koutout and I have completed a new working papge: [Reduction in Belief Elicitation](../2. Working Papers/Reduction.html).
 
 ## 11/1/21, 7:32 PM @retrocomputing
 
