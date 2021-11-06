@@ -6,6 +6,6 @@
 
 Bergstrom, Ted and Leo, Greg, Volunteer's Dilemmas with and without Coordination
 
-## Link 
+## Paper
 
 [Volunteer's Dilemmas with and without Coordination](../files/Papers/WP_Volunteers_Dilemmas.pdf)

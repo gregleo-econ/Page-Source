@@ -6,4 +6,5 @@
              /|
             (/
 ```
-| *New Working Paper* | [Reduction in Belief Elicitations](2. Working Papers/Reduction.html) | 
+
+**New**: [Reduction in Belief Elicitation](2. Working Papers/Reduction.html)

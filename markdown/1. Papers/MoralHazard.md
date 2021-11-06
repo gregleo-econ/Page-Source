@@ -7,6 +7,6 @@
 Castillo, Marco, and Gregory Leo. “Moral Hazard and Reciprocity.” Southern Economic Journal 77, no. 2 (2010): 271-281.
 
 
-## Link 
+## Paper
 
 [Moral Hazard and Reciprocity](<https://onlinelibrary.wiley.com/doi/pdf/10.4284/sej.2010.77.2.271>)

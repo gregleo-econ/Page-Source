@@ -1,6 +1,6 @@
-+7
++8
 
-# *NEW* Reduction in Belief Elicitation
+# ++NEW++ Reduction in Belief Elicitation
 
 ## Abstract
 
@@ -22,6 +22,6 @@ characteristics that affect accuracy.
 
 Dustan, Andrew and Koutout, Kristine and Leo, Greg, Reduction in Belief Elicitation
 
-## Link
+## Paper
 
 [Reduction in Belief Elicitation](../files/Papers/WP_Reduction_in_Belief_Elicitation.pdf)

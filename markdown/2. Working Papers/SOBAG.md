@@ -6,7 +6,7 @@
 
 Dustan, Andrew and Koutout, Kristine and Leo, Greg, Second-Order Beliefs and Gender
 
-## Link 
+## Paper
 
 [Second-Order Beliefs and Gender](../files/Papers/WP_Second-Order-Beliefs.pdf)
 
