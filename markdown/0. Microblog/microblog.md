@@ -2,6 +2,8 @@
 
 # Microblog
 
+Test
+
 ## 11/4/21, 7:14 PM @academic
 
 Andrew Dustan, Kristine Koutout and I have completed a new working papge: [Reduction in Belief Elicitation](../2. Working Papers/Reduction.html).
