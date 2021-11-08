@@ -41,6 +41,8 @@ if [ -d ".git" ]; then
               exit 1
           else
               echo $GU_SUCCESS_REPORT
+	      cp -R /static ~/static
+
           fi
       fi
   fi
