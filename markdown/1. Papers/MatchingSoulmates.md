@@ -148,7 +148,7 @@ p %r% rank
 
 #Set up parameters. "dim" is the number of players. "n" is the number of random trials. 
 dim <- 10
-n <- 10000
+n <- 100
 
 #Create List of "n" Preference Matricies with "dim" players.
 preference_list <- lapply(1:n,function(x){create_preference(dim)})

@@ -1,63 +1,64 @@
-```
-   ,___             __           
-  /   /            ( /           
- /  ___   _  _,     /    _  __   
- ___// (_(/_(_)_  (/___/(/_(_)   
-             /|                  
-            (/                   
-```
-| **ESA Presentation** | Friday 10:00 AM | Palm Room |  
-
-| [Slides/PDF](files/Presentations/MinEx20.pdf) | [Minimal Experiments App](https://gregleo-econ.shinyapps.io/minimalexperiments/) we| [GIF Version of Talk](2. Working Papers/MinimalExperiments.html) |
-##  MICROBLOG
-[Gopher Log](0. Microblog/gopher.html)
+```
+   ,___             __
+  /   /            ( /
+ /  ___   _  _,     /    _  __
+ ___// (_(/_(_)_  (/___/(/_(_)
+             /|
+            (/
+```
 
-[Microblog](0. Microblog/microblog.html)
+**New**: [Reduction in Belief Elicitation](2. Working Papers/Reduction.html)
+##  MICROBLOG
+[9](1/gopher.html)
+
+[13](1/microblog.html)
 
 ##  PAPERS
-[Matching Soulmates](1. Papers/MatchingSoulmates.html)
+[12](2/MatchingSoulmates.html)
 
-[Let Me, or Let George?](1. Papers/LMOLG.html)
+[11](2/LMOLG.html)
 
-[Room Composition Effects on Risk Taking by Gender](1. Papers/RoomComposition.html)
+[16](2/RoomComposition.html)
 
-[Taking Turns](1. Papers/TakingTurns.html)
+[20](2/TakingTurns.html)
 
-[Moral Hazard and Reciprocity](1. Papers/MoralHazard.html)
+[15](2/MoralHazard.html)
 
 ##  WORKING PAPERS
-[Minimal Experiments](2. Working Papers/MinimalExperiments.html)
+[1](3/Reduction.html)
 
-[Subgame Perfect Coalition Formation](2. Working Papers/SPGS.html)
+[14](3/MinimalExperiments.html)
 
-[Competing for Priorities in School Choice](2. Working Papers/Competing.html)
+[18](3/SPGS.html)
 
-[Second-Order Beliefs and Gender](2. Working Papers/SOBAG.html)
+[5](3/Competing.html)
 
-[From Coordination to Double-Crossing](2. Working Papers/CoordinationDoubleCrossing.html)
+[17](3/SOBAG.html)
 
-[Volunteer's Dilemmas with and without Coordination](2. Working Papers/Volunteers.html)
+[8](3/CoordinationDoubleCrossing.html)
+
+[21](3/Volunteers.html)
 
 ##  MATH WORKING PAPERS
-[A Binomial Tail Inequality for Successes](3. Math Working Papers/Binomial.html)
+[2](4/Binomial.html)
 
-[A Generalization of Teicher's Poisson Tail Inequality](3. Math Working Papers/Teicher.html)
+[3](4/Teicher.html)
 
 ##  TEACHING
-[Econ 3012](4. Teaching/econ3012.html)
+[6](5/econ3012.html)
 
-[Econ 8100](4. Teaching/econ8100.html)
+[7](5/econ8100.html)
 
-[Workouts- Shape of Functions](4. Teaching/workouts.html)
+[22](5/workouts.html)
 
 ##  R PROJECTS
-[t(t(a[((!outer(a,a,"%%"))%*%a)>=2*a]))](5. R Projects/codeGolfAbundant.html)
+[19](6/codeGolfAbundant.html)
 
-[How I Generate This Webpage  ](5. R Projects/page maker.html)
+[10](6/page maker.html)
 
 ##  NON-ACADEMIC PROJECTS
-[ARTSEY.io - One Handed Keyboard Layout](6. Non-academic Projects/ARTSEY.html)
+[4](7/ARTSEY.html)
 
 ```
-##------ Thu Oct 28 22:16:16 2021 ------##
+##------ Mon Nov  8 11:13:41 2021 ------##
 ```

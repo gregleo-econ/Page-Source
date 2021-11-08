@@ -109,7 +109,7 @@ makeLink <- function(fileInfo) {
     "](",
     fileInfo$folder,
     "/",
-    substr(fileInfo$fileName, 1, nchar(fileInfo$fileName) - 2),
+    substr(as.character(fileInfo$fileName), 1, nchar(as.character(fileInfo$fileName)) - 2),
     "html)\n"
   ),
   collapse = "")
@@ -226,11 +226,11 @@ makePage <- function(directory, style,pageTitle,indexHeader) {
 }
 
 #Set it up. Make it go.
-directory = dirname(sys.frame(1)$ofile)
-setwd(directory)
+#directory = dirname(sys.frame(1)$ofile)
+#setwd(directory)
 
 # Local Building
-#directory = getwd()
+directory = getwd()
 
 
 style = paste(c(directory,"/style/style.css"),collapse="")
