@@ -1,64 +1,64 @@
-```
-   ,___             __
-  /   /            ( /
- /  ___   _  _,     /    _  __
- ___// (_(/_(_)_  (/___/(/_(_)
-             /|
-            (/
-```
-
+```
+   ,___             __
+  /   /            ( /
+ /  ___   _  _,     /    _  __
+ ___// (_(/_(_)_  (/___/(/_(_)
+             /|
+            (/
+```
+
 **New**: [Reduction in Belief Elicitation](2. Working Papers/Reduction.html)
 ##  MICROBLOG
-[9](1/gopher.html)
+[Gopher Log](0. Microblog/gopher.html)
 
-[13](1/microblog.html)
+[Microblog](0. Microblog/microblog.html)
 
 ##  PAPERS
-[12](2/MatchingSoulmates.html)
+[Matching Soulmates](1. Papers/MatchingSoulmates.html)
 
-[11](2/LMOLG.html)
+[Let Me, or Let George?](1. Papers/LMOLG.html)
 
-[16](2/RoomComposition.html)
+[Room Composition Effects on Risk Taking by Gender](1. Papers/RoomComposition.html)
 
-[20](2/TakingTurns.html)
+[Taking Turns](1. Papers/TakingTurns.html)
 
-[15](2/MoralHazard.html)
+[Moral Hazard and Reciprocity](1. Papers/MoralHazard.html)
 
 ##  WORKING PAPERS
-[1](3/Reduction.html)
+[++NEW++ Reduction in Belief Elicitation](2. Working Papers/Reduction.html)
 
-[14](3/MinimalExperiments.html)
+[Minimal Experiments](2. Working Papers/MinimalExperiments.html)
 
-[18](3/SPGS.html)
+[Subgame Perfect Coalition Formation](2. Working Papers/SPGS.html)
 
-[5](3/Competing.html)
+[Competing for Priorities in School Choice](2. Working Papers/Competing.html)
 
-[17](3/SOBAG.html)
+[Second-Order Beliefs and Gender](2. Working Papers/SOBAG.html)
 
-[8](3/CoordinationDoubleCrossing.html)
+[From Coordination to Double-Crossing](2. Working Papers/CoordinationDoubleCrossing.html)
 
-[21](3/Volunteers.html)
+[Volunteer's Dilemmas with and without Coordination](2. Working Papers/Volunteers.html)
 
 ##  MATH WORKING PAPERS
-[2](4/Binomial.html)
+[A Binomial Tail Inequality for Successes](3. Math Working Papers/Binomial.html)
 
-[3](4/Teicher.html)
+[A Generalization of Teicher's Poisson Tail Inequality](3. Math Working Papers/Teicher.html)
 
 ##  TEACHING
-[6](5/econ3012.html)
+[Econ 3012](4. Teaching/econ3012.html)
 
-[7](5/econ8100.html)
+[Econ 8100](4. Teaching/econ8100.html)
 
-[22](5/workouts.html)
+[Workouts- Shape of Functions](4. Teaching/workouts.html)
 
 ##  R PROJECTS
-[19](6/codeGolfAbundant.html)
+[t(t(a[((!outer(a,a,"%%"))%*%a)>=2*a]))](5. R Projects/codeGolfAbundant.html)
 
-[10](6/page maker.html)
+[How I Generate This Webpage  ](5. R Projects/page maker.html)
 
 ##  NON-ACADEMIC PROJECTS
-[4](7/ARTSEY.html)
+[ARTSEY.io - One Handed Keyboard Layout](6. Non-academic Projects/ARTSEY.html)
 
 ```
-##------ Mon Nov  8 11:13:41 2021 ------##
+##------ Mon Nov 08 12:15:03 2021 ------##
 ```

@@ -103,7 +103,7 @@ getStaticPath <- function(file, folder, directory) {
 
 #Make a Link to the Static File in Markdown Format
 makeLink <- function(fileInfo) {
-  paste(c(
+    paste(c(
     "[",
     fileInfo$title,
     "](",
@@ -117,6 +117,7 @@ makeLink <- function(fileInfo) {
 
 #Create the Index Page
 makeIndex <- function(fileData,pageTitle,indexHeader) {
+  
   indexHeaderPath <-  paste(directory, "/markdown/indexHeader.md", sep = "")
   indexHeader <-  readChar(indexHeaderPath, file.info(indexHeaderPath)$size)
   indexText <- indexHeader
@@ -126,7 +127,7 @@ makeIndex <- function(fileData,pageTitle,indexHeader) {
     indexText <- c(indexText,paste("## ",toupper(substring(currentFolder,3)),sep=""))
     subsetFiles <- fileData %>% filter(folder==currentFolder) %>% arrange(desc(priority))
     for(i in 1:dim(subsetFiles)[1]){
-      
+      print(subsetFiles[i,])
       indexText <- c(indexText,makeLink(subsetFiles[i,]))
     }
   }
@@ -196,7 +197,7 @@ makeFileData <- function(directory){
       content <- c(content,fileContent)
     }
   }
-  return(data.frame(fileName = fileName,folder = folder,fullMarkdownPath = fullMarkdownPath,fullStaticPath = fullStaticPath,title = title,priority = priority,content = content))
+  return(data.frame(fileName = fileName,folder = folder,fullMarkdownPath = fullMarkdownPath,fullStaticPath = fullStaticPath,title = title,priority = priority,content = content,stringsAsFactors=FALSE))
 }
 
 
