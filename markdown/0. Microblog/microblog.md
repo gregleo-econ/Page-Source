@@ -2,28 +2,11 @@
 
 # Microblog  
 
-## 11/8/21, 9:55 PM
+## 11/8/21, 9:55 PM @webpage
 
 I’ve moved my site generation to a new raspberry **pi zero 2**.
 
 Previously, this site was generated in the cloud via a GitHub action. This required GitHub to fire up a virtual machine each timeI updated my site. To speed up this process and expand my control over the generation, I’ve migrated this to $15 pi zero. The time from updating my source repo to having live html updates is down to about a minute, and now I can incorporated more complex build workflows using other tools. 
-
-I am on gopherspace at [gopher://gopher.gregcleo.com:70/](gopher://gopher.gregcleo.com:70/).
-
-## What is Gopher?
-
-The [Gopher Protocol](https://mncomputinghistory.com/gopher-protocol/) is an alternative to HTTP that was created in 1991 at the University of Minnesota. It is a very simple protocol for the distribution of (primarily) text. Gopher has had a resurgence recently thanks to the "Small Internet" movement that aims to get away from the bloat and noise of the modern internet.
-
-## How do I View Gopehrspace?!?
-
-You have a few options. If you have Linux, you can use the Lynx browser, which supports both gopher and http. On Windows or Mac, you can look for a native gopher client, or use the Firefox add-on client called ["Overbite"](https://gopher.floodgap.com/overbite/). If you do not want to download a client, you can also use the [Floodgap Public Gopher Proxy](https://gopher.floodgap.com), which allows you to view the Gopherspace through your http browser.
-
-## Why?
-
-I remember Gopher vaguely from my childhood, so there is an element of nostalgia. I also really like working in and consuming plain text.
-+1
-
-# Microblog
 
 ## 11/4/21, 7:14 PM @academic
 
