@@ -5,7 +5,7 @@
 # MIT License
 
 # Default to working directory
-LOCAL_REPO="."
+LOCAL_REPO="/root/Page-Source/"
 # Default to git pull with FF merge in quiet mode
 GIT_COMMAND="git pull --quiet"
 
@@ -16,11 +16,7 @@ GU_ERROR_NO_GIT="This directory has not been initialized with Git."
 GU_INFO_REPOS_EQUAL="The local repository is current. No update is needed."
 GU_SUCCESS_REPORT="Update complete."
 
-
-if [ $# -eq 1 ]; then
-  LOCAL_REPO="$1"
-  cd "$LOCAL_REPO"
-fi
+cd /root/Page-Source/
 
 if [ -d ".git" ]; then
   # update remote tracking branch
@@ -41,7 +37,20 @@ if [ -d ".git" ]; then
               exit 1
           else
               echo $GU_SUCCESS_REPORT
-	      cp -R /static ~/static
+              echo "Removing Old Page Contents"
+              cd /root/page
+              git pull
+              cd /root/Page-Source 
+              Rscript pageMakerLinux.R
+              rm -r /root/page/*
+              echo "Copying New Page Contents"
+	      cp -R static/. /root/page/
+              cd /root/page
+              echo "Pushing Update"
+              git add .
+              git commit -m "Automatic Build"
+              git push
+              echo "Done!"
 
           fi
       fi

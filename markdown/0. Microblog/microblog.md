@@ -4,9 +4,11 @@
 
 ## 11/8/21, 9:55 PM @webpage
 
-I’ve moved my site generation to a new raspberry **pi zero 2**.  
+I’ve moved my site generation to a raspberry pi.
 
-Previously, this site was generated in the cloud via a GitHub action. This required GitHub to fire up a virtual machine each time I updated my site. To speed up this process and expand my control over the generation, I’ve migrated this to $15 pi zero. The time from updating my source repo to having live html updates is down to about a minute, and now I can incorporated more complex build workflows using other tools. 
+Previously, this site was generated in the cloud via a GitHub action. This required GitHub to fire up a virtual machine each time I updated my site. To speed up this process and expand my control over the generation, I’ve migrated this to an older pi 3, which provides more than enough power to handle this tiny site.  
+
+The time from updating my source repo to having live html updates is down to about a minute, and now I can incorporated more complex build workflows using other tools. 
 
 ## 11/4/21, 7:14 PM @academic
 
