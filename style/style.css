@@ -1,9 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bgcol: #312F2f;
+	--header1bgcol: #BF98A0;
+	--header2bgcol: #BF98A0;
+	--header1fgcol: #312F2f;
+	--header2fgcol: #312F2f;
+  --textcol: #a6D9F7;
+	--linkcol: #84DCCF;
+	--visitedlinkcol: #84DCCF;
+	--subheadercol: #BF98A0;
+	--shadowcol: #312F2f;
+	--pretextcol: #84DCCF;
+	--prebgcol: #312F2f;
+}
+
 body {
-	background: #2637dd;
+	background: var(--bgcol);
 	font-family: "Roboto Mono", monospace;
 	font-weight: 500;
-	color: #fff;
+	color: var(--textcol);
 	-webkit-font-smoothing: antialiased;
 	font-size: 16pt;
 	width: 900px;
@@ -18,8 +34,8 @@ main h1 {}
 
 h1 {
 	font-family: "Rubik Mono One", sans-serif;
-	background: #fff;
-	color: #2637dd;
+	background: var(--header1bgcol);
+	color: var(--header1fgcol);
 	font-size: 24pt;
 	text-transform: uppercase;
 	display: inline-block;
@@ -32,8 +48,8 @@ h1 {
 
 h2 {
 	font-family: "Rubik Mono One", sans-serif;
-	background: #fff;
-	color: #2637dd;
+	background: var(--header2bgcol);
+	color: var(--header2fgcol);
 	font-size: 20pt;
 	text-transform: uppercase;
 	margin-top: 15px;
@@ -60,7 +76,7 @@ title {
 
 p.subheader {
 	font-weight: bold;
-	color: #593d87;
+	color: var(--subheadercol);
 }
 
 img {
@@ -69,16 +85,16 @@ img {
 }
 
 a {
-	color: #ffffff;
+	color: var(--linkcol);
 	color: inherit;
-	text-shadow: 1px 1px #2637dd, -1px -1px #2637dd;
+	text-shadow: 1px 1px var(--shadowcol), -1px -1px var(--shadowcol);
 	text-decoration: underline;
 	font-size: 16pt;
 }
 
 a:link,
 a:visited {
-	color: #ffffff;
+	color: var(--visitedlinkcol);
 }
 
 pre {
@@ -89,8 +105,8 @@ pre {
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
 	padding: 2px 5px;
-	color: #000000;
-	background: #ffffff;
+	color: var(--pretextcol);
+	background: var(--prebgcol);
 	font-family: inherit;
 }
 
@@ -103,7 +119,7 @@ a:active {
 p {
 	margin: 0px;
 	margin-bottom: 5px;
-	
+
 }
 
 div.footer {
