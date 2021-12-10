@@ -11,8 +11,12 @@
 	--visitedlinkcol: #84DCCF;
 	--subheadercol: #BF98A0;
 	--shadowcol: #312F2f;
-	--pretextcol: #312F2f;
-	--prebgcol: #BF98A0;
+	--pretextcol: #84DCCF;
+	--prebgcol: #312F2f;
+	--operator: #BF98A0;
+	--string: #84DCCF;
+	--identifier: #a6D9F7;
+	--number: #a6D9F7;
 }
 
 body {
@@ -128,4 +132,21 @@ div.footer {
 	line-height: 12pt;
 	text-align: center;
 	padding-top: 30pt;
+}
+
+
+pre .operator, pre .paren {
+    color: var(--operator);
+}
+
+pre .string, pre .paren {
+    color: var(--string);
+}
+
+pre .identifier, pre .paren {
+    color: var(--identifier);
+}
+
+pre .number, pre .paren {
+    color: var(--number);
 }
