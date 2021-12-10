@@ -2,8 +2,6 @@
 
 # Minimal Experiments
 
-![MinEx20](../files/Images/MinEx20.gif)
-
 ## Citation 
 
 Healy, P.J. and Leo, Greg, Minimal Experiments
