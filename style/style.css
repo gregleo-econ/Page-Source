@@ -17,6 +17,9 @@
 	--string: #84DCCF;
 	--identifier: #a6D9F7;
 	--number: #a6D9F7;
+	--keyword: #a6D9F7;
+	--literal: #a6D9F7;
+	--comment: #BF98A0;
 }
 
 body {
@@ -148,5 +151,17 @@ pre .identifier, pre .paren {
 }
 
 pre .number, pre .paren {
+    color: var(--number);
+}
+
+pre .keyword, pre .paren {
+    color: var(--number);
+}
+
+pre .literal, pre .paren {
+    color: var(--number);
+}
+
+pre .constant, pre .paren {
     color: var(--number);
 }
