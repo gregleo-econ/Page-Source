@@ -22,7 +22,7 @@ I am on gopherspace at [gopher://gopher.gregcleo.com:70/](gopher://gopher.gregcl
 
 ChiWriter is a document editor for MsDos with built-in math fonts written by Cay Horstmann in 1986. It is available as abandonware on [Cay Hortsmann's Website.](https://horstmann.com/ChiWriter/)
 
-The look of ChiWriter inspried the theme of this page. So blue...
+So blue...
 
 ![ChiWriter in Action](../files/Images/chiwriter.png)
 
