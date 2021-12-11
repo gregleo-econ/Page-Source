@@ -1,12 +1,12 @@
-+4
++1
 
-# t(t(a[((!outer(a,a,"%%"))%*%a)>=2*a]))
+# R Blog
 
-## Code Golf
+## Code Golf Abundant Numbers 11/15/21 @codegolf
 
-The goal in *code golf* is to produce a program that solves a problem with as few characters as possible. Here is a code golf problem where R does pretty well. 
+The goal in *code golf* is to produce a program that solves a problem with as few characters as possible. Here is a code golf problem where R does pretty well.
 
-## Abundant Numbers
+### Abundant Numbers
 
 This problem comes from [Here](<https://code.golf/abundant-numbers>](https://code.golf/abundant-numbers).
 
@@ -14,7 +14,7 @@ This problem comes from [Here](<https://code.golf/abundant-numbers>](https://cod
 
 *Print all the abundant numbers from **1** to **200** inclusive, each on their own line.*
 
-## Code: (46 Characters)
+### Code: (46 Characters)
 
 This code takes advantage of R's matrix functions and operators.
 
@@ -22,4 +22,3 @@ This code takes advantage of R's matrix functions and operators.
 a=1:200
 t(t(a[((!outer(a,a,"%%"))%*%a)>=2*a]))
 ```
-

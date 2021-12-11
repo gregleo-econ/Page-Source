@@ -1,6 +1,6 @@
-+3
++1
 
-# How I Generate This Webpage
+# (Updated 12/11) How I Generate This Webpage
 
 I generate this site from a directory of markdown files using a script written in R. The code for this and some instructions are given below.
 
@@ -30,7 +30,7 @@ Place a stylesheet (css) file in the directory in a /style subdirectory. The con
 
 ## Running the code.
 
-To generate your site, run the following code. Set your working directory to the path containing all the folders you set up above. Also make sure to update the page title! 
+To generate your site, run the following code. Set your working directory to the path containing all the folders you set up above. Also make sure to update the page title!
 
 ```{r,running,eval=FALSE,echo=TRUE}
 library(knitr)
