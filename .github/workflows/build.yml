@@ -1,0 +1,43 @@
+on:
+  push:
+    branches:
+      - main
+
+name: build
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v1
+
+      - name: Install packages
+        run: |
+          R -e 'install.packages(c("knitr","fs","stringr","dplyr","stringi","magrittr","renv","txtplot","markdown"))'
+          R -e 'renv::restore()'
+      - name: Make Page
+        run: |
+          source("pageMakerLinux.R")
+        shell: Rscript {0} 
+
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'static'
+          destination-github-username: 'gregleo-econ'
+          destination-repository-name: 'gregleo-econ.github.io'
+          user-email: g.leo@vanderbilt.edu
+          target-branch: master
+
+
+      
