@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>(Updated 12/11) How I Generate This Webpage</title>
+<title>Matching Soulmates</title>
 
 <script type="text/javascript">
 window.onload = function() {
@@ -236,444 +236,164 @@ pre .constant, pre .paren {
 <body>
 <p><a href="../index.html">Back</a></p>
 
-<h1>(Updated 12/11) How I Generate This Webpage</h1>
+<h1>Matching Soulmates</h1>
 
-<p>I generate this site from a directory of markdown files using a script written in R. The code for this and some instructions are given below.</p>
+<h2>Citation</h2>
 
-<h2>Set up your directory.</h2>
+<p>Leo, Greg and Lou, Jian and Van der Linden, Martin and Vorobeychik, Yevgeniy and Wooders, Myrna H., &ldquo;Matching Soulmates.&rdquo; Journal of Public Economic Theory. <em>forthcoming</em></p>
 
-<p>Your directory should have a folder called &ldquo;markdown&rdquo;. This folder must contain one folder for each category of page you want on the index page of the site. I have, for instance &ldquo;papers&rdquo; and &ldquo;teaching&rdquo; as subfolders. Each subfolder must have one markdown file per page you want on the site. The markdown files should start with a single blank line and then a header <code># Title</code>. This header will be used as the title of the page on the index.</p>
+<h2>Paper</h2>
 
-<p>The markdown folder should also contain a file called header.md which will be placed on top of every page (except the index). Mine is just:</p>
+<p><a href="https://onlinelibrary.wiley.com/doi/10.1111/jpet.12542">Matching Soulmates</a></p>
 
-<pre><code>[Back](../index.html)
+<h2>Matching Soulmates in R</h2>
+
+<p>In <a href="../2.%20Working%20Papers/MatchingSoulmates.html">Matching Soulmates</a>, my co-authors and I study a a recursive process in matching that
+forms coalitions that are mutually most-preferred by members of that coalition. We call this process the iterated matching of soulmates: <em>IMS</em>. We show that mechanisms that implement IMS have strong properties among those who are matched by IMS. </p>
+
+<p>How many people can &ldquo;usually&rdquo; be matched by IMS? This depends a lot on the environment and structure of preferences. But what about in totally unstructured environments? </p>
+
+<p>Here is some R code that takes advantage of R&#39;s array-centric functions and some custom operators to count the number of people that can be matched as soulmates in 10000 random 10-person <a href="https://en.wikipedia.org/wiki/Stable_roommates_problem">stable roommates problems</a>. </p>
+
+<p>The core of this code is contained in the <em>whos_a_soulmate</em> function. This function is somewhat non-standard R code. It is inspired by the type of programming normally done in one of R&#39;s predecessors <a href="https://tryapl.org">APL</a>. Here is the function: </p>
+
+<pre><code class="r">whos_a_soulmate &lt;- function(p){which((p%r%rank%&gt;%hadamard%r%min)==1)}
 </code></pre>
 
-<p>The markdown folder should also contain a file called indexHeader.md which will be placed at the top of the index. Mine is just some ascii art:</p>
+<p>To see how this works, let&#39;s first setup an example preference matrix. </p>
 
-<pre><code>   ,___             __          ############
-  /   /            ( /          # Greg Leo #
- /  ___   _  _,     /    _  __  # VU Econ  #
- ___// (_(/_(_)_  (/___/(/_(_)  # Theory   #
-             /|                 # Exp.     #
-            (/                  ############
+<pre><code class="r">p &lt;- matrix(c(3,1,2,1,3,2,2,1,3),3,3,byrow=TRUE)
+p
 </code></pre>
 
-<p>Place a stylesheet (css) file in the directory in a /style subdirectory. The content of my stylesheet is provided below. Feel free to use that as a base.</p>
-
-<h2>Running the code.</h2>
-
-<p>To generate your site, run the following code. Set your working directory to the path containing all the folders you set up above. Also make sure to update the page title!</p>
-
-<pre><code class="r">library(knitr)
-library(fs)
-library(stringr)
-library(dplyr)
-library(stringi)
-library(magrittr)
-
-list.dirs &lt;- function(path = &quot;.&quot;,
-                      pattern = NULL,
-                      all.dirs = FALSE,
-                      full.names = FALSE,
-                      ignore.case = FALSE) {
-  # use full.names=TRUE to pass to file.info
-  all &lt;- list.files(path,
-                    pattern,
-                    all.dirs,
-                    full.names = TRUE,
-                    recursive = FALSE,
-                    ignore.case)
-  dirs &lt;- all[file.info(all)$isdir]
-  # determine whether to return full names or just dir names
-  if (isTRUE(full.names))
-    return(dirs)
-  else
-    return(basename(dirs))
-}
-
-#Get Folders in Markdown Directory
-getFolders &lt;- function(directory) {
-  markdownDirectory = paste(c(directory, &quot;/markdown&quot;), collapse = &quot;&quot;)
-  folders = list.dirs(markdownDirectory)
-}
-
-#Get Files in Markdown Directory Folder
-getFiles &lt;- function(folder, directory) {
-  markdownDirectory = paste(c(directory, &quot;/markdown&quot;), collapse = &quot;&quot;)
-  staticDirectory = paste(c(directory, &quot;/static&quot;), collapse = &quot;&quot;)
-  currentDirectoryMarkdown = paste(c(markdownDirectory, &quot;/&quot;, folder), collapse =
-                                     &quot;&quot;)
-  currentDirectory = paste(c(staticDirectory, &quot;/&quot;, folder), collapse =
-                             &quot;&quot;)
-  temp = list.files(currentDirectoryMarkdown, pattern = &quot;*.md$&quot;)
-  temp
-}
-
-#Extract Page Title from File
-getTitle &lt;- function(file) {
-  pageTitle &lt;- str_extract(readChar(file, 500), regex(&quot;# .*&quot;))
-  pageTitle &lt;- substring(pageTitle, 3)
-  pageTitle
-}
-
-
-#Extract Page Title from File
-getPriority &lt;- function(file) {
-  priority &lt;- str_extract(readChar(file, 10), regex(&quot;[0-9]{1,10}&quot;))
-  priority
-}
-
-
-#Add a &quot;back&quot; link to each page.
-addBack &lt;- function(fileInfo){
-  content &lt;- fileInfo$content
-  content &lt;- paste(&quot;[Back](../index.html)  \n\n\n&quot;, content, collapse = &quot;&quot;)
-  fileInfo$content &lt;- content
-  fileInfo
-}
-
-#Setup the Static Folder
-makeStaticFolder &lt;- function(folder, directory) {
-  staticDirectory = paste(c(directory, &quot;/static&quot;), collapse = &quot;&quot;)
-  currentDirectory = paste(c(staticDirectory, &quot;/&quot;, folder), collapse =
-                             &quot;&quot;)
-  dir.create(currentDirectory)
-}
-setupStatic &lt;- function(directory, folders) {
-  sapply(folders, makeStaticFolder, directory = directory)
-}
-
-#Setup the Temp Folder
-setupTemp &lt;- function(directory) {
-  tempDirectory = paste(c(directory, &quot;/temp&quot;), collapse = &quot;&quot;)
-  dir.create(tempDirectory)
-}
-
-#Get Full Path to Markdown File
-getMarkdownPath &lt;- function(file, folder, directory) {
-  paste(c(directory, &quot;/markdown/&quot;, folder, &quot;/&quot;, file), collapse = &quot;&quot;)
-}
-
-#Get Full Path to Static File
-getStaticPath &lt;- function(file, folder, directory) {
-  paste(c(
-    directory,
-    &quot;/static/&quot;,
-    folder,
-    &quot;/&quot;,
-    substr(file, 1, nchar(file) - 2),
-    &quot;html&quot;
-  ),
-  collapse = &quot;&quot;)
-}
-
-#Make a Link to the Static File in Markdown Format
-makeLink &lt;- function(fileInfo) {
-    paste(c(
-    &quot;[&quot;,
-    fileInfo$title,
-    &quot;](&quot;,
-    fileInfo$folder,
-    &quot;/&quot;,
-    substr(as.character(fileInfo$fileName), 1, nchar(as.character(fileInfo$fileName)) - 2),
-    &quot;html)\n&quot;
-  ),
-  collapse = &quot;&quot;)
-}
-
-#Create the Index Page
-makeIndex &lt;- function(fileData,pageTitle,indexHeader) {
-
-  indexHeaderPath &lt;-  paste(directory, &quot;/markdown/indexHeader.md&quot;, sep = &quot;&quot;)
-  indexHeader &lt;-  readChar(indexHeaderPath, file.info(indexHeaderPath)$size)
-  indexText &lt;- indexHeader
-  folders &lt;- fileData %&gt;% pull(folder) %&gt;% unique
-  for(currentFolder in folders){
-
-    indexText &lt;- c(indexText,paste(&quot;## &quot;,toupper(substring(currentFolder,3)),sep=&quot;&quot;))
-    subsetFiles &lt;- fileData %&gt;% filter(folder==currentFolder) %&gt;% arrange(desc(priority))
-    for(i in 1:dim(subsetFiles)[1]){
-      print(subsetFiles[i,])
-      indexText &lt;- c(indexText,makeLink(subsetFiles[i,]))
-    }
-  }
-  indexText &lt;- c(indexText,&quot;```&quot;,timestamp(),&quot;```&quot;)
-  writeLines(indexText, paste(directory, &quot;/markdown/index.md&quot;, sep = &quot;&quot;))
-  knit2html(
-    paste(directory, &quot;/markdown/index.md&quot;, sep = &quot;&quot;),
-    paste(directory, &quot;/static/index.md&quot;, sep = &quot;&quot;),
-    stylesheet = style,
-    title=pageTitle
-  )
-}
-
-#Add a &quot;back&quot; link to each page.
-addBack &lt;- function(fileInfo){
-  headerPath &lt;- paste(directory, &quot;/markdown/header.md&quot;, sep = &quot;&quot;)
-  header &lt;- readChar(headerPath, file.info(headerPath)$size)
-  content &lt;- fileInfo$content
-  content &lt;- paste(header, content, collapse = &quot;&quot;)
-  fileInfo$content &lt;- content
-  fileInfo
-}
-
-#Create an HTML Page from Markdown File
-makeHtml &lt;- function(fileInfo,style,directory) {
-  message(&quot;Making&quot;,fileInfo$title)
-  fileInfo &lt;- addBack(fileInfo)
-  tempFile &lt;- paste(directory, &quot;/temp/temp.md&quot;, sep = &quot;&quot;)
-  writeLines(fileInfo$content, tempFile, sep = &quot;&quot;)
-  knit2html(tempFile, output=fileInfo$fullStaticPath, stylesheet = style)
-  setwd(directory)
-}
-
-
-#Remove Priority String
-removePriority &lt;- function(content){
-  content &lt;- str_remove(content,&quot;[+][0-9]{1,10}&quot;)
-  content
-}
-
-
-#Parse the files and make a dataframe with relevant file info.
-makeFileData &lt;- function(directory){
-  fileName=c()
-  folder=c()
-  fullMarkdownPath=c()
-  fullStaticPath=c()
-  title=c()
-  content=c()
-  priority &lt;- c()
-  folders &lt;- getFolders(directory)
-  for (fileFolder in folders) {
-    files &lt;- getFiles(fileFolder, directory)
-    for(file in files){
-      fileMarkdownPath &lt;- getMarkdownPath(file,fileFolder,directory)
-      fileStaticPath &lt;- getStaticPath(file,fileFolder,directory)
-      fileTitle &lt;- getTitle(fileMarkdownPath)
-      filePriority &lt;- as.numeric(getPriority(fileMarkdownPath))
-      fileContent &lt;- readChar(fileMarkdownPath, file.info(fileMarkdownPath)$size)
-      fileContent &lt;- removePriority(fileContent)
-      priority &lt;- c(priority,filePriority)
-      fileName &lt;- c(fileName,file)
-      folder &lt;- c(folder,fileFolder)
-      fullMarkdownPath &lt;- c(fullMarkdownPath,fileMarkdownPath)
-      fullStaticPath &lt;- c(fullStaticPath,fileStaticPath)
-      title &lt;- c(title,fileTitle)
-      content &lt;- c(content,fileContent)
-    }
-  }
-  return(data.frame(fileName = fileName,folder = folder,fullMarkdownPath = fullMarkdownPath,fullStaticPath = fullStaticPath,title = title,priority = priority,content = content,stringsAsFactors=FALSE))
-}
-
-
-#Make sure the directory structure of the site is ok.
-setupSite &lt;- function(directory){
-  setwd(directory)
-  dir.create(paste(c(directory, &quot;/static/&quot;), collapse = &quot;&quot;))
-  folders &lt;- getFolders(directory)
-  setupTemp(directory)
-  setupStatic(directory, folders)
-}
-
-
-#Put it All Together to Make Page
-makePage &lt;- function(directory, style,pageTitle,indexHeader) {
-  print(&quot;Setting Up Site&quot;)
-  setupSite(directory)
-  print(&quot;Getting File Data&quot;)
-  fileData &lt;- makeFileData(directory)
-  for(i in 1:dim(fileData)[1]){
-    print(&quot;Setting up Page&quot;)
-    print(fileData[i,]$title)
-    makeHtml(fileData[i,],style = style,directory=directory)
-  }
-  print(&quot;Making Index&quot;)
-  makeIndex(fileData,pageTitle)
-}
-
-#Set it up. Make it go.
-#directory = dirname(sys.frame(1)$ofile)
-#setwd(directory)
-
-# Local Building
-directory = getwd()
-
-
-style = paste(c(directory,&quot;/style/style.css&quot;),collapse=&quot;&quot;)
-makePage(directory,style,&quot;Greg Leo&quot;)
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    3    1    2
+## [2,]    1    3    2
+## [3,]    2    1    3
 </code></pre>
 
-<h2>Style Sheet</h2>
+<p>Plyer 1 likes 2 best, player 2 likes 1 best, player 3 likes 2 best. Note that 1 and 2 are soulmates. We should find that 1 and 2 are soulmates in the first round of IMS. </p>
 
-<pre><code class="r">@import url(&#39;https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap&#39;);
+<p>The first step of the function ensures the matrix &ldquo;p&rdquo; is a ranking matrix. We apply the &ldquo;rank&rdquo; function to the &ldquo;p&rdquo; matrix by row using the by-row operator created here. Since &ldquo;p&rdquo; is already a ranking matrix, this does not do anything. It is more important once some players have been removed and we need to re-rank. </p>
 
-:root {
-  --bgcol: #312F2f;
-    --header1bgcol: #BF98A0;
-    --header2bgcol: #BF98A0;
-    --header1fgcol: #312F2f;
-    --header2fgcol: #312F2f;
-  --textcol: #a6D9F7;
-    --linkcol: #84DCCF;
-    --visitedlinkcol: #84DCCF;
-    --subheadercol: #BF98A0;
-    --shadowcol: #312F2f;
-    --pretextcol: #84DCCF;
-    --prebgcol: #312F2f;
-    --operator: #BF98A0;
-    --string: #84DCCF;
-    --identifier: #a6D9F7;
-    --number: #a6D9F7;
-    --keyword: #a6D9F7;
-    --literal: #a6D9F7;
-    --comment: #BF98A0;
+<pre><code class="r">p %r% rank
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    3    1    2
+## [2,]    1    3    2
+## [3,]    2    1    3
+</code></pre>
+
+<p>Now we take take <a href="https://en.wikipedia.org/wiki/Hadamard_product">Hadamard product</a> of the preference matrix with its own transpose by piping it to our &ldquo;hadamard&rdquo; function with the built-in R pipe. </p>
+
+<pre><code class="r">p %r% rank %&gt;% hadamard
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    9    1    4
+## [2,]    1    9    2
+## [3,]    4    2    9
+</code></pre>
+
+<p>Note how off diagonal 1&#39;s in this matrix represent positions where both players prefer eachother most. We want to pull these players who have a 1 in their row. To do this, we pipe what we have to the &ldquo;min&rdquo; function using our by-row operator. If a 1 is present, that player has a soulmate. </p>
+
+<pre><code class="r">p %r% rank %&gt;% hadamard %r% min
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    1    2
+</code></pre>
+
+<p>Note that 1 and 2 have a &ldquo;1&rdquo; here, indicating that players 1 and 2 have a soulmate from this group. Select just these players, we compare this vector to 1. The indicies that map to &ldquo;TRUE&rdquo; are players who have a soulmate. </p>
+
+<pre><code class="r">p %r% rank %&gt;% hadamard %r% min == 1
+</code></pre>
+
+<pre><code>##      [,1] [,2]  [,3]
+## [1,] TRUE TRUE FALSE
+</code></pre>
+
+<p>We see now that players 1 and 2 have a soulmate. We can now remove these players by using our remove operator &ldquo;%rm%&rdquo;. </p>
+
+<pre><code class="r">p &lt;- p %rm% whos_a_soulmate(p) %&gt;% as.matrix
+p
+</code></pre>
+
+<pre><code>##      [,1]
+## [1,]    3
+</code></pre>
+
+<p>What we get is the remainder of the preference matrix &ldquo;p&rdquo; after removing soulmates. We only have player 3 left. Note that player 3 originally ranked being &ldquo;alone&rdquo; as third-best. That&#39;s why a 3 shows up here. Let&#39;s pipe this to rank again to have the player(s) rerank their potential partners.</p>
+
+<pre><code class="r">p %r% rank
+</code></pre>
+
+<pre><code>##      [,1]
+## [1,]    1
+</code></pre>
+
+<p>Now we can run the process again.</p>
+
+<pre><code class="r">p &lt;- p %rm% whos_a_soulmate(p)
+p
+</code></pre>
+
+<pre><code>## &lt;0 x 0 matrix&gt;
+</code></pre>
+
+<p>Since being alone is the only outcome left, player 3 is a solemate-group-of-one and is removed. This demonstrates how the &ldquo;IMS&rdquo; function proceeds. It calls &ldquo;remove_soulmates&rdquo;. If anyone is removed, &ldquo;IMS&rdquo; calls itself. If there is no one to remove or no one further can be removed, the function returns the remaining preference matrix.  </p>
+
+<h2>Code</h2>
+
+<pre><code class="r">#Operator &quot;m %r% f&quot; applies function &quot;f&quot; to matrix &quot;m&quot; by rows. 
+`%r%` &lt;- function(m,f){t(apply(m,1,match.fun(f)))}
+
+#Operator &quot;m %rm% i&quot; removes rows and column indicies &quot;i&quot; from matrix &quot;m&quot;. 
+`%rm%` &lt;- function(m,i){if(length(i)&gt;0){m[-i,-i]}else{m}}  
+
+#Operator applies function &quot;f&quot; across list &quot;l&quot; with sapply.
+`%s%` &lt;- function(l,f){sapply(l,match.fun(f))}
+
+#Returns Hadamard product of matrix m with its transpose.
+hadamard &lt;- function(m){m * t(m)}
+
+#Given preference matrix, returns vector of player indicies who are first-order soulmates.
+whos_a_soulmate &lt;- function(p){which((p%r%rank%&gt;%hadamard%r%min)==1)}
+
+#Removes first order soulmates from preference matrix p.
+remove_soulmates &lt;- function(p){p %rm% whos_a_soulmate(p) %&gt;% as.matrix}
+
+#Recursively applies remove_soulmates until there&#39;s none left to remove.
+ims &lt;- function(p){if(dim(p)[1]==0 || identical(remove_soulmates(p),p)){p}else{ims(remove_soulmates(p))}}
+
+#Create a random roommates preference matrix with &quot;dim&quot; players.
+create_preference &lt;- function(dim){
+p &lt;- matrix(runif(dim*dim),dim,dim,byrow=TRUE)
+diag(p)&lt;- 1
+p %r% rank
 }
 
-body {
-    background: var(--bgcol);
-    font-family: &quot;Roboto Mono&quot;, monospace;
-    font-weight: 500;
-    color: var(--textcol);
-    -webkit-font-smoothing: antialiased;
-    font-size: 16pt;
-    width: 900px;
-    line-height: 18pt;
-    padding-left: 5pt;
-    padding-right: 5pt;
-    padding-top: 5pt;
-    margin: auto;
-}
+#Set up parameters. &quot;dim&quot; is the number of players. &quot;n&quot; is the number of random trials. 
+dim &lt;- 10
+n &lt;- 100
 
-main h1 {}
+#Create List of &quot;n&quot; Preference Matricies with &quot;dim&quot; players.
+preference_list &lt;- lapply(1:n,function(x){create_preference(dim)})
 
-h1 {
-    font-family: &quot;Rubik Mono One&quot;, sans-serif;
-    background: var(--header1bgcol);
-    color: var(--header1fgcol);
-    font-size: 24pt;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    line-height: 26pt;
-    padding: 2px 2px;
-}
+#Apply IMS to the list of preferences then count the number of players remaining.
+remaining &lt;- preference_list %s% ims %s% dim 
 
-h2 {
-    font-family: &quot;Rubik Mono One&quot;, sans-serif;
-    background: var(--header2bgcol);
-    color: var(--header2fgcol);
-    font-size: 20pt;
-    text-transform: uppercase;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    line-height: 22pt;
-    padding: 2px 2px;
-}
+#Get the number of players removed by IMS.
+removed &lt;- dim - remaining[1,]
 
-h3 {
-    margin-top: 16px;
-    margin-bottom: 5px;
-}
+#Make a table of frequencies of the number of removed players.
+removed %&gt;% table/n
+</code></pre>
 
-h4 {
-    margin-top: 16px;
-    margin-bottom: 5px;
-}
-
-title {
-    font-weight: bold;
-    line-height: 26pt;
-}
-
-p.subheader {
-    font-weight: bold;
-    color: var(--subheadercol);
-}
-
-img {
-    padding: 3pt;
-    float: center;
-}
-
-a {
-    color: var(--linkcol);
-    color: inherit;
-    text-shadow: 1px 1px var(--shadowcol), -1px -1px var(--shadowcol);
-    text-decoration: underline;
-    font-size: 16pt;
-}
-
-a:link,
-a:visited {
-    color: var(--visitedlinkcol);
-}
-
-pre {
-    overflow-x: auto;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
-    padding: 2px 5px;
-    color: var(--pretextcol);
-    background: var(--prebgcol);
-    font-family: inherit;
-}
-
-a:hover,
-a:active {
-    text-decoration: none;
-    /*text-decoration: line-through;*/
-}
-
-p {
-    margin: 0px;
-    margin-bottom: 5px;
-
-}
-
-div.footer {
-    font-size: 9pt;
-    font-style: italic;
-    line-height: 12pt;
-    text-align: center;
-    padding-top: 30pt;
-}
-
-
-pre .operator, pre .paren {
-    color: var(--operator);
-}
-
-pre .string, pre .paren {
-    color: var(--string);
-}
-
-pre .identifier, pre .paren {
-    color: var(--identifier);
-}
-
-pre .number, pre .paren {
-    color: var(--number);
-}
-
-pre .keyword, pre .paren {
-    color: var(--number);
-}
-
-pre .literal, pre .paren {
-    color: var(--number);
-}
-
-pre .constant, pre .paren {
-    color: var(--number);
-}
+<pre><code>## .
+##    0    2    4    6   10 
+## 0.53 0.31 0.09 0.03 0.04
 </code></pre>
 
 </body>

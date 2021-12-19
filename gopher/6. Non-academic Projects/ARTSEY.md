@@ -1,7 +1,4 @@
-[Back](../index.html)
 
-
- 
 
 # ARTSEY.io - One Handed Keyboard Layout
 

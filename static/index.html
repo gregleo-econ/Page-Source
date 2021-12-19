@@ -23,11 +23,34 @@ window.onload = function() {
 
 <style type="text/css">
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bgcol: #312F2f;
+	--header1bgcol: #BF98A0;
+	--header2bgcol: #BF98A0;
+	--header1fgcol: #312F2f;
+	--header2fgcol: #312F2f;
+  --textcol: #a6D9F7;
+	--linkcol: #84DCCF;
+	--visitedlinkcol: #84DCCF;
+	--subheadercol: #BF98A0;
+	--shadowcol: #312F2f;
+	--pretextcol: #84DCCF;
+	--prebgcol: #312F2f;
+	--operator: #BF98A0;
+	--string: #84DCCF;
+	--identifier: #a6D9F7;
+	--number: #a6D9F7;
+	--keyword: #a6D9F7;
+	--literal: #a6D9F7;
+	--comment: #BF98A0;
+}
+
 body {
-	background: #2637dd;
+	background: var(--bgcol);
 	font-family: "Roboto Mono", monospace;
 	font-weight: 500;
-	color: #fff;
+	color: var(--textcol);
 	-webkit-font-smoothing: antialiased;
 	font-size: 16pt;
 	width: 900px;
@@ -42,8 +65,8 @@ main h1 {}
 
 h1 {
 	font-family: "Rubik Mono One", sans-serif;
-	background: #fff;
-	color: #2637dd;
+	background: var(--header1bgcol);
+	color: var(--header1fgcol);
 	font-size: 24pt;
 	text-transform: uppercase;
 	display: inline-block;
@@ -56,8 +79,8 @@ h1 {
 
 h2 {
 	font-family: "Rubik Mono One", sans-serif;
-	background: #fff;
-	color: #2637dd;
+	background: var(--header2bgcol);
+	color: var(--header2fgcol);
 	font-size: 20pt;
 	text-transform: uppercase;
 	margin-top: 15px;
@@ -84,7 +107,7 @@ title {
 
 p.subheader {
 	font-weight: bold;
-	color: #593d87;
+	color: var(--subheadercol);
 }
 
 img {
@@ -93,16 +116,16 @@ img {
 }
 
 a {
-	color: #ffffff;
+	color: var(--linkcol);
 	color: inherit;
-	text-shadow: 1px 1px #2637dd, -1px -1px #2637dd;
+	text-shadow: 1px 1px var(--shadowcol), -1px -1px var(--shadowcol);
 	text-decoration: underline;
 	font-size: 16pt;
 }
 
 a:link,
 a:visited {
-	color: #ffffff;
+	color: var(--visitedlinkcol);
 }
 
 pre {
@@ -113,8 +136,8 @@ pre {
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
 	padding: 2px 5px;
-	color: #000000;
-	background: #ffffff;
+	color: var(--pretextcol);
+	background: var(--prebgcol);
 	font-family: inherit;
 }
 
@@ -127,7 +150,7 @@ a:active {
 p {
 	margin: 0px;
 	margin-bottom: 5px;
-	
+
 }
 
 div.footer {
@@ -137,6 +160,35 @@ div.footer {
 	text-align: center;
 	padding-top: 30pt;
 }
+
+
+pre .operator, pre .paren {
+    color: var(--operator);
+}
+
+pre .string, pre .paren {
+    color: var(--string);
+}
+
+pre .identifier, pre .paren {
+    color: var(--identifier);
+}
+
+pre .number, pre .paren {
+    color: var(--number);
+}
+
+pre .keyword, pre .paren {
+    color: var(--number);
+}
+
+pre .literal, pre .paren {
+    color: var(--number);
+}
+
+pre .constant, pre .paren {
+    color: var(--number);
+}
 </style>
 
 
@@ -144,75 +196,77 @@ div.footer {
 </head>
 
 <body>
-<pre><code>   ,___             __
-  /   /            ( /
- /  ___   _  _,     /    _  __
- ___// (_(/_(_)_  (/___/(/_(_)
-             /|
-            (/
+<pre><code>   ,___             __          ############
+  /   /            ( /          # Greg Leo #
+ /  ___   _  _,     /    _  __  # VU Econ  #
+ ___// (_(/_(_)_  (/___/(/_(_)  # Theory   #
+             /|                 # Exp.     #
+            (/                  ############
 </code></pre>
 
-<p><strong>New</strong>: <a href="2.%20Working%20Papers/Reduction.html">Reduction in Belief Elicitation</a>  </p>
+<p><strong>Good Luck with Finals!</strong></p>
 
 <h2>MICROBLOG</h2>
 
+<p><a href="0.%20Microblog/microblog.html">Microblog</a></p>
+
 <p><a href="0.%20Microblog/gopher.html">Gopher Log</a></p>
-
-<p><a href="0.%20Microblog/microblog.html">Microblog  </a></p>
-
-<h2>PAPERS</h2>
-
-<p><a href="1.%20Papers/MatchingSoulmates.html">Matching Soulmates</a></p>
-
-<p><a href="1.%20Papers/LMOLG.html">Let Me, or Let George?</a></p>
-
-<p><a href="1.%20Papers/RoomComposition.html">Room Composition Effects on Risk Taking by Gender</a></p>
-
-<p><a href="1.%20Papers/TakingTurns.html">Taking Turns</a></p>
-
-<p><a href="1.%20Papers/MoralHazard.html">Moral Hazard and Reciprocity</a></p>
-
-<h2>WORKING PAPERS</h2>
-
-<p><a href="2.%20Working%20Papers/Reduction.html">++NEW++ Reduction in Belief Elicitation</a></p>
-
-<p><a href="2.%20Working%20Papers/MinimalExperiments.html">Minimal Experiments</a></p>
-
-<p><a href="2.%20Working%20Papers/SPGS.html">Subgame Perfect Coalition Formation</a></p>
-
-<p><a href="2.%20Working%20Papers/Competing.html">Competing for Priorities in School Choice</a></p>
-
-<p><a href="2.%20Working%20Papers/SOBAG.html">Second-Order Beliefs and Gender</a></p>
-
-<p><a href="2.%20Working%20Papers/CoordinationDoubleCrossing.html">From Coordination to Double-Crossing</a></p>
-
-<p><a href="2.%20Working%20Papers/Volunteers.html">Volunteer&#39;s Dilemmas with and without Coordination</a></p>
-
-<h2>MATH WORKING PAPERS</h2>
-
-<p><a href="3.%20Math%20Working%20Papers/Binomial.html">A Binomial Tail Inequality for Successes</a></p>
-
-<p><a href="3.%20Math%20Working%20Papers/Teicher.html">A Generalization of Teicher&#39;s Poisson Tail Inequality</a></p>
 
 <h2>TEACHING</h2>
 
-<p><a href="4.%20Teaching/econ3012.html">Econ 3012</a></p>
+<p><a href="1.%20Teaching/econ3012.html">Econ 3012</a></p>
 
-<p><a href="4.%20Teaching/econ8100.html">Econ 8100</a></p>
+<p><a href="1.%20Teaching/econ8100.html">Econ 8100</a></p>
 
-<p><a href="4.%20Teaching/workouts.html">Workouts- Shape of Functions</a></p>
+<p><a href="1.%20Teaching/mechanism.html">Mechanism Design</a></p>
+
+<p><a href="1.%20Teaching/workouts.html">Workouts</a></p>
+
+<h2>PAPERS</h2>
+
+<p><a href="2.%20Papers/MatchingSoulmates.html">Matching Soulmates</a></p>
+
+<p><a href="2.%20Papers/LMOLG.html">Let Me, or Let George?</a></p>
+
+<p><a href="2.%20Papers/RoomComposition.html">Room Composition Effects on Risk Taking by Gender</a></p>
+
+<p><a href="2.%20Papers/TakingTurns.html">Taking Turns</a></p>
+
+<p><a href="2.%20Papers/MoralHazard.html">Moral Hazard and Reciprocity</a></p>
+
+<h2>WORKING PAPERS</h2>
+
+<p><a href="3.%20Working%20Papers/Reduction.html">++NEW++ Reduction in Belief Elicitation</a></p>
+
+<p><a href="3.%20Working%20Papers/MinimalExperiments.html">Minimal Experiments</a></p>
+
+<p><a href="3.%20Working%20Papers/SPGS.html">Subgame Perfect Coalition Formation</a></p>
+
+<p><a href="3.%20Working%20Papers/Competing.html">Competing for Priorities in School Choice</a></p>
+
+<p><a href="3.%20Working%20Papers/SOBAG.html">Second-Order Beliefs and Gender</a></p>
+
+<p><a href="3.%20Working%20Papers/CoordinationDoubleCrossing.html">From Coordination to Double-Crossing</a></p>
+
+<p><a href="3.%20Working%20Papers/Volunteers.html">Volunteer&#39;s Dilemmas with and without Coordination</a></p>
+
+<h2>MATH WORKING PAPERS</h2>
+
+<p><a href="4.%20Math%20Working%20Papers/Binomial.html">A Binomial Tail Inequality for Successes</a></p>
+
+<p><a href="4.%20Math%20Working%20Papers/Teicher.html">A Generalization of Teicher&#39;s Poisson Tail Inequality</a></p>
 
 <h2>R PROJECTS</h2>
 
-<p><a href="5.%20R%20Projects/codeGolfAbundant.html">t(t(a[((!outer(a,a,&ldquo;%%&rdquo;))%*%a)&gt;=2*a]))</a></p>
+<p><a href="5.%20R%20Projects/page%20maker.html">(Updated 12/11) How I Generate This Webpage</a></p>
 
-<p><a href="5.%20R%20Projects/page%20maker.html">How I Generate This Webpage  </a></p>
+<p><a href="5.%20R%20Projects/rblog.html">R Blog</a></p>
 
 <h2>NON-ACADEMIC PROJECTS</h2>
 
 <p><a href="6.%20Non-academic%20Projects/ARTSEY.html">ARTSEY.io - One Handed Keyboard Layout</a></p>
 
-<pre><code>##------ Tue Nov  9 19:16:44 2021 ------##
+<pre><code>##------ Sun Dec 19 17:54:24 2021 ------##
 </code></pre>
 
 </body>

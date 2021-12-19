@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>(Updated 12/11) How I Generate This Webpage</title>
+<title>R Blog</title>
 
 <script type="text/javascript">
 window.onload = function() {
@@ -236,444 +236,77 @@ pre .constant, pre .paren {
 <body>
 <p><a href="../index.html">Back</a></p>
 
-<h1>(Updated 12/11) How I Generate This Webpage</h1>
+<h1>R Blog</h1>
 
-<p>I generate this site from a directory of markdown files using a script written in R. The code for this and some instructions are given below.</p>
+<h2>Code Golf Abundant Numbers 11/15/21 @codegolf</h2>
 
-<h2>Set up your directory.</h2>
+<p>The goal in <em>code golf</em> is to produce a program that solves a problem with as few characters as possible. Here is a code golf problem where R does pretty well.</p>
 
-<p>Your directory should have a folder called &ldquo;markdown&rdquo;. This folder must contain one folder for each category of page you want on the index page of the site. I have, for instance &ldquo;papers&rdquo; and &ldquo;teaching&rdquo; as subfolders. Each subfolder must have one markdown file per page you want on the site. The markdown files should start with a single blank line and then a header <code># Title</code>. This header will be used as the title of the page on the index.</p>
+<h3>Abundant Numbers</h3>
 
-<p>The markdown folder should also contain a file called header.md which will be placed on top of every page (except the index). Mine is just:</p>
+<p>This problem comes from <a href="https://code.golf/abundant-numbers%3E%5D(https://code.golf/abundant-numbers">Here</a>.</p>
 
-<pre><code>[Back](../index.html)
+<p><em>An abundant number is a number for which the sum of its proper divisors (divisors not including the number itself) is greater than the number itself. For example **12</em>* is abundant because its proper divisors are <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>6</strong> which add up to <strong>16</strong>.*</p>
+
+<p><em>Print all the abundant numbers from **1</em>* to <strong>200</strong> inclusive, each on their own line.*</p>
+
+<h3>Code: (46 Characters)</h3>
+
+<p>This code takes advantage of R&#39;s matrix functions and operators.</p>
+
+<pre><code class="r">a=1:200
+t(t(a[((!outer(a,a,&quot;%%&quot;))%*%a)&gt;=2*a]))
 </code></pre>
 
-<p>The markdown folder should also contain a file called indexHeader.md which will be placed at the top of the index. Mine is just some ascii art:</p>
-
-<pre><code>   ,___             __          ############
-  /   /            ( /          # Greg Leo #
- /  ___   _  _,     /    _  __  # VU Econ  #
- ___// (_(/_(_)_  (/___/(/_(_)  # Theory   #
-             /|                 # Exp.     #
-            (/                  ############
-</code></pre>
-
-<p>Place a stylesheet (css) file in the directory in a /style subdirectory. The content of my stylesheet is provided below. Feel free to use that as a base.</p>
-
-<h2>Running the code.</h2>
-
-<p>To generate your site, run the following code. Set your working directory to the path containing all the folders you set up above. Also make sure to update the page title!</p>
-
-<pre><code class="r">library(knitr)
-library(fs)
-library(stringr)
-library(dplyr)
-library(stringi)
-library(magrittr)
-
-list.dirs &lt;- function(path = &quot;.&quot;,
-                      pattern = NULL,
-                      all.dirs = FALSE,
-                      full.names = FALSE,
-                      ignore.case = FALSE) {
-  # use full.names=TRUE to pass to file.info
-  all &lt;- list.files(path,
-                    pattern,
-                    all.dirs,
-                    full.names = TRUE,
-                    recursive = FALSE,
-                    ignore.case)
-  dirs &lt;- all[file.info(all)$isdir]
-  # determine whether to return full names or just dir names
-  if (isTRUE(full.names))
-    return(dirs)
-  else
-    return(basename(dirs))
-}
-
-#Get Folders in Markdown Directory
-getFolders &lt;- function(directory) {
-  markdownDirectory = paste(c(directory, &quot;/markdown&quot;), collapse = &quot;&quot;)
-  folders = list.dirs(markdownDirectory)
-}
-
-#Get Files in Markdown Directory Folder
-getFiles &lt;- function(folder, directory) {
-  markdownDirectory = paste(c(directory, &quot;/markdown&quot;), collapse = &quot;&quot;)
-  staticDirectory = paste(c(directory, &quot;/static&quot;), collapse = &quot;&quot;)
-  currentDirectoryMarkdown = paste(c(markdownDirectory, &quot;/&quot;, folder), collapse =
-                                     &quot;&quot;)
-  currentDirectory = paste(c(staticDirectory, &quot;/&quot;, folder), collapse =
-                             &quot;&quot;)
-  temp = list.files(currentDirectoryMarkdown, pattern = &quot;*.md$&quot;)
-  temp
-}
-
-#Extract Page Title from File
-getTitle &lt;- function(file) {
-  pageTitle &lt;- str_extract(readChar(file, 500), regex(&quot;# .*&quot;))
-  pageTitle &lt;- substring(pageTitle, 3)
-  pageTitle
-}
-
-
-#Extract Page Title from File
-getPriority &lt;- function(file) {
-  priority &lt;- str_extract(readChar(file, 10), regex(&quot;[0-9]{1,10}&quot;))
-  priority
-}
-
-
-#Add a &quot;back&quot; link to each page.
-addBack &lt;- function(fileInfo){
-  content &lt;- fileInfo$content
-  content &lt;- paste(&quot;[Back](../index.html)  \n\n\n&quot;, content, collapse = &quot;&quot;)
-  fileInfo$content &lt;- content
-  fileInfo
-}
-
-#Setup the Static Folder
-makeStaticFolder &lt;- function(folder, directory) {
-  staticDirectory = paste(c(directory, &quot;/static&quot;), collapse = &quot;&quot;)
-  currentDirectory = paste(c(staticDirectory, &quot;/&quot;, folder), collapse =
-                             &quot;&quot;)
-  dir.create(currentDirectory)
-}
-setupStatic &lt;- function(directory, folders) {
-  sapply(folders, makeStaticFolder, directory = directory)
-}
-
-#Setup the Temp Folder
-setupTemp &lt;- function(directory) {
-  tempDirectory = paste(c(directory, &quot;/temp&quot;), collapse = &quot;&quot;)
-  dir.create(tempDirectory)
-}
-
-#Get Full Path to Markdown File
-getMarkdownPath &lt;- function(file, folder, directory) {
-  paste(c(directory, &quot;/markdown/&quot;, folder, &quot;/&quot;, file), collapse = &quot;&quot;)
-}
-
-#Get Full Path to Static File
-getStaticPath &lt;- function(file, folder, directory) {
-  paste(c(
-    directory,
-    &quot;/static/&quot;,
-    folder,
-    &quot;/&quot;,
-    substr(file, 1, nchar(file) - 2),
-    &quot;html&quot;
-  ),
-  collapse = &quot;&quot;)
-}
-
-#Make a Link to the Static File in Markdown Format
-makeLink &lt;- function(fileInfo) {
-    paste(c(
-    &quot;[&quot;,
-    fileInfo$title,
-    &quot;](&quot;,
-    fileInfo$folder,
-    &quot;/&quot;,
-    substr(as.character(fileInfo$fileName), 1, nchar(as.character(fileInfo$fileName)) - 2),
-    &quot;html)\n&quot;
-  ),
-  collapse = &quot;&quot;)
-}
-
-#Create the Index Page
-makeIndex &lt;- function(fileData,pageTitle,indexHeader) {
-
-  indexHeaderPath &lt;-  paste(directory, &quot;/markdown/indexHeader.md&quot;, sep = &quot;&quot;)
-  indexHeader &lt;-  readChar(indexHeaderPath, file.info(indexHeaderPath)$size)
-  indexText &lt;- indexHeader
-  folders &lt;- fileData %&gt;% pull(folder) %&gt;% unique
-  for(currentFolder in folders){
-
-    indexText &lt;- c(indexText,paste(&quot;## &quot;,toupper(substring(currentFolder,3)),sep=&quot;&quot;))
-    subsetFiles &lt;- fileData %&gt;% filter(folder==currentFolder) %&gt;% arrange(desc(priority))
-    for(i in 1:dim(subsetFiles)[1]){
-      print(subsetFiles[i,])
-      indexText &lt;- c(indexText,makeLink(subsetFiles[i,]))
-    }
-  }
-  indexText &lt;- c(indexText,&quot;```&quot;,timestamp(),&quot;```&quot;)
-  writeLines(indexText, paste(directory, &quot;/markdown/index.md&quot;, sep = &quot;&quot;))
-  knit2html(
-    paste(directory, &quot;/markdown/index.md&quot;, sep = &quot;&quot;),
-    paste(directory, &quot;/static/index.md&quot;, sep = &quot;&quot;),
-    stylesheet = style,
-    title=pageTitle
-  )
-}
-
-#Add a &quot;back&quot; link to each page.
-addBack &lt;- function(fileInfo){
-  headerPath &lt;- paste(directory, &quot;/markdown/header.md&quot;, sep = &quot;&quot;)
-  header &lt;- readChar(headerPath, file.info(headerPath)$size)
-  content &lt;- fileInfo$content
-  content &lt;- paste(header, content, collapse = &quot;&quot;)
-  fileInfo$content &lt;- content
-  fileInfo
-}
-
-#Create an HTML Page from Markdown File
-makeHtml &lt;- function(fileInfo,style,directory) {
-  message(&quot;Making&quot;,fileInfo$title)
-  fileInfo &lt;- addBack(fileInfo)
-  tempFile &lt;- paste(directory, &quot;/temp/temp.md&quot;, sep = &quot;&quot;)
-  writeLines(fileInfo$content, tempFile, sep = &quot;&quot;)
-  knit2html(tempFile, output=fileInfo$fullStaticPath, stylesheet = style)
-  setwd(directory)
-}
-
-
-#Remove Priority String
-removePriority &lt;- function(content){
-  content &lt;- str_remove(content,&quot;[+][0-9]{1,10}&quot;)
-  content
-}
-
-
-#Parse the files and make a dataframe with relevant file info.
-makeFileData &lt;- function(directory){
-  fileName=c()
-  folder=c()
-  fullMarkdownPath=c()
-  fullStaticPath=c()
-  title=c()
-  content=c()
-  priority &lt;- c()
-  folders &lt;- getFolders(directory)
-  for (fileFolder in folders) {
-    files &lt;- getFiles(fileFolder, directory)
-    for(file in files){
-      fileMarkdownPath &lt;- getMarkdownPath(file,fileFolder,directory)
-      fileStaticPath &lt;- getStaticPath(file,fileFolder,directory)
-      fileTitle &lt;- getTitle(fileMarkdownPath)
-      filePriority &lt;- as.numeric(getPriority(fileMarkdownPath))
-      fileContent &lt;- readChar(fileMarkdownPath, file.info(fileMarkdownPath)$size)
-      fileContent &lt;- removePriority(fileContent)
-      priority &lt;- c(priority,filePriority)
-      fileName &lt;- c(fileName,file)
-      folder &lt;- c(folder,fileFolder)
-      fullMarkdownPath &lt;- c(fullMarkdownPath,fileMarkdownPath)
-      fullStaticPath &lt;- c(fullStaticPath,fileStaticPath)
-      title &lt;- c(title,fileTitle)
-      content &lt;- c(content,fileContent)
-    }
-  }
-  return(data.frame(fileName = fileName,folder = folder,fullMarkdownPath = fullMarkdownPath,fullStaticPath = fullStaticPath,title = title,priority = priority,content = content,stringsAsFactors=FALSE))
-}
-
-
-#Make sure the directory structure of the site is ok.
-setupSite &lt;- function(directory){
-  setwd(directory)
-  dir.create(paste(c(directory, &quot;/static/&quot;), collapse = &quot;&quot;))
-  folders &lt;- getFolders(directory)
-  setupTemp(directory)
-  setupStatic(directory, folders)
-}
-
-
-#Put it All Together to Make Page
-makePage &lt;- function(directory, style,pageTitle,indexHeader) {
-  print(&quot;Setting Up Site&quot;)
-  setupSite(directory)
-  print(&quot;Getting File Data&quot;)
-  fileData &lt;- makeFileData(directory)
-  for(i in 1:dim(fileData)[1]){
-    print(&quot;Setting up Page&quot;)
-    print(fileData[i,]$title)
-    makeHtml(fileData[i,],style = style,directory=directory)
-  }
-  print(&quot;Making Index&quot;)
-  makeIndex(fileData,pageTitle)
-}
-
-#Set it up. Make it go.
-#directory = dirname(sys.frame(1)$ofile)
-#setwd(directory)
-
-# Local Building
-directory = getwd()
-
-
-style = paste(c(directory,&quot;/style/style.css&quot;),collapse=&quot;&quot;)
-makePage(directory,style,&quot;Greg Leo&quot;)
-</code></pre>
-
-<h2>Style Sheet</h2>
-
-<pre><code class="r">@import url(&#39;https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap&#39;);
-
-:root {
-  --bgcol: #312F2f;
-    --header1bgcol: #BF98A0;
-    --header2bgcol: #BF98A0;
-    --header1fgcol: #312F2f;
-    --header2fgcol: #312F2f;
-  --textcol: #a6D9F7;
-    --linkcol: #84DCCF;
-    --visitedlinkcol: #84DCCF;
-    --subheadercol: #BF98A0;
-    --shadowcol: #312F2f;
-    --pretextcol: #84DCCF;
-    --prebgcol: #312F2f;
-    --operator: #BF98A0;
-    --string: #84DCCF;
-    --identifier: #a6D9F7;
-    --number: #a6D9F7;
-    --keyword: #a6D9F7;
-    --literal: #a6D9F7;
-    --comment: #BF98A0;
-}
-
-body {
-    background: var(--bgcol);
-    font-family: &quot;Roboto Mono&quot;, monospace;
-    font-weight: 500;
-    color: var(--textcol);
-    -webkit-font-smoothing: antialiased;
-    font-size: 16pt;
-    width: 900px;
-    line-height: 18pt;
-    padding-left: 5pt;
-    padding-right: 5pt;
-    padding-top: 5pt;
-    margin: auto;
-}
-
-main h1 {}
-
-h1 {
-    font-family: &quot;Rubik Mono One&quot;, sans-serif;
-    background: var(--header1bgcol);
-    color: var(--header1fgcol);
-    font-size: 24pt;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    line-height: 26pt;
-    padding: 2px 2px;
-}
-
-h2 {
-    font-family: &quot;Rubik Mono One&quot;, sans-serif;
-    background: var(--header2bgcol);
-    color: var(--header2fgcol);
-    font-size: 20pt;
-    text-transform: uppercase;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    line-height: 22pt;
-    padding: 2px 2px;
-}
-
-h3 {
-    margin-top: 16px;
-    margin-bottom: 5px;
-}
-
-h4 {
-    margin-top: 16px;
-    margin-bottom: 5px;
-}
-
-title {
-    font-weight: bold;
-    line-height: 26pt;
-}
-
-p.subheader {
-    font-weight: bold;
-    color: var(--subheadercol);
-}
-
-img {
-    padding: 3pt;
-    float: center;
-}
-
-a {
-    color: var(--linkcol);
-    color: inherit;
-    text-shadow: 1px 1px var(--shadowcol), -1px -1px var(--shadowcol);
-    text-decoration: underline;
-    font-size: 16pt;
-}
-
-a:link,
-a:visited {
-    color: var(--visitedlinkcol);
-}
-
-pre {
-    overflow-x: auto;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
-    padding: 2px 5px;
-    color: var(--pretextcol);
-    background: var(--prebgcol);
-    font-family: inherit;
-}
-
-a:hover,
-a:active {
-    text-decoration: none;
-    /*text-decoration: line-through;*/
-}
-
-p {
-    margin: 0px;
-    margin-bottom: 5px;
-
-}
-
-div.footer {
-    font-size: 9pt;
-    font-style: italic;
-    line-height: 12pt;
-    text-align: center;
-    padding-top: 30pt;
-}
-
-
-pre .operator, pre .paren {
-    color: var(--operator);
-}
-
-pre .string, pre .paren {
-    color: var(--string);
-}
-
-pre .identifier, pre .paren {
-    color: var(--identifier);
-}
-
-pre .number, pre .paren {
-    color: var(--number);
-}
-
-pre .keyword, pre .paren {
-    color: var(--number);
-}
-
-pre .literal, pre .paren {
-    color: var(--number);
-}
-
-pre .constant, pre .paren {
-    color: var(--number);
-}
+<pre><code>##       [,1]
+##  [1,]    6
+##  [2,]   12
+##  [3,]   18
+##  [4,]   20
+##  [5,]   24
+##  [6,]   28
+##  [7,]   30
+##  [8,]   36
+##  [9,]   40
+## [10,]   42
+## [11,]   48
+## [12,]   54
+## [13,]   56
+## [14,]   60
+## [15,]   66
+## [16,]   70
+## [17,]   72
+## [18,]   78
+## [19,]   80
+## [20,]   84
+## [21,]   88
+## [22,]   90
+## [23,]   96
+## [24,]  100
+## [25,]  102
+## [26,]  104
+## [27,]  108
+## [28,]  112
+## [29,]  114
+## [30,]  120
+## [31,]  126
+## [32,]  132
+## [33,]  138
+## [34,]  140
+## [35,]  144
+## [36,]  150
+## [37,]  156
+## [38,]  160
+## [39,]  162
+## [40,]  168
+## [41,]  174
+## [42,]  176
+## [43,]  180
+## [44,]  186
+## [45,]  192
+## [46,]  196
+## [47,]  198
+## [48,]  200
 </code></pre>
 
 </body>

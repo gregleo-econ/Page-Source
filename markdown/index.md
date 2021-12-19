@@ -1,64 +1,67 @@
-```
-   ,___             __
-  /   /            ( /
- /  ___   _  _,     /    _  __
- ___// (_(/_(_)_  (/___/(/_(_)
-             /|
-            (/
-```
+```
+   ,___             __          ############
+  /   /            ( /          # Greg Leo #
+ /  ___   _  _,     /    _  __  # VU Econ  #
+ ___// (_(/_(_)_  (/___/(/_(_)  # Theory   #
+             /|                 # Exp.     #
+            (/                  ############
+```
+
+**Good Luck with Finals!**
 
-**New**: [Reduction in Belief Elicitation](2. Working Papers/Reduction.html)  
 ##  MICROBLOG
+[Microblog](0. Microblog/microblog.html)
+
 [Gopher Log](0. Microblog/gopher.html)
 
-[Microblog  ](0. Microblog/microblog.html)
+##  TEACHING
+[Econ 3012](1. Teaching/econ3012.html)
+
+[Econ 8100](1. Teaching/econ8100.html)
+
+[Mechanism Design](1. Teaching/mechanism.html)
+
+[Workouts](1. Teaching/workouts.html)
 
 ##  PAPERS
-[Matching Soulmates](1. Papers/MatchingSoulmates.html)
+[Matching Soulmates](2. Papers/MatchingSoulmates.html)
 
-[Let Me, or Let George?](1. Papers/LMOLG.html)
+[Let Me, or Let George?](2. Papers/LMOLG.html)
 
-[Room Composition Effects on Risk Taking by Gender](1. Papers/RoomComposition.html)
+[Room Composition Effects on Risk Taking by Gender](2. Papers/RoomComposition.html)
 
-[Taking Turns](1. Papers/TakingTurns.html)
+[Taking Turns](2. Papers/TakingTurns.html)
 
-[Moral Hazard and Reciprocity](1. Papers/MoralHazard.html)
+[Moral Hazard and Reciprocity](2. Papers/MoralHazard.html)
 
 ##  WORKING PAPERS
-[++NEW++ Reduction in Belief Elicitation](2. Working Papers/Reduction.html)
+[++NEW++ Reduction in Belief Elicitation](3. Working Papers/Reduction.html)
 
-[Minimal Experiments](2. Working Papers/MinimalExperiments.html)
+[Minimal Experiments](3. Working Papers/MinimalExperiments.html)
 
-[Subgame Perfect Coalition Formation](2. Working Papers/SPGS.html)
+[Subgame Perfect Coalition Formation](3. Working Papers/SPGS.html)
 
-[Competing for Priorities in School Choice](2. Working Papers/Competing.html)
+[Competing for Priorities in School Choice](3. Working Papers/Competing.html)
 
-[Second-Order Beliefs and Gender](2. Working Papers/SOBAG.html)
+[Second-Order Beliefs and Gender](3. Working Papers/SOBAG.html)
 
-[From Coordination to Double-Crossing](2. Working Papers/CoordinationDoubleCrossing.html)
+[From Coordination to Double-Crossing](3. Working Papers/CoordinationDoubleCrossing.html)
 
-[Volunteer's Dilemmas with and without Coordination](2. Working Papers/Volunteers.html)
+[Volunteer's Dilemmas with and without Coordination](3. Working Papers/Volunteers.html)
 
 ##  MATH WORKING PAPERS
-[A Binomial Tail Inequality for Successes](3. Math Working Papers/Binomial.html)
+[A Binomial Tail Inequality for Successes](4. Math Working Papers/Binomial.html)
 
-[A Generalization of Teicher's Poisson Tail Inequality](3. Math Working Papers/Teicher.html)
-
-##  TEACHING
-[Econ 3012](4. Teaching/econ3012.html)
-
-[Econ 8100](4. Teaching/econ8100.html)
-
-[Workouts- Shape of Functions](4. Teaching/workouts.html)
+[A Generalization of Teicher's Poisson Tail Inequality](4. Math Working Papers/Teicher.html)
 
 ##  R PROJECTS
-[t(t(a[((!outer(a,a,"%%"))%*%a)>=2*a]))](5. R Projects/codeGolfAbundant.html)
+[(Updated 12/11) How I Generate This Webpage](5. R Projects/page maker.html)
 
-[How I Generate This Webpage  ](5. R Projects/page maker.html)
+[R Blog](5. R Projects/rblog.html)
 
 ##  NON-ACADEMIC PROJECTS
 [ARTSEY.io - One Handed Keyboard Layout](6. Non-academic Projects/ARTSEY.html)
 
 ```
-##------ Tue Nov  9 19:16:44 2021 ------##
+##------ Sun Dec 19 17:54:24 2021 ------##
 ```

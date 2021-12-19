@@ -39,5 +39,15 @@ jobs:
           user-email: g.leo@vanderbilt.edu
           target-branch: master
 
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'gopher'
+          destination-github-username: 'gregleo-econ'
+          destination-repository-name: 'gopher-hole'
+          user-email: g.leo@vanderbilt.edu
+          target-branch: master
 
       

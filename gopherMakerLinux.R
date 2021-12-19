@@ -4,6 +4,59 @@ library(stringr)
 library(dplyr)
 library(stringi)
 library(magrittr)
+library(bannerCommenter)
+
+width <- 60
+
+
+#Operator "m %r% f" applies function "f" to matrix "m" by rows. 
+`%r%` <- function(m,f){t(apply(m,1,match.fun(f)))}
+#Operator "m %c% f" applies function "f" to matrix "m" by column. 
+`%c%` <- function(m,f){t(apply(m,2,match.fun(f)))}
+#Operator "m %i% f" applies function "f" to matrix "m" by cell. 
+`%i%` <- function(m,f){t(apply(m,c(1,2),match.fun(f)))}
+#Operator "m %o% f" applies function "f" to object "o".
+`%o%` <- function(o,f){match.fun(f)(o)}
+#Operator "m %-% i" removes rows and column indicies "i" from matrix "m". 
+`%-%` <- function(m,i){if(length(i)>0){m[-i,-i]}else{m}}  
+#Operator applies function "f" across list "l" with sapply.
+`%s%` <- function(l,f){sapply(l,match.fun(f))}
+
+
+##################################################################
+##         Splits the Chunks Into Left and Right Column         ##
+##################################################################
+getLeftColumn <- function(vector){
+  vecLength <- length(vector)
+  half <- ceiling(vecLength/2)
+  vector[1:half]
+} 
+getRightColumn <- function(vector){
+  vecLength <- length(vector)
+  half <- ceiling(vecLength/2)
+  vector[(half+1):vecLength]
+} 
+
+twoColumn <- function(string,colSize,sep,lineSep){
+  string <- str_replace_all(string, "\n\n", "\n")
+  string <- str_replace_all(string, "\n", " \n ")
+  string <- str_replace_all(string, "\n", pasteCollapse(rep(lineSep,colSize)))
+  pasteSep <- function(vector) paste0(vector,collapse=sep)
+  addNewline <- function(string) paste0(c(string,"\n"),collapse="")
+  pasteCollapse <- function(vector) paste0(vector,collapse="")
+  addSpace <- function(string) c(rep(" ",max(c(0,colSize - nchar(string)))),string) %>% pasteCollapse  
+  brokenString <- stri_wrap(string,colSize) 
+  firstHalf <- brokenString %o% getFirstHalf %s% addSpace
+  secondHalf <- brokenString %o% getSecondHalf
+  if(length(firstHalf)>length(secondHalf)){secondHalf<-append(secondHalf,"")}
+  stringMatrix <- matrix(0,max(length(firstHalf),length(secondHalf)),0)
+  stringMatrix <- cbind(stringMatrix,firstHalf)
+  stringMatrix <- cbind(stringMatrix,secondHalf)
+  string <- stringMatrix %r% pasteSep %c%  addNewline %o% as.vector %o% pasteCollapse 
+  #string <- str_replace_all(string, pasteCollapse(rep("-",colSize)),"")
+  cat(string)
+}
+
 
 list.dirs <- function(path = ".",
                       pattern = NULL,
@@ -73,23 +126,9 @@ makeStaticFolder <- function(folder, directory) {
                              "")
   dir.create(currentDirectory)
 }
-
-#Setup the Gopher Folder
-makeGopherFolder <- function(folder, directory) {
-  staticDirectory = paste(c(directory, "/gopher"), collapse = "")
-  currentDirectory = paste(c(staticDirectory, "/", folder), collapse =
-                             "")
-  dir.create(currentDirectory)
-}
-
 setupStatic <- function(directory, folders) {
   sapply(folders, makeStaticFolder, directory = directory)
 }
-
-setupGopher <- function(directory, folders) {
-  sapply(folders, makeGopherFolder, directory = directory)
-}
-
 
 #Setup the Temp Folder
 setupTemp <- function(directory) {
@@ -110,47 +149,21 @@ getStaticPath <- function(file, folder, directory) {
     folder,
     "/",
     substr(file, 1, nchar(file) - 2),
-    "html"
+    "txt"
   ),
   collapse = "")
 }
-
-#Get Full Path to Static File
-getGopherPath <- function(file, folder, directory) {
-  paste(c(
-    directory,
-    "/gopher/",
-    folder,
-    "/",
-    file
-  ),
-  collapse = "")
-}
-
 
 #Make a Link to the Static File in Markdown Format
 makeLink <- function(fileInfo) {
-    paste(c(
-    "[",
-    fileInfo$title,
-    "](",
-    fileInfo$folder,
-    "/",
-    substr(as.character(fileInfo$fileName), 1, nchar(as.character(fileInfo$fileName)) - 2),
-    "html)\n"
-  ),
-  collapse = "")
-}
-
-#Make a Link to the Static File in Markdown Format
-makeGopherLink <- function(fileInfo) {
   paste(c(
     "1\t",
     fileInfo$title,
     "\t",
     fileInfo$folder,
     "/",
-    as.character(fileInfo$fileName)
+    substr(as.character(fileInfo$fileName), 1, nchar(as.character(fileInfo$fileName)) - 2),
+    "txt"
   ),
   collapse = "")
 }
@@ -164,40 +177,15 @@ makeIndex <- function(fileData,pageTitle,indexHeader) {
   folders <- fileData %>% pull(folder) %>% unique
   for(currentFolder in folders){
     
-    indexText <- c(indexText,paste("## ",toupper(substring(currentFolder,3)),sep=""))
+    indexText <- c(indexText,paste("**",toupper(substring(currentFolder,3)),sep=""))
     subsetFiles <- fileData %>% filter(folder==currentFolder) %>% arrange(desc(priority))
     for(i in 1:dim(subsetFiles)[1]){
-      print(subsetFiles[i,])
       indexText <- c(indexText,makeLink(subsetFiles[i,]))
     }
   }
   indexText <- c(indexText,"```",timestamp(),"```")
-  writeLines(indexText, paste(directory, "/markdown/index.md", sep = ""))
-  knit2html(
-    paste(directory, "/markdown/index.md", sep = ""),
-    paste(directory, "/static/index.md", sep = ""),
-    stylesheet = style,
-    title=pageTitle
-  )
-}
-
-#Create the Index Page
-makeGophermap <- function(fileData,pageTitle,indexHeader) {
+  writeLines(indexText, paste(directory, "/static/gophermap", sep = ""))
   
-  indexHeaderPath <-  paste(directory, "/markdown/indexHeader.md", sep = "")
-  indexHeader <-  readChar(indexHeaderPath, file.info(indexHeaderPath)$size)
-  indexText <- indexHeader
-  folders <- fileData %>% pull(folder) %>% unique
-  for(currentFolder in folders){
-    print(currentFolder)
-    indexText <- c(indexText,paste("**",toupper(currentFolder),sep=""))
-    subsetFiles <- fileData %>% filter(folder==currentFolder) 
-    for(i in 1:dim(subsetFiles)[1]){
-      indexText <- c(indexText,makeGopherLink(subsetFiles[i,]))
-    }
-  }
-  indexText <- c(indexText,"```",timestamp(),"```")
-  writeLines(indexText, paste(directory, "/gopher/gophermap", sep = ""))
 }
 
 #Add a "back" link to each page.
@@ -211,20 +199,24 @@ addBack <- function(fileInfo){
 }
 
 #Create an HTML Page from Markdown File
-makeHtml <- function(fileInfo,style,directory) {
+makeTxt <- function(fileInfo,directory) {
   message("Making",fileInfo$title)
-  fileInfo <- addBack(fileInfo)
-  tempFile <- paste(directory, "/temp/temp.md", sep = "")
-  writeLines(fileInfo$content, tempFile, sep = "")
-  knit2html(tempFile, output=fileInfo$fullStaticPath, stylesheet = style)
-  setwd(directory)
-}
+  fileTxt <- fileInfo$content
+  fileTxt <- stri_split_lines(fileInfo$content) %>% unlist
+  top <- paste0(banner(fileTxt[1],minHashes=60),collapse="")
+  fileTxt <- fileTxt[-1]
+  fileTxt <- pasteCollapse(fileTxt)
+  fileTxt <- pasteCollapse(stri_wrap(fileTxt,width=60))
+  fileTxt <- pasteCollapse(c(top,fileTxt))
+  
 
-makeGopher <- function(fileInfo,style,directory) {
-  message("Making",fileInfo$title)
-  sink(fileInfo$fullGopherPath)
-  cat(fileInfo$content)
-  sink()
+  print(fileTxt)
+  sink(file=fileInfo$fullStaticPath)
+
+  cat(fileTxt)
+  
+  sink(file = NULL) 
+  
 }
 
 
@@ -241,7 +233,6 @@ makeFileData <- function(directory){
   folder=c()
   fullMarkdownPath=c()
   fullStaticPath=c()
-  fullGopherPath=c()
   title=c()
   content=c()
   priority <- c()
@@ -251,7 +242,6 @@ makeFileData <- function(directory){
     for(file in files){
       fileMarkdownPath <- getMarkdownPath(file,fileFolder,directory)
       fileStaticPath <- getStaticPath(file,fileFolder,directory)
-      fileGopherPath <- getGopherPath(file,fileFolder,directory)
       fileTitle <- getTitle(fileMarkdownPath)  
       filePriority <- as.numeric(getPriority(fileMarkdownPath))
       fileContent <- readChar(fileMarkdownPath, file.info(fileMarkdownPath)$size)
@@ -261,12 +251,11 @@ makeFileData <- function(directory){
       folder <- c(folder,fileFolder)
       fullMarkdownPath <- c(fullMarkdownPath,fileMarkdownPath)
       fullStaticPath <- c(fullStaticPath,fileStaticPath)
-      fullGopherPath <- c(fullGopherPath,fileGopherPath)
       title <- c(title,fileTitle)
       content <- c(content,fileContent)
     }
   }
-  return(data.frame(fileName = fileName,folder = folder,fullMarkdownPath = fullMarkdownPath,fullStaticPath = fullStaticPath,fullGopherPath=fullGopherPath,title = title,priority = priority,content = content,stringsAsFactors=FALSE))
+  return(data.frame(fileName = fileName,folder = folder,fullMarkdownPath = fullMarkdownPath,fullStaticPath = fullStaticPath,title = title,priority = priority,content = content,stringsAsFactors=FALSE))
 }
 
 
@@ -277,7 +266,6 @@ setupSite <- function(directory){
   folders <- getFolders(directory)
   setupTemp(directory)
   setupStatic(directory, folders)
-  setupGopher(directory, folders)
 }
 
 
@@ -290,12 +278,10 @@ makePage <- function(directory, style,pageTitle,indexHeader) {
   for(i in 1:dim(fileData)[1]){
     print("Setting up Page")
     print(fileData[i,]$title)
-    makeHtml(fileData[i,],style = style,directory=directory)
-    makeGopher(fileData[i,],style = style,directory=directory)
+    makeTxt(fileData[i,],directory=directory)
   }
   print("Making Index")
   makeIndex(fileData,pageTitle)
-  makeGophermap(fileData,pageTitle)
 }
 
 #Set it up. Make it go.
@@ -303,10 +289,8 @@ makePage <- function(directory, style,pageTitle,indexHeader) {
 #setwd(directory)
 
 # Local Building
-
+setwd("C://Users//leogc//OneDrive//Webpages//Gopher")
 directory = getwd()
 
-
-style = paste(c(directory,"/style/style.css"),collapse="")
 makePage(directory,style,"Greg Leo")
 
