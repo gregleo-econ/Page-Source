@@ -122,7 +122,8 @@ getGopherPath <- function(file, folder, directory) {
     "/gopher/",
     folder,
     "/",
-    file
+    substr(file, 1, nchar(file) - 2),
+    "txt"
   ),
   collapse = "")
 }
