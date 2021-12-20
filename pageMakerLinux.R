@@ -189,14 +189,14 @@ makeGophermap <- function(fileData,pageTitle,indexHeader) {
   indexHeader <-  readChar(indexHeaderPath, file.info(indexHeaderPath)$size)
   indexText <- indexHeader
   folders <- fileData %>% pull(folder) %>% unique
-  for(currentFolder in folders){
-    print(currentFolder)
-    indexText <- c(indexText,paste("**",toupper(currentFolder),sep=""))
-    subsetFiles <- fileData %>% filter(folder==currentFolder) 
-    for(i in 1:dim(subsetFiles)[1]){
-      indexText <- c(indexText,makeGopherLink(subsetFiles[i,]))
-    }
-  }
+# for(currentFolder in folders){
+#   print(currentFolder)
+#   indexText <- c(indexText,paste("**",toupper(currentFolder),sep=""))
+#   subsetFiles <- fileData %>% filter(folder==currentFolder) 
+#   for(i in 1:dim(subsetFiles)[1]){
+#     indexText <- c(indexText,makeGopherLink(subsetFiles[i,]))
+ #   }
+  #}
   indexText <- c(indexText,"```",timestamp(),"```")
   writeLines(indexText, paste(directory, "/gopher/gophermap", sep = ""))
 }
