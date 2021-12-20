@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>t(t(a[((!outer(a,a,&ldquo;%%&rdquo;))%*%a)&gt;=2*a]))</title>
+<title>Matching Soulmates</title>
 
 <script type="text/javascript">
 window.onload = function() {
@@ -61,11 +61,34 @@ hljs.initHighlightingOnLoad();
 
 <style type="text/css">
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bgcol: #312F2f;
+	--header1bgcol: #BF98A0;
+	--header2bgcol: #BF98A0;
+	--header1fgcol: #312F2f;
+	--header2fgcol: #312F2f;
+  --textcol: #a6D9F7;
+	--linkcol: #84DCCF;
+	--visitedlinkcol: #84DCCF;
+	--subheadercol: #BF98A0;
+	--shadowcol: #312F2f;
+	--pretextcol: #84DCCF;
+	--prebgcol: #312F2f;
+	--operator: #BF98A0;
+	--string: #84DCCF;
+	--identifier: #a6D9F7;
+	--number: #a6D9F7;
+	--keyword: #a6D9F7;
+	--literal: #a6D9F7;
+	--comment: #BF98A0;
+}
+
 body {
-	background: #2637dd;
+	background: var(--bgcol);
 	font-family: "Roboto Mono", monospace;
 	font-weight: 500;
-	color: #fff;
+	color: var(--textcol);
 	-webkit-font-smoothing: antialiased;
 	font-size: 16pt;
 	width: 900px;
@@ -80,8 +103,8 @@ main h1 {}
 
 h1 {
 	font-family: "Rubik Mono One", sans-serif;
-	background: #fff;
-	color: #2637dd;
+	background: var(--header1bgcol);
+	color: var(--header1fgcol);
 	font-size: 24pt;
 	text-transform: uppercase;
 	display: inline-block;
@@ -94,8 +117,8 @@ h1 {
 
 h2 {
 	font-family: "Rubik Mono One", sans-serif;
-	background: #fff;
-	color: #2637dd;
+	background: var(--header2bgcol);
+	color: var(--header2fgcol);
 	font-size: 20pt;
 	text-transform: uppercase;
 	margin-top: 15px;
@@ -122,7 +145,7 @@ title {
 
 p.subheader {
 	font-weight: bold;
-	color: #593d87;
+	color: var(--subheadercol);
 }
 
 img {
@@ -131,16 +154,16 @@ img {
 }
 
 a {
-	color: #ffffff;
+	color: var(--linkcol);
 	color: inherit;
-	text-shadow: 1px 1px #2637dd, -1px -1px #2637dd;
+	text-shadow: 1px 1px var(--shadowcol), -1px -1px var(--shadowcol);
 	text-decoration: underline;
 	font-size: 16pt;
 }
 
 a:link,
 a:visited {
-	color: #ffffff;
+	color: var(--visitedlinkcol);
 }
 
 pre {
@@ -151,8 +174,8 @@ pre {
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
 	padding: 2px 5px;
-	color: #000000;
-	background: #ffffff;
+	color: var(--pretextcol);
+	background: var(--prebgcol);
 	font-family: inherit;
 }
 
@@ -165,7 +188,7 @@ a:active {
 p {
 	margin: 0px;
 	margin-bottom: 5px;
-	
+
 }
 
 div.footer {
@@ -174,6 +197,35 @@ div.footer {
 	line-height: 12pt;
 	text-align: center;
 	padding-top: 30pt;
+}
+
+
+pre .operator, pre .paren {
+    color: var(--operator);
+}
+
+pre .string, pre .paren {
+    color: var(--string);
+}
+
+pre .identifier, pre .paren {
+    color: var(--identifier);
+}
+
+pre .number, pre .paren {
+    color: var(--number);
+}
+
+pre .keyword, pre .paren {
+    color: var(--number);
+}
+
+pre .literal, pre .paren {
+    color: var(--number);
+}
+
+pre .constant, pre .paren {
+    color: var(--number);
 }
 </style>
 
@@ -184,77 +236,164 @@ div.footer {
 <body>
 <p><a href="../index.html">Back</a></p>
 
-<h1>t(t(a[((!outer(a,a,&ldquo;%%&rdquo;))%*%a)&gt;=2*a]))</h1>
+<h1>Matching Soulmates</h1>
 
-<h2>Code Golf</h2>
+<h2>Citation</h2>
 
-<p>The goal in <em>code golf</em> is to produce a program that solves a problem with as few characters as possible. Here is a code golf problem where R does pretty well. </p>
+<p>Leo, Greg and Lou, Jian and Van der Linden, Martin and Vorobeychik, Yevgeniy and Wooders, Myrna H., &ldquo;Matching Soulmates.&rdquo; Journal of Public Economic Theory. <em>forthcoming</em></p>
 
-<h2>Abundant Numbers</h2>
+<h2>Paper</h2>
 
-<p>This problem comes from <a href="https://code.golf/abundant-numbers%3E%5D(https://code.golf/abundant-numbers">Here</a>.</p>
+<p><a href="https://onlinelibrary.wiley.com/doi/10.1111/jpet.12542">Matching Soulmates</a></p>
 
-<p><em>An abundant number is a number for which the sum of its proper divisors (divisors not including the number itself) is greater than the number itself. For example **12</em>* is abundant because its proper divisors are <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>6</strong> which add up to <strong>16</strong>.*</p>
+<h2>Matching Soulmates in R</h2>
 
-<p><em>Print all the abundant numbers from **1</em>* to <strong>200</strong> inclusive, each on their own line.*</p>
+<p>In <a href="../2.%20Working%20Papers/MatchingSoulmates.html">Matching Soulmates</a>, my co-authors and I study a a recursive process in matching that
+forms coalitions that are mutually most-preferred by members of that coalition. We call this process the iterated matching of soulmates: <em>IMS</em>. We show that mechanisms that implement IMS have strong properties among those who are matched by IMS. </p>
 
-<h2>Code: (46 Characters)</h2>
+<p>How many people can &ldquo;usually&rdquo; be matched by IMS? This depends a lot on the environment and structure of preferences. But what about in totally unstructured environments? </p>
 
-<p>This code takes advantage of R&#39;s matrix functions and operators.</p>
+<p>Here is some R code that takes advantage of R&#39;s array-centric functions and some custom operators to count the number of people that can be matched as soulmates in 10000 random 10-person <a href="https://en.wikipedia.org/wiki/Stable_roommates_problem">stable roommates problems</a>. </p>
 
-<pre><code class="r">a=1:200
-t(t(a[((!outer(a,a,&quot;%%&quot;))%*%a)&gt;=2*a]))
+<p>The core of this code is contained in the <em>whos_a_soulmate</em> function. This function is somewhat non-standard R code. It is inspired by the type of programming normally done in one of R&#39;s predecessors <a href="https://tryapl.org">APL</a>. Here is the function: </p>
+
+<pre><code class="r">whos_a_soulmate &lt;- function(p){which((p%r%rank%&gt;%hadamard%r%min)==1)}
 </code></pre>
 
-<pre><code>##       [,1]
-##  [1,]    6
-##  [2,]   12
-##  [3,]   18
-##  [4,]   20
-##  [5,]   24
-##  [6,]   28
-##  [7,]   30
-##  [8,]   36
-##  [9,]   40
-## [10,]   42
-## [11,]   48
-## [12,]   54
-## [13,]   56
-## [14,]   60
-## [15,]   66
-## [16,]   70
-## [17,]   72
-## [18,]   78
-## [19,]   80
-## [20,]   84
-## [21,]   88
-## [22,]   90
-## [23,]   96
-## [24,]  100
-## [25,]  102
-## [26,]  104
-## [27,]  108
-## [28,]  112
-## [29,]  114
-## [30,]  120
-## [31,]  126
-## [32,]  132
-## [33,]  138
-## [34,]  140
-## [35,]  144
-## [36,]  150
-## [37,]  156
-## [38,]  160
-## [39,]  162
-## [40,]  168
-## [41,]  174
-## [42,]  176
-## [43,]  180
-## [44,]  186
-## [45,]  192
-## [46,]  196
-## [47,]  198
-## [48,]  200
+<p>To see how this works, let&#39;s first setup an example preference matrix. </p>
+
+<pre><code class="r">p &lt;- matrix(c(3,1,2,1,3,2,2,1,3),3,3,byrow=TRUE)
+p
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    3    1    2
+## [2,]    1    3    2
+## [3,]    2    1    3
+</code></pre>
+
+<p>Plyer 1 likes 2 best, player 2 likes 1 best, player 3 likes 2 best. Note that 1 and 2 are soulmates. We should find that 1 and 2 are soulmates in the first round of IMS. </p>
+
+<p>The first step of the function ensures the matrix &ldquo;p&rdquo; is a ranking matrix. We apply the &ldquo;rank&rdquo; function to the &ldquo;p&rdquo; matrix by row using the by-row operator created here. Since &ldquo;p&rdquo; is already a ranking matrix, this does not do anything. It is more important once some players have been removed and we need to re-rank. </p>
+
+<pre><code class="r">p %r% rank
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    3    1    2
+## [2,]    1    3    2
+## [3,]    2    1    3
+</code></pre>
+
+<p>Now we take take <a href="https://en.wikipedia.org/wiki/Hadamard_product">Hadamard product</a> of the preference matrix with its own transpose by piping it to our &ldquo;hadamard&rdquo; function with the built-in R pipe. </p>
+
+<pre><code class="r">p %r% rank %&gt;% hadamard
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    9    1    4
+## [2,]    1    9    2
+## [3,]    4    2    9
+</code></pre>
+
+<p>Note how off diagonal 1&#39;s in this matrix represent positions where both players prefer eachother most. We want to pull these players who have a 1 in their row. To do this, we pipe what we have to the &ldquo;min&rdquo; function using our by-row operator. If a 1 is present, that player has a soulmate. </p>
+
+<pre><code class="r">p %r% rank %&gt;% hadamard %r% min
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    1    2
+</code></pre>
+
+<p>Note that 1 and 2 have a &ldquo;1&rdquo; here, indicating that players 1 and 2 have a soulmate from this group. Select just these players, we compare this vector to 1. The indicies that map to &ldquo;TRUE&rdquo; are players who have a soulmate. </p>
+
+<pre><code class="r">p %r% rank %&gt;% hadamard %r% min == 1
+</code></pre>
+
+<pre><code>##      [,1] [,2]  [,3]
+## [1,] TRUE TRUE FALSE
+</code></pre>
+
+<p>We see now that players 1 and 2 have a soulmate. We can now remove these players by using our remove operator &ldquo;%rm%&rdquo;. </p>
+
+<pre><code class="r">p &lt;- p %rm% whos_a_soulmate(p) %&gt;% as.matrix
+p
+</code></pre>
+
+<pre><code>##      [,1]
+## [1,]    3
+</code></pre>
+
+<p>What we get is the remainder of the preference matrix &ldquo;p&rdquo; after removing soulmates. We only have player 3 left. Note that player 3 originally ranked being &ldquo;alone&rdquo; as third-best. That&#39;s why a 3 shows up here. Let&#39;s pipe this to rank again to have the player(s) rerank their potential partners.</p>
+
+<pre><code class="r">p %r% rank
+</code></pre>
+
+<pre><code>##      [,1]
+## [1,]    1
+</code></pre>
+
+<p>Now we can run the process again.</p>
+
+<pre><code class="r">p &lt;- p %rm% whos_a_soulmate(p)
+p
+</code></pre>
+
+<pre><code>## &lt;0 x 0 matrix&gt;
+</code></pre>
+
+<p>Since being alone is the only outcome left, player 3 is a solemate-group-of-one and is removed. This demonstrates how the &ldquo;IMS&rdquo; function proceeds. It calls &ldquo;remove_soulmates&rdquo;. If anyone is removed, &ldquo;IMS&rdquo; calls itself. If there is no one to remove or no one further can be removed, the function returns the remaining preference matrix.  </p>
+
+<h2>Code</h2>
+
+<pre><code class="r">#Operator &quot;m %r% f&quot; applies function &quot;f&quot; to matrix &quot;m&quot; by rows. 
+`%r%` &lt;- function(m,f){t(apply(m,1,match.fun(f)))}
+
+#Operator &quot;m %rm% i&quot; removes rows and column indicies &quot;i&quot; from matrix &quot;m&quot;. 
+`%rm%` &lt;- function(m,i){if(length(i)&gt;0){m[-i,-i]}else{m}}  
+
+#Operator applies function &quot;f&quot; across list &quot;l&quot; with sapply.
+`%s%` &lt;- function(l,f){sapply(l,match.fun(f))}
+
+#Returns Hadamard product of matrix m with its transpose.
+hadamard &lt;- function(m){m * t(m)}
+
+#Given preference matrix, returns vector of player indicies who are first-order soulmates.
+whos_a_soulmate &lt;- function(p){which((p%r%rank%&gt;%hadamard%r%min)==1)}
+
+#Removes first order soulmates from preference matrix p.
+remove_soulmates &lt;- function(p){p %rm% whos_a_soulmate(p) %&gt;% as.matrix}
+
+#Recursively applies remove_soulmates until there&#39;s none left to remove.
+ims &lt;- function(p){if(dim(p)[1]==0 || identical(remove_soulmates(p),p)){p}else{ims(remove_soulmates(p))}}
+
+#Create a random roommates preference matrix with &quot;dim&quot; players.
+create_preference &lt;- function(dim){
+p &lt;- matrix(runif(dim*dim),dim,dim,byrow=TRUE)
+diag(p)&lt;- 1
+p %r% rank
+}
+
+#Set up parameters. &quot;dim&quot; is the number of players. &quot;n&quot; is the number of random trials. 
+dim &lt;- 10
+n &lt;- 100
+
+#Create List of &quot;n&quot; Preference Matricies with &quot;dim&quot; players.
+preference_list &lt;- lapply(1:n,function(x){create_preference(dim)})
+
+#Apply IMS to the list of preferences then count the number of players remaining.
+remaining &lt;- preference_list %s% ims %s% dim 
+
+#Get the number of players removed by IMS.
+removed &lt;- dim - remaining[1,]
+
+#Make a table of frequencies of the number of removed players.
+removed %&gt;% table/n
+</code></pre>
+
+<pre><code>## .
+##    0    2    4    6   10 
+## 0.54 0.30 0.09 0.03 0.04
 </code></pre>
 
 </body>

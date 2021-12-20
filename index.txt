@@ -9,59 +9,59 @@
 
 **Good Luck with Finals!**
 
-##  MICROBLOG
-[Microblog](0. Microblog/microblog.html)
+## .MICROBLOG
+[Microblog](0.Microblog/microblog.html)
 
-[Gopher Log](0. Microblog/gopher.html)
+[Gopher Log](0.Microblog/gopher.html)
 
-##  TEACHING
-[Econ 3012](1. Teaching/econ3012.html)
+## .TEACHING
+[Econ 3012](1.Teaching/econ3012.html)
 
-[Econ 8100](1. Teaching/econ8100.html)
+[Econ 8100](1.Teaching/econ8100.html)
 
-[Mechanism Design](1. Teaching/mechanism.html)
+[Mechanism Design](1.Teaching/mechanism.html)
 
-[Workouts](1. Teaching/workouts.html)
+[Workouts](1.Teaching/workouts.html)
 
-##  PAPERS
-[Matching Soulmates](2. Papers/MatchingSoulmates.html)
+## .PAPERS
+[Matching Soulmates](2.Papers/MatchingSoulmates.html)
 
-[Let Me, or Let George?](2. Papers/LMOLG.html)
+[Let Me, or Let George?](2.Papers/LMOLG.html)
 
-[Room Composition Effects on Risk Taking by Gender](2. Papers/RoomComposition.html)
+[Room Composition Effects on Risk Taking by Gender](2.Papers/RoomComposition.html)
 
-[Taking Turns](2. Papers/TakingTurns.html)
+[Taking Turns](2.Papers/TakingTurns.html)
 
-[Moral Hazard and Reciprocity](2. Papers/MoralHazard.html)
+[Moral Hazard and Reciprocity](2.Papers/MoralHazard.html)
 
-##  WORKING PAPERS
-[++NEW++ Reduction in Belief Elicitation](3. Working Papers/Reduction.html)
+## .WORKING PAPERS
+[++NEW++ Reduction in Belief Elicitation](3.Working_Papers/Reduction.html)
 
-[Minimal Experiments](3. Working Papers/MinimalExperiments.html)
+[Minimal Experiments](3.Working_Papers/MinimalExperiments.html)
 
-[Subgame Perfect Coalition Formation](3. Working Papers/SPGS.html)
+[Subgame Perfect Coalition Formation](3.Working_Papers/SPGS.html)
 
-[Competing for Priorities in School Choice](3. Working Papers/Competing.html)
+[Competing for Priorities in School Choice](3.Working_Papers/Competing.html)
 
-[Second-Order Beliefs and Gender](3. Working Papers/SOBAG.html)
+[Second-Order Beliefs and Gender](3.Working_Papers/SOBAG.html)
 
-[From Coordination to Double-Crossing](3. Working Papers/CoordinationDoubleCrossing.html)
+[From Coordination to Double-Crossing](3.Working_Papers/CoordinationDoubleCrossing.html)
 
-[Volunteer's Dilemmas with and without Coordination](3. Working Papers/Volunteers.html)
+[Volunteer's Dilemmas with and without Coordination](3.Working_Papers/Volunteers.html)
 
-##  MATH WORKING PAPERS
-[A Binomial Tail Inequality for Successes](4. Math Working Papers/Binomial.html)
+## .MATH WORKING_PAPERS
+[A Binomial Tail Inequality for Successes](4.Math_Working_Papers/Binomial.html)
 
-[A Generalization of Teicher's Poisson Tail Inequality](4. Math Working Papers/Teicher.html)
+[A Generalization of Teicher's Poisson Tail Inequality](4.Math_Working_Papers/Teicher.html)
 
-##  R PROJECTS
-[(Updated 12/11) How I Generate This Webpage](5. R Projects/page maker.html)
+## .R PROJECTS
+[(Updated 12/11) How I Generate This Webpage](5.R_Projects/page maker.html)
 
-[R Blog](5. R Projects/rblog.html)
+[R Blog](5.R_Projects/rblog.html)
 
-##  NON-ACADEMIC PROJECTS
-[ARTSEY.io - One Handed Keyboard Layout](6. Non-academic Projects/ARTSEY.html)
+## .NON-ACADEMIC PROJECTS
+[ARTSEY.io - One Handed Keyboard Layout](6.Non-academic_Projects/ARTSEY.html)
 
 ```
-##------ Sun Dec 19 17:54:24 2021 ------##
+##------ Sun Dec 19 21:07:22 2021 ------##
 ```
