@@ -46,7 +46,7 @@ jobs:
         with:
           source-directory: 'gopher'
           destination-github-username: 'gregleo-econ'
-          destination-repository-name: 'gopher-hole'
+          destination-repository-name: 'gopher'
           user-email: g.leo@vanderbilt.edu
           target-branch: master
 
