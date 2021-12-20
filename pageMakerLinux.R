@@ -165,7 +165,7 @@ makeIndex <- function(fileData,pageTitle,indexHeader) {
   folders <- fileData %>% pull(folder) %>% unique
   for(currentFolder in folders){
     
-    indexText <- c(indexText,paste("## ",toupper(substring(currentFolder,3)),sep=""))
+    indexText <- c(indexText,paste("## ",toupper(substring(currentFolder,2)),sep=""))
     subsetFiles <- fileData %>% filter(folder==currentFolder) %>% arrange(desc(priority))
     for(i in 1:dim(subsetFiles)[1]){
       print(subsetFiles[i,])
