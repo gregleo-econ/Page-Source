@@ -224,9 +224,9 @@ makeHtml <- function(fileInfo,style,directory) {
 
 makeGopher <- function(fileInfo,style,directory) {
   message("Making",fileInfo$title)
-  sink(fileInfo$fullGopherPath)
-  cat(fileInfo$content)
-  sink()
+  
+  writeLines(fileInfo$content,fileInfo$fullGopherPath,sep="")
+
 }
 
 
