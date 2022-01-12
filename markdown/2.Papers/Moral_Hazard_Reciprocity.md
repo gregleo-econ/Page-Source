@@ -1,6 +1,6 @@
 +1
 
-# Moral Hazard and Reciprocity
+# Moral Hazard and Reciprocity (Southern Journal of Economcis)
 
 ## Citation 
 
