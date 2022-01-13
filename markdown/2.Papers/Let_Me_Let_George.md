@@ -1,6 +1,6 @@
 +4
 
-# Let Me, or Let George? (Games and Economic Behavior)
+# Let Me, or Let George? (GEB)
 
 ## Citation
 

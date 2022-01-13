@@ -1,6 +1,6 @@
 +3
 
-# Room Composition Effects on Risk Taking by Gender (Experimental Economics)
+# Room Composition Effects on Risk Taking by Gender (EE)
 
 ## Citation 
 

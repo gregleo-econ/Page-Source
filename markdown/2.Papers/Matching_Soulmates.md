@@ -1,6 +1,6 @@
 +5
 
-# Matching Soulmates (J. Public Economic Theory)
+# Matching Soulmates (JPET)
 
 ## Citation 
 
