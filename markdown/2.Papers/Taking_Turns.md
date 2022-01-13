@@ -1,6 +1,6 @@
 +2
 
-# Taking Turns (Games and Economic Behavior)
+# Taking Turns (GEB)
 
 ## Citation 
 
