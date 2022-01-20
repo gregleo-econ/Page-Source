@@ -21,7 +21,7 @@ jobs:
 
       - name: Install packages
         run: |
-          R -e 'install.packages(c("knitr","fs","stringr","dplyr","stringi","magrittr","renv","txtplot","markdown"))'
+          R -e 'install.packages(c("knitr","txtplot","fs","stringr","dplyr","stringi","magrittr","renv","txtplot","markdown"))'
           R -e 'renv::restore()'
       - name: Make Page
         run: |
