@@ -279,7 +279,7 @@ setupSite <- function(directory){
   folders <- getFolders(directory)
   setupTemp(directory)
   setupStatic(directory, folders)
-  setupGopher(directory, folders)
+  #setupGopher(directory, folders)
 }
 
 
@@ -297,7 +297,7 @@ makePage <- function(directory, style,pageTitle,indexHeader) {
   }
   print("Making Index")
   makeIndex(fileData,pageTitle)
-  makeGophermap(fileData,pageTitle)
+  #makeGophermap(fileData,pageTitle)
 }
 
 #Set it up. Make it go.
