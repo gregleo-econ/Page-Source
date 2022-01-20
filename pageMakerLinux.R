@@ -4,6 +4,8 @@ library(stringr)
 library(dplyr)
 library(stringi)
 library(magrittr)
+library(txtplot)
+library(gtrendsR)
 
 list.dirs <- function(path = ".",
                       pattern = NULL,
@@ -74,27 +76,22 @@ makeStaticFolder <- function(folder, directory) {
   dir.create(currentDirectory)
 }
 
-#Setup the Gopher Folder
-makeGopherFolder <- function(folder, directory) {
-  staticDirectory = paste(c(directory, "/gopher"), collapse = "")
-  currentDirectory = paste(c(staticDirectory, "/", folder), collapse =
-                             "")
-  dir.create(currentDirectory)
-}
-
 setupStatic <- function(directory, folders) {
   sapply(folders, makeStaticFolder, directory = directory)
 }
 
-setupGopher <- function(directory, folders) {
-  sapply(folders, makeGopherFolder, directory = directory)
-}
 
 
 #Setup the Temp Folder
 setupTemp <- function(directory) {
   tempDirectory = paste(c(directory, "/temp"), collapse = "")
   dir.create(tempDirectory)
+}
+
+#Setup the Temp Folder
+setupGopher <- function(directory) {
+  gopherDirectory = paste(c(directory, "/gopher"), collapse = "")
+  dir.create(gopherDirectory)
 }
 
 #Get Full Path to Markdown File
@@ -115,18 +112,6 @@ getStaticPath <- function(file, folder, directory) {
   collapse = "")
 }
 
-#Get Full Path to Static File
-getGopherPath <- function(file, folder, directory) {
-  paste(c(
-    directory,
-    "/gopher/",
-    folder,
-    "/",
-    substr(file, 1, nchar(file) - 2),
-    "txt"
-  ),
-  collapse = "")
-}
 
 
 #Make a Link to the Static File in Markdown Format
@@ -143,18 +128,6 @@ makeLink <- function(fileInfo) {
   collapse = "")
 }
 
-#Make a Link to the Static File in Markdown Format
-makeGopherLink <- function(fileInfo) {
-  paste(c(
-    "1\t",
-    fileInfo$title,
-    "\t",
-    fileInfo$folder,
-    "/",
-    as.character(fileInfo$fileName)
-  ),
-  collapse = "")
-}
 
 #Create the Index Page
 makeIndex <- function(fileData,pageTitle,indexHeader) {
@@ -186,20 +159,20 @@ makeIndex <- function(fileData,pageTitle,indexHeader) {
 #Create the Index Page
 makeGophermap <- function(fileData,pageTitle,indexHeader) {
   
-  indexHeaderPath <-  paste(directory, "/markdown/indexHeader.md", sep = "")
-  indexHeader <-  readChar(indexHeaderPath, file.info(indexHeaderPath)$size)
-  indexText <- indexHeader
-  folders <- fileData %>% pull(folder) %>% unique
-# for(currentFolder in folders){
-#   print(currentFolder)
-#   indexText <- c(indexText,paste("**",toupper(currentFolder),sep=""))
-#   subsetFiles <- fileData %>% filter(folder==currentFolder) 
-#   for(i in 1:dim(subsetFiles)[1]){
-#     indexText <- c(indexText,makeGopherLink(subsetFiles[i,]))
- #   }
-  #}
-  indexText <- c(indexText,"```",timestamp(),"```")
-  writeLines(indexText, paste(directory, "/gopher/gophermap", sep = ""))
+  gopherHeaderPath <-  paste(directory, "/markdown/gopherHeader.md", sep = "")
+  gopherHeader <-  readChar(gopherHeaderPath, file.info(gopherHeaderPath)$size)
+  gopherText <- gopherHeader
+  
+  terms = c("gopher","gemini")
+  
+  for(term in terms){
+    df <-gtrends(term,time="all",onlyInterest = TRUE)
+    gopherText <- c(gopherText,paste0("$$ Interest in ",term," over time. $$"))
+    gopherText <- c(gopherText,capture.output(txtplot(as.numeric(df$interest_over_time[,1]),df$interest_over_time[,2],ylab="Interest",xlab="Unix Epoch on January 1st, 1970 at UTC.")))
+    gopherText <- c(gopherText," ")
+  }
+
+  writeLines(gopherText, paste(directory, "/gopher/gophermap", sep = ""))
 }
 
 #Add a "back" link to each page.
@@ -222,12 +195,7 @@ makeHtml <- function(fileInfo,style,directory) {
   setwd(directory)
 }
 
-makeGopher <- function(fileInfo,style,directory) {
-  message("Making",fileInfo$title)
-  
-  writeLines(fileInfo$content,fileInfo$fullGopherPath,sep="")
 
-}
 
 
 #Remove Priority String
@@ -243,7 +211,6 @@ makeFileData <- function(directory){
   folder=c()
   fullMarkdownPath=c()
   fullStaticPath=c()
-  fullGopherPath=c()
   title=c()
   content=c()
   priority <- c()
@@ -253,7 +220,6 @@ makeFileData <- function(directory){
     for(file in files){
       fileMarkdownPath <- getMarkdownPath(file,fileFolder,directory)
       fileStaticPath <- getStaticPath(file,fileFolder,directory)
-      fileGopherPath <- getGopherPath(file,fileFolder,directory)
       fileTitle <- getTitle(fileMarkdownPath)  
       filePriority <- as.numeric(getPriority(fileMarkdownPath))
       fileContent <- readChar(fileMarkdownPath, file.info(fileMarkdownPath)$size)
@@ -263,12 +229,11 @@ makeFileData <- function(directory){
       folder <- c(folder,fileFolder)
       fullMarkdownPath <- c(fullMarkdownPath,fileMarkdownPath)
       fullStaticPath <- c(fullStaticPath,fileStaticPath)
-      fullGopherPath <- c(fullGopherPath,fileGopherPath)
       title <- c(title,fileTitle)
       content <- c(content,fileContent)
     }
   }
-  return(data.frame(fileName = fileName,folder = folder,fullMarkdownPath = fullMarkdownPath,fullStaticPath = fullStaticPath,fullGopherPath=fullGopherPath,title = title,priority = priority,content = content,stringsAsFactors=FALSE))
+  return(data.frame(fileName = fileName,folder = folder,fullMarkdownPath = fullMarkdownPath,fullStaticPath = fullStaticPath,title = title,priority = priority,content = content,stringsAsFactors=FALSE))
 }
 
 
@@ -279,7 +244,7 @@ setupSite <- function(directory){
   folders <- getFolders(directory)
   setupTemp(directory)
   setupStatic(directory, folders)
-  #setupGopher(directory, folders)
+  setupGopher(directory)
 }
 
 
