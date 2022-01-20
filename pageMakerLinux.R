@@ -293,11 +293,10 @@ makePage <- function(directory, style,pageTitle,indexHeader) {
     print("Setting up Page")
     print(fileData[i,]$title)
     makeHtml(fileData[i,],style = style,directory=directory)
-    makeGopher(fileData[i,],style = style,directory=directory)
   }
   print("Making Index")
   makeIndex(fileData,pageTitle)
-  #makeGophermap(fileData,pageTitle)
+  makeGophermap()
 }
 
 #Set it up. Make it go.
