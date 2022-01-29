@@ -2,6 +2,20 @@
 
 # Microblog  
 
+## 1/28/22, 10:14 PM @Wordle
+Wordle 223 4/6  
+
+  
+
+🟨🟩⬛⬛⬛  
+
+⬛🟩⬛🟨🟩  
+
+⬛🟩🟩⬛🟩  
+
+🟩🟩🟩🟩🟩  
+
+
 ## 1/26/22, 1:48 PM @Wordle
 Just like everyone else, I have been playing Wrodle. 
 
