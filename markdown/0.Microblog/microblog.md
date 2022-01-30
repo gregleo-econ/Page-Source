@@ -2,6 +2,24 @@
 
 # Microblog  
 
+## 1/30/22, 11:37 AM @Wordle
+Wordle 225 4/6  
+
+  
+
+My usual tactic is to use two words that try the top ten most common letters. Today’s puzzle shows that this can work well even when very few of those letters match.   
+
+  
+
+🟨⬛⬛⬛🟨  
+
+⬛⬛⬛⬛⬛  
+
+⬛🟩🟩🟩🟩  
+
+🟩🟩🟩🟩🟩  
+
+
 ## 1/29/22, 10:20 AM @Wordle
 Wordle 224 4/6  
 
