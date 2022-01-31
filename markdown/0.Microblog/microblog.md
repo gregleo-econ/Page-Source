@@ -2,14 +2,14 @@
 
 # Microblog  
 
-## 1/30/22, 11:37 AM @Wordle
+
+
+## 1/26/22, 1:48 PM @Wordle
+Just like everyone else, I have been playing Wrodle. Here are notable solutions. 
+
 Wordle 225 4/6  
 
-  
-
 My usual tactic is to use two words that try the top ten most common letters. Today’s puzzle shows that this can work well even when very few of those letters match.   
-
-  
 
 🟨⬛⬛⬛🟨  
 
@@ -20,79 +20,9 @@ My usual tactic is to use two words that try the top ten most common letters. To
 🟩🟩🟩🟩🟩  
 
 
-## 1/29/22, 10:20 AM @Wordle
-Wordle 224 4/6  
-
-  
-
-⬛⬛⬛⬛⬛  
-
-🟨🟨⬛⬛🟨  
-
-🟩🟩⬛⬛⬛  
-
-🟩🟩🟩🟩🟩  
-
-
-## 1/26/22, 1:48 PM @Wordle
-Just like everyone else, I have been playing Wrodle. 
-
-Wordle 223 4/6  
-
-🟨🟩⬛⬛⬛  
-
-⬛🟩⬛🟨🟩  
-
-⬛🟩🟩⬛🟩  
-
-🟩🟩🟩🟩🟩  
-
-
-Wordle 221 4/6  
-
-⬛⬛⬛⬛⬛  
-
-⬛🟨⬛🟨⬛  
-
-🟩🟨🟨🟨⬛  
-
-🟩🟩🟩🟩🟩  
-
-Wordle 215 5/6  
-
-🟩⬛⬛⬛⬛  
-
-🟨⬛🟨⬛⬛  
-
-🟩🟩🟨🟨⬛  
-
-🟩🟩🟨🟩⬛  
-
-🟩🟩🟩🟩🟩  
-
-Wordle 214 4/6    
-
-⬛⬛🟨🟨⬛  
-
-⬛⬛🟩🟩🟩  
-
-⬛⬛🟩🟩🟩  
-
-🟩🟩🟩🟩🟩  
-
-Wordle 213 5/6  
-
-⬛⬛⬛🟨⬛  
-
-⬛🟩🟩⬛⬛  
-
-⬛🟩🟩⬛⬛  
-
-🟩🟩🟩⬛⬛  
-
-🟩🟩🟩🟩🟩  
-
 Wordle 212 3/6  
+
+This was my first game of Wordle. Getting this in three hooked me on the game.  
 
 🟨🟨🟨🟨⬛  
 
