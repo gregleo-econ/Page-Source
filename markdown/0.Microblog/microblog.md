@@ -2,10 +2,17 @@
 
 # Microblog  
 
-## 2/2/22, 10:21 PM @Wordle
-Wordle 228 3/6  
 
-  
+
+
+
+## 1/26/22, 1:48 PM @Wordle
+Just like everyone else, I have been playing Wrodle. Here are notable solutions.   
+
+My usual tactic is to use two words that try the top ten most common letters. Sometimes it pays off.  
+
+
+Wordle 228 3/6   
 
 ⬛⬛🟨🟨⬛  
 
@@ -14,14 +21,7 @@ Wordle 228 3/6
 🟩🟩🟩🟩🟩  
 
 
-
-
-## 1/26/22, 1:48 PM @Wordle
-Just like everyone else, I have been playing Wrodle. Here are notable solutions. 
-
 Wordle 225 4/6  
-
-My usual tactic is to use two words that try the top ten most common letters. Today’s puzzle shows that this can work well even when very few of those letters match.   
 
 🟨⬛⬛⬛🟨  
 
