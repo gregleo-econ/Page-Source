@@ -6,7 +6,7 @@
              /|                 # Exp.     #
             (/                  ############
 ```
-![MinEx](../files/Images/minex.png)
-*New Working Paper:* **Minimal Experiments**
+![MinEx](../files/Images/minex.png)  
+
 
 
