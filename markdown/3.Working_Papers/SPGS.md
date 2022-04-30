@@ -1,4 +1,4 @@
-+4
++3
 
 # Subgame Perfect Coalition Formation
 

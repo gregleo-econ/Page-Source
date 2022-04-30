@@ -1,4 +1,4 @@
-+8
++7
 
 # Reduction in Belief Elicitation
 

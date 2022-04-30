@@ -1,4 +1,4 @@
-+3
++1
 
 # Competing for Priorities in School Choice
 
