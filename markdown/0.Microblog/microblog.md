@@ -2,6 +2,12 @@
 
 # Microblog  
 
+## 4/30/22 11:47 AM @RESEARCH
+
+I am pleased to post a draft version of *Minimal Experiments* joint with [P.J. Healy](https://healy.econ.ohio-state.edu/).
+
+![MinEx](../files/Images/minex.png)
+
 ## 2/13/22, 1:48 PM @Wordle
 Just like everyone else, I have been playing Wrodle. Here are notable solutions.   
 
