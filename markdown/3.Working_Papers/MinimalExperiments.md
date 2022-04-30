@@ -12,7 +12,7 @@ Healy, P.J. and Leo, Greg, Minimal Experiments
 
 ## Paper
 
-[Minimal Experiments](../files/Papers/WP_Minmal_Experiments.pdf)
+[Minimal Experiments](../files/Papers/WP_Minimal_Experiments.pdf)
 
 ## App
 
