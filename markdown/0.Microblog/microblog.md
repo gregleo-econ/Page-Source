@@ -2,24 +2,14 @@
 
 # Microblog  
 
-## 2/13/22, 8:14 PM @Wordle
-Wordle 239 2/6  
+## 2/13/22, 1:48 PM @Wordle
+Just like everyone else, I have been playing Wrodle. Here are notable solutions.   
 
-  
+Wordle 239 2/6  
 
 🟩⬛⬛🟩🟩  
 
 🟩🟩🟩🟩🟩  
-
-
-
-
-
-
-## 1/26/22, 1:48 PM @Wordle
-Just like everyone else, I have been playing Wrodle. Here are notable solutions.   
-
-My usual tactic is to use two words that try the top ten most common letters. Sometimes it pays off.  
 
 
 Wordle 228 3/6   
@@ -61,24 +51,6 @@ During winter break, I worked on a new project using my 3d printer. I attached a
 
 ![Cyberdeck](../files/Images/cyberdeck.jpeg)
 
-## 12/10/21, 4:18 PM @webpage
-
-With another semester in the books (nearly), I want to thank all my students for great courses. This semester, I tried live-typing my lecture notes in both my undergraduate and PhD courses. I used Lyx (a frontend for latex) for typesetting. Lyx has the nice benefit of being able to hook into a background Mathematica instance to take derivatives, solve simple problems, and even do some more complex tasks on the fly right from the typeset expressions. It's an amazing system.
-
-For me, this is the best-of-both-worlds of overhead slides and lecturing at the board. The typeset notes free students to listen rather than write (if they want), and Mathematica ensures we don't make any math mistakes (unless we want to). Typing live keeps the lecture interactive and keeps my pace appropriate. Plus, we can adapt, change our models, and experiment as we go.
-
-I have a little work to do to clean up the notes, but I am happy to have a durable record of our notes for the future.
-
-On another note, I've updated the look of the site with a new theme for winter. This one is reminiscent of hot chocolate and winter treats!
-
-## 11/8/21, 9:55 PM @webpage
-
-I’ve moved my site generation to a raspberry pi.
-
-Previously, this site was generated in the cloud via a GitHub action. This required GitHub to fire up a virtual machine each time I updated my site. To speed up this process and expand my control over the generation, I’ve migrated this to an older pi 3, which provides more than enough power to handle this tiny site.
-
-The time from updating my source repo to having live html updates is down to about a minute, and now I can incorporated more complex build workflows using other tools.
-
 ## 11/4/21, 7:14 PM @academic
 
 Andrew Dustan, Kristine Koutout and I have completed a new working papge: [Reduction in Belief Elicitation](../2.Working_Papers/Reduction.html).
@@ -98,11 +70,6 @@ So blue...
 Here is a snip of the "printed" Postscript output.
 
 ![ChiWriter Output](../files/Images/chiwriteroutput.png)
-
-
-## 10/23/21, 8:14 PM @retrocomputing
-
-I am now on gopherspace at [gopher://gopher.gregcleo.com:70/](gopher://gopher.gregcleo.com:70/).
 
 ## 10/19/21, 9:33 PM @academic
 
