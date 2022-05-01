@@ -1,6 +1,6 @@
 +7
 
-# Second-Order Beliefs and Gender (R&R JEBO)
+# Second-Order Beliefs and Gender (R&R)
 
 ## Citation 
 
