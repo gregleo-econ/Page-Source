@@ -6,7 +6,7 @@ I am on gopherspace at [gopher://gopher.gregcleo.com:70/](gopher://gopher.gregcl
 
 ## Gopher Server
 
-My gopher server runs in a docker container on a docker "swarm" in my raspberry pi zero cluster. Here's a picture of this funny little server:
+My gopher server runs in a docker container on a docker “swarm” in my raspberry pi zero cluster. Here’s a picture of this funny little server:
 
 ![Pi Zero Cluster](../files/Images/picluster.jpeg)
 

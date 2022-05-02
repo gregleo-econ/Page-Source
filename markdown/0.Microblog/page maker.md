@@ -1,6 +1,6 @@
-+2
++1
 
-# (Updated 12/11) How I Generate This Webpage
+# About This Webpage
 
 I generate this site from a directory of markdown files using a script written in R. The code for this and some instructions are given below.
 
