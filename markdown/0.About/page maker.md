@@ -7,7 +7,7 @@ I generate this site from a directory of markdown files using a script written i
 
 ## Set up your directory.
 
-Your directory should have a folder called "markdown". This folder must contain one folder for each category of page you want on the index page of the site. I have, for instance "papers" and "teaching" as subfolders. Each subfolder must have one markdown file per page you want on the site. The markdown files should start with a single blank line and then a header `# Title`. This header will be used as the title of the page on the index.
+Your directory should have a folder called "markdown". This folder must contain one folder for each category of page you want on the index page of the site. I have, for instance "papers" and "teaching" as subfolders. Each subfolder must have one markdown file per page you want on the site. The markdown files should start with a  `+1` or `+2` or some other number. This is used for ordering pages (larger numbers are placed higher up) within a subgroup. Then there should be a single blank line and then a header `# Title`. This header will be used as the title of the page on the index.
 
 The markdown folder should also contain a file called header.md which will be placed on top of every page (except the index). Mine is just:
 
@@ -15,16 +15,7 @@ The markdown folder should also contain a file called header.md which will be pl
 [Back](../index.html)
 ```
 
-The markdown folder should also contain a file called indexHeader.md which will be placed at the top of the index. Mine is just some ascii art:
-
-```
-   ,___             __          ############
-  /   /            ( /          # Greg Leo #
- /  ___   _  _,     /    _  __  # VU Econ  #
- ___// (_(/_(_)_  (/___/(/_(_)  # Theory   #
-             /|                 # Exp.     #
-            (/                  ############
-```
+The markdown folder should also contain a file called indexHeader.md which will be placed at the top of the index. This can be whatever. Maybe a banner.
 
 Place a stylesheet (css) file in the directory in a /style subdirectory. The content of my stylesheet is provided below. Feel free to use that as a base.
 
