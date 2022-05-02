@@ -1,6 +1,6 @@
 +1 
 
-# Microblog  
+# Blog  
 
 ## 4/30/22 11:47 AM @research
 
