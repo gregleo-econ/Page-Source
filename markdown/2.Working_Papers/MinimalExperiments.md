@@ -14,8 +14,6 @@ Healy, P.J. and Leo, Greg, Minimal Experiments
 
 [Minimal Experiments](../files/Papers/WP_Minimal_Experiments.pdf)  
 
-[Minimal Experiments Small Screen Version](../files/Papers/WP_Minimal_Experiments_Small.pdf)
-
 ## App
 
 [Minimal Experiment App](https://gregleo-econ.shinyapps.io/minimalexperiments/)
