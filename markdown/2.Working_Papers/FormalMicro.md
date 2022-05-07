@@ -1,10 +1,14 @@
 +10
 
-# Formalizing Microeconomic Foundations in the Lean Theorem Prover
+# Formalizing Microeconomic Foundations
 
 ## Code Repository
 
 [GitHub Repository](https://github.com/gregleo-econ/formal-microeconoimcs)
+
+## About
+
+This is a project to formalize the foundations of microeconomic theory in the [Lean](https://leanprover.github.io/) theorem prover. 
 
 ## What is Lean?
 
