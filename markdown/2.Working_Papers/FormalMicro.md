@@ -18,4 +18,4 @@ A Lean proof looks very little like a normal "paper" proof. For instace, here is
 
 If $x \sim y$ and $y \sim z$ then $x \sim z$.
 
-![proof](![MinEx](../files/Images/krepsproof.png)
+![proof](![MinEx](../files/Images/krepsproof.jpeg)
