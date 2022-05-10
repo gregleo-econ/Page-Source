@@ -6,6 +6,6 @@ I have been formalizing foundational microeconomics in the [Lean](https://leanpr
 
 ## What’s Done?
 
-**Krep’s Microeconomics Foundations** 
+**Kreps’ Microeconomics Foundations** 
 
 - [Proposition 1.9](https://github.com/gregleo-econ/formal-microeconoimcs/blob/main/src/Kreps_Prop_1_9.lean): various relation properties.
