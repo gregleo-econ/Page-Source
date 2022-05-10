@@ -2,11 +2,15 @@
 
 # Teaching Economics to my Computer
 
-In summer 2022, I launched a project to formalize some foundational microeconomics in the [Lean](https://leanprover.github.io) proof assistant. 
+In summer 2022, I launched a project to formalize some foundational microeconomics in the [Lean](https://leanprover.github.io) proof assistant.  
 
-Lean is a programming language that implements (dependent type theory)[https://leanprover.github.io/theorem_proving_in_lean/dependent_type_theory.html]. It is possible to formalize complex mathematical concepts in this language. More importantly, it is possible to have the computer exhaustively check proofs of results written in this language.
 
-The more knowledge that is encoded in a Lean (or any formal system) the easier it is to check, and possibly in the future, automatically generate proofs. 
+Lean is a programming language that implements [dependent type theory](https://leanprover.github.io/theorem_proving_in_lean/dependent_type_theory.html]
+). It is possible to formalize complex mathematical concepts in this language. More importantly, it is possible to have the computer exhaustively check proofs of results written in this language.  
+
+
+The more knowledge that is encoded in a Lean (or any formal system) the easier it is to check, and possibly in the future, automatically generate proofs.  
+
 
 ## What’s Done?
 
