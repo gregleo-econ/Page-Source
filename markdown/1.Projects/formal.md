@@ -16,7 +16,7 @@ The more knowledge that is encoded in a Lean (or any formal system) the easier i
 **Mas-Colell, Whinston, Green Microeconomic Theory**  
 
 - [Proposition 1.B.1](https://github.com/gregleo-econ/formal-microeconoimcs/blob/main/src/MWG_1_B_1.lean)
-- Proposition 1.B.2 *In Progress*
+- [Proposition 1.B.2](https://github.com/gregleo-econ/formal-microeconoimcs/blob/main/src/MWG_1_B_2.lean)
 
 **Kreps’ Microeconomics Foundations**  
 
