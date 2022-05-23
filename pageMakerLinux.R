@@ -4,8 +4,8 @@ library(stringr)
 library(dplyr)
 library(stringi)
 library(magrittr)
-library(txtplot)
-library(gtrendsR)
+# library(txtplot)
+# library(gtrendsR)
 
 list.dirs <- function(path = ".",
                       pattern = NULL,
@@ -163,15 +163,15 @@ makeGophermap <- function(fileData,pageTitle,indexHeader) {
   gopherHeader <-  readChar(gopherHeaderPath, file.info(gopherHeaderPath)$size)
   gopherText <- gopherHeader
   
-  terms = c("gopher","gemini")
-  
-  for(term in terms){
-    df <-gtrends(term,time="all",onlyInterest = TRUE)
-    gopherText <- c(gopherText,paste0("$$ Interest in ",term," over time. $$"))
-    gopherText <- c(gopherText,capture.output(txtplot(as.numeric(df$interest_over_time[,1]),df$interest_over_time[,2],ylab="Interest",xlab="Unix Epoch on January 1st, 1970 at UTC.")))
-    gopherText <- c(gopherText," ")
-  }
-
+  # terms = c("gopher","gemini")
+  # 
+  # for(term in terms){
+  #   df <-gtrends(term,time="all",onlyInterest = TRUE)
+  #   gopherText <- c(gopherText,paste0("$$ Interest in ",term," over time. $$"))
+  #   gopherText <- c(gopherText,capture.output(txtplot(as.numeric(df$interest_over_time[,1]),df$interest_over_time[,2],ylab="Interest",xlab="Unix Epoch on January 1st, 1970 at UTC.")))
+  #   gopherText <- c(gopherText," ")
+  # }
+  # 
   writeLines(gopherText, paste(directory, "/gopher/gophermap", sep = ""))
 }
 
