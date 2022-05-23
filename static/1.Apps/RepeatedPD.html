@@ -189,6 +189,14 @@ pre .literal, pre .paren {
 pre .constant, pre .paren {
     color: var(--number);
 }
+
+iframe {
+  box-sizing: border-box;   /* make the border size be included in the height */
+  display: block;           /* make them block to fix white space margin */
+  width: 100%;
+  height: 900px;
+  border-width: 0px;	
+}
 </style>
 
 
@@ -200,11 +208,13 @@ pre .constant, pre .paren {
 
 <h1>Automated Repeated Prisoners Dilemma Tournaments</h1>
 
-<p>This app, written in R, let&#39;s you submit a bot (coded in R) to play repeated prisoners dilemma against <em>every other bot</em> that has been submitted to the app. Can you beat &ldquo;Always Defect&rdquo;?</p>
+<p>This app, written in R, let&#39;s you submit a bot (coded in R) to play repeated prisoners dilemma against <em>every other bot</em> that has been submitted to the app. Can you beat &ldquo;Always Defect&rdquo;?  </p>
 
-<p><a href="https://g-econ.shinyapps.io/PDSim">PD Bot Tournament</a></p>
+<p><a href="https://g-econ.shinyapps.io/demand">Link to Demand Finder</a>, or use the embedded app below.  </p>
 
-<p><img src="../files/Images/pdSim.png" alt="Demand Finder"/></p>
+<h2>App</h2>
+
+<p><iframe src="https://g-econ.shinyapps.io/PDSim" width: 500px; height: 1000px;"></p>
 
 </body>
 

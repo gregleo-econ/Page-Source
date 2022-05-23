@@ -2,8 +2,12 @@
 
 # Automated Repeated Prisoners Dilemma Tournaments
 
-This app, written in R, let's you submit a bot (coded in R) to play repeated prisoners dilemma against *every other bot* that has been submitted to the app. Can you beat "Always Defect"?
+This app, written in R, let's you submit a bot (coded in R) to play repeated prisoners dilemma against *every other bot* that has been submitted to the app. Can you beat "Always Defect"?  
 
-[PD Bot Tournament](https://g-econ.shinyapps.io/PDSim)
+[Link to Demand Finder](https://g-econ.shinyapps.io/demand), or use the embedded app below.  
 
-![Demand Finder](../files/Images/pdSim.png)
+## App
+
+<iframe src="https://g-econ.shinyapps.io/PDSim" width: 500px; height: 1000px;">
+
+

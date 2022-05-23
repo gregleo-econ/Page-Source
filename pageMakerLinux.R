@@ -271,7 +271,7 @@ makePage <- function(directory, style,pageTitle,indexHeader) {
   makeGophermap()
 }
 
-#Set it up. Make it go.
+# Set it up. Make it go.
 # directory = dirname(sys.frame(1)$ofile)
 # setwd(directory)
 # 

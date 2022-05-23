@@ -4,6 +4,8 @@
 
 This app, written in R, lets you find the demand for **any utility function**.  
 
-[Demand Finder](https://g-econ.shinyapps.io/demand)
+[Link to Demand Finder](https://g-econ.shinyapps.io/demand), or use the embedded app below.  
 
-![Demand Finder](../files/Images/demandFinder.png)
+## App
+
+<iframe src="https://g-econ.shinyapps.io/demand" width: 500px; height: 1000px;">

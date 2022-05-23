@@ -189,6 +189,14 @@ pre .literal, pre .paren {
 pre .constant, pre .paren {
     color: var(--number);
 }
+
+iframe {
+  box-sizing: border-box;   /* make the border size be included in the height */
+  display: block;           /* make them block to fix white space margin */
+  width: 100%;
+  height: 900px;
+  border-width: 0px;	
+}
 </style>
 
 
@@ -202,9 +210,11 @@ pre .constant, pre .paren {
 
 <p>This app, written in R, lets you find the demand for <strong>any utility function</strong>.  </p>
 
-<p><a href="https://g-econ.shinyapps.io/demand">Demand Finder</a></p>
+<p><a href="https://g-econ.shinyapps.io/demand">Link to Demand Finder</a>, or use the embedded app below.  </p>
 
-<p><img src="../files/Images/demandFinder.png" alt="Demand Finder"/></p>
+<h2>App</h2>
+
+<p><iframe src="https://g-econ.shinyapps.io/demand" width: 500px; height: 1000px;"></p>
 
 </body>
 
