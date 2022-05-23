@@ -140,7 +140,12 @@ makeIndex <- function(fileData,pageTitle,indexHeader) {
     folderName <- substring(currentFolder,3)
     folderName <- str_replace(folderName,"_"," ")
     indexText <- c(indexText,paste("## ",toupper(folderName),sep=""))
+    folderHeaderPath <-  paste(directory,"/markdown/",currentFolder, "/header.md", sep = "")
+    print(folderHeaderPath)
+    folderHeader <-  readChar(folderHeaderPath, file.info(folderHeaderPath)$size)
+    indexText <- c(indexText,folderHeader)
     subsetFiles <- fileData %>% filter(folder==currentFolder) %>% arrange(desc(priority))
+    print(subsetFiles)
     for(i in 1:dim(subsetFiles)[1]){
       print(subsetFiles[i,])
       indexText <- c(indexText,makeLink(subsetFiles[i,]))
@@ -218,6 +223,7 @@ makeFileData <- function(directory){
   for (fileFolder in folders) {
     files <- getFiles(fileFolder, directory)
     for(file in files){
+      if(file == "header.md"){}else{
       fileMarkdownPath <- getMarkdownPath(file,fileFolder,directory)
       fileStaticPath <- getStaticPath(file,fileFolder,directory)
       fileTitle <- getTitle(fileMarkdownPath)  
@@ -231,6 +237,7 @@ makeFileData <- function(directory){
       fullStaticPath <- c(fullStaticPath,fileStaticPath)
       title <- c(title,fileTitle)
       content <- c(content,fileContent)
+      }
     }
   }
   return(data.frame(fileName = fileName,folder = folder,fullMarkdownPath = fullMarkdownPath,fullStaticPath = fullStaticPath,title = title,priority = priority,content = content,stringsAsFactors=FALSE))
@@ -265,11 +272,11 @@ makePage <- function(directory, style,pageTitle,indexHeader) {
 }
 
 #Set it up. Make it go.
-#directory = dirname(sys.frame(1)$ofile)
-#setwd(directory)
-
-# Local Building
-
+# directory = dirname(sys.frame(1)$ofile)
+# setwd(directory)
+# 
+# # Local Building
+# 
 directory = getwd()
 
 
