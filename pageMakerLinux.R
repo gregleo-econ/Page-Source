@@ -274,12 +274,13 @@ makePage <- function(directory, style,pageTitle,indexHeader) {
 # Set it up. Make it go.
 # directory = dirname(sys.frame(1)$ofile)
 # setwd(directory)
-# 
-# # Local Building
-# 
+
+# Local Building
+
 directory = getwd()
 
 
 style = paste(c(directory,"/style/style.css"),collapse="")
 makePage(directory,style,"Greg Leo")
+
 

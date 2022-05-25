@@ -3,8 +3,9 @@
 # MOTD
 In any editor that supports RegEx search, `\b(\w+)\s+\1\b` will find words you have accidentally duplicated.
 
+## Play A Cournot Game
 
-
+<center><iframe src="https://g-econ.shinyapps.io/2dhotelling" width = "500" height= "450"></iframe></center>
 
 
 ## ABOUT
@@ -68,5 +69,5 @@ Some results in probability theory.
 [A Generalization of Teicher's Poisson Tail Inequality](5.Math_Working/Teicher.html)
 
 ```
-##------ Mon May 23 14:49:43 2022 ------##
+##------ Wed May 25 13:06:59 2022 ------##
 ```
