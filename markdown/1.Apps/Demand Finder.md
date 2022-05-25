@@ -8,4 +8,4 @@ This app, written in R, lets you find the demand for **any utility function**.
 
 ## App
 
-<iframe src="https://g-econ.shinyapps.io/demand" width: 500px; height: 1000px;">
+<iframe src="https://g-econ.shinyapps.io/demand" width = "100%" height = "500"></iframe>

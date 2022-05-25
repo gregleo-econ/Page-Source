@@ -8,6 +8,6 @@ This is a game I wrote for my wife's birthday. It is a *wordlelike* inspired by 
 
 ## App
 
-<iframe src="https://g-econ.shinyapps.io/wordSlayer" width: 500px; height: 1000px;">
+<iframe src="https://g-econ.shinyapps.io/wordSlayer" width = "100%" height = "500"></iframe>
 
 

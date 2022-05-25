@@ -8,6 +8,6 @@ This app, written in R, let's you submit a bot (coded in R) to play repeated pri
 
 ## App
 
-<iframe src="https://g-econ.shinyapps.io/PDSim" width: 500px; height: 1000px;">
+<iframe src="https://g-econ.shinyapps.io/PDSim" width = "100%" height = "500"></iframe>
 
 
