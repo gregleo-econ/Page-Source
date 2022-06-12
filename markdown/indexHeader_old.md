@@ -10,3 +10,6 @@
 
 
 
+## Play A Hotelling Game
+
+<center><iframe src="https://g-econ.shinyapps.io/2dhotelling" width = "100%" height= "500"></iframe></center>

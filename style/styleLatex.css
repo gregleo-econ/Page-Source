@@ -1,54 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-<title>Minimal Experiments (New)</title>
-
-<script type="text/javascript">
-window.onload = function() {
-  var imgs = document.getElementsByTagName('img'), i, img;
-  for (i = 0; i < imgs.length; i++) {
-    img = imgs[i];
-    // center an image if it is the only element of its parent
-    if (img.parentElement.childElementCount === 1)
-      img.parentElement.style.textAlign = 'center';
-  }
-};
-</script>
-
-
-
-
-
-<style type="text/css">
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('http://fonts.cdnfonts.com/css/cmu-sans-serif');
 
 :root {
-  --bgcol: #312F2f;
-	--header1bgcol: #BF98A0;
-	--header2bgcol: #BF98A0;
-	--header1fgcol: #312F2f;
-	--header2fgcol: #312F2f;
-  --textcol: #ffffff;
-	--linkcol: #84DCCF;
-	--visitedlinkcol: #84DCCF;
-	--subheadercol: #BF98A0;
-	--shadowcol: #312F2f;
-	--pretextcol: #84DCCF;
-	--prebgcol: #312F2f;
-	--operator: #BF98A0;
-	--string: #84DCCF;
+  --bgcol: #ffffff;
+	--header1bgcol: #3333B2;
+	--header2bgcol: #3333B2;
+	--header1fgcol: #ffffff;
+	--header2fgcol: #ffffff;
+  --textcol: #000000;
+	--linkcol: #058205;
+	--visitedlinkcol: #058205;
+	--subheadercol: #3333B2;
+	--shadowcol: #ffffff;
+	--pretextcol: #058205;
+	--prebgcol: #ffffff;
+	--operator: #3333B2;
+	--string: #058205;
 	--identifier: #a6D9F7;
 	--number: #a6D9F7;
 	--keyword: #a6D9F7;
 	--literal: #a6D9F7;
-	--comment: #BF98A0;
+	--comment: #3333B2;
 }
 
 body {
 	background: var(--bgcol);
-	font-family: "Roboto Mono", monospace;
+	font-family: "CMU Sans Serif", sans-serif;
 	font-weight: 500;
 	color: var(--textcol);
 	-webkit-font-smoothing: antialiased;
@@ -64,7 +41,7 @@ body {
 main h1 {}
 
 h1 {
-	font-family: "Rubik Mono One", sans-serif;
+	font-family: "CMU Sans Serif", sans-serif;
 	background: var(--header1bgcol);
 	color: var(--header1fgcol);
 	font-size: 24pt;
@@ -78,7 +55,7 @@ h1 {
 }
 
 h2 {
-	font-family: "Rubik Mono One", sans-serif;
+	font-family: "CMU Sans Serif", sans-serif;
 	background: var(--header2bgcol);
 	color: var(--header2fgcol);
 	font-size: 20pt;
@@ -195,33 +172,3 @@ iframe {
   display: block;           /* make them block to fix white space margin */
   border-width: 0px;	
 }
-</style>
-
-
-
-</head>
-
-<body>
-<p><a href="../index.html">Back</a></p>
-
-<h1>Minimal Experiments (New)</h1>
-
-<h2>Abstract</h2>
-
-<p>Given a parameterized model of preferences, what choice data is needed to classify agents according to that model? Similarly, what data would be sufficient for testing the validity of the model? We characterize choice datasets (or, experiments) that either classify or test a given model. We do so using a novel graph-theoretic construction: the labeled permutohedron. We then provide an algorithm that can identify the &ldquo;smallest&rdquo; experiment for either classifying subjects or testing a model. As an illustrative example, we show how this algorithm can be used to simplify belief elicitation procedures.</p>
-
-<h2>Citation</h2>
-
-<p>Healy, P.J. and Leo, Greg, Minimal Experiments</p>
-
-<h2>Paper</h2>
-
-<p><a href="../files/Papers/WP_Minimal_Experiments.pdf">Minimal Experiments</a>  </p>
-
-<h2>App</h2>
-
-<p><a href="https://gregleo-econ.shinyapps.io/minimalexperiments/">Minimal Experiment App</a></p>
-
-</body>
-
-</html>

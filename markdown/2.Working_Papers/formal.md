@@ -1,6 +1,6 @@
-+9
++8
 
-# Teaching Economics to my Computer
+# Teaching Economics to my Computer (New)
 
 In summer 2022, I launched a project to formalize some foundational microeconomics in the [Lean](https://leanprover.github.io) proof assistant.  
 

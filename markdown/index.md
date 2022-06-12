@@ -3,11 +3,6 @@
 # MOTD
 In any editor that supports RegEx search, `\b(\w+)\s+\1\b` will find words you have accidentally duplicated.
 
-## Play A Cournot Game
-
-<center><iframe src="https://g-econ.shinyapps.io/2dhotelling" width = "500" height= "450"></iframe></center>
-
-
 ## ABOUT
 
 [About Me / About this Website](0.About/about me.html)
@@ -19,47 +14,51 @@ Some web apps I have written in R.
 
 [Demand Finder](1.Apps/Demand Finder.html)
 
+[2d Hotelling Game](1.Apps/Hotelling.html)
+
 [Automated Repeated Prisoners Dilemma Tournaments](1.Apps/RepeatedPD.html)
 
 [Word Slayer (R Shiny Word Game)](1.Apps/Slayer.html)
 
-## TEACHING
-
-[Econ 3012](2.Teaching/econ3012.html)
-
-[Econ 8100](2.Teaching/econ8100.html)
-
-[Mechanism Design](2.Teaching/mechanism.html)
-
 ## WORKING PAPERS
 
-[Teaching Economics to my Computer](3.Working_Papers/formal.html)
+[Coarse Belief Elicitation (New)](2.Working_Papers/CoarseBeliefs.html)
 
-[Minimal Experiments (NEW)](3.Working_Papers/MinimalExperiments.html)
+[Minimal Experiments (New)](2.Working_Papers/MinimalExperiments.html)
 
-[Reduction in Belief Elicitation (New)](3.Working_Papers/Reduction.html)
+[Teaching Economics to my Computer (New)](2.Working_Papers/formal.html)
 
-[Second-Order Beliefs and Gender (R&R)](3.Working_Papers/SOBAG.html)
+[Reduction in Belief Elicitation (New)](2.Working_Papers/Reduction.html)
 
-[Subgame Perfect Coalition Formation (R&R)](3.Working_Papers/SPGS.html)
+[Second-Order Beliefs and Gender (R&R)](2.Working_Papers/SOBAG.html)
 
-[Competing for Priorities in School Choice](3.Working_Papers/Competing.html)
+[Subgame Perfect Coalition Formation (R&R)](2.Working_Papers/SPGS.html)
 
-[From Coordination to Double-Crossing](3.Working_Papers/CoordinationDoubleCrossing.html)
+[Competing for Priorities in School Choice](2.Working_Papers/Competing.html)
 
-[Volunteer's Dilemmas with and without Coordination](3.Working_Papers/Volunteers.html)
+[From Coordination to Double-Crossing](2.Working_Papers/CoordinationDoubleCrossing.html)
+
+[Volunteer's Dilemmas with and without Coordination](2.Working_Papers/Volunteers.html)
 
 ## PAPERS
 
-[Matching Soulmates (JPET)](4.Papers/Matching_Soulmates.html)
+[Matching Soulmates (JPET)](3.Papers/Matching_Soulmates.html)
 
-[Let Me, or Let George? (GEB)](4.Papers/Let_Me_Let_George.html)
+[Let Me, or Let George? (GEB)](3.Papers/Let_Me_Let_George.html)
 
-[Room Composition Effects on Risk Taking by Gender (EE)](4.Papers/Room_Composition.html)
+[Room Composition Effects on Risk Taking by Gender (EE)](3.Papers/Room_Composition.html)
 
-[Taking Turns (GEB)](4.Papers/Taking_Turns.html)
+[Taking Turns (GEB)](3.Papers/Taking_Turns.html)
 
-[Moral Hazard and Reciprocity (SEJ)](4.Papers/Moral_Hazard_Reciprocity.html)
+[Moral Hazard and Reciprocity (SEJ)](3.Papers/Moral_Hazard_Reciprocity.html)
+
+## TEACHING
+
+[Econ 3012](4.Teaching/econ3012.html)
+
+[Econ 8100](4.Teaching/econ8100.html)
+
+[Mechanism Design](4.Teaching/mechanism.html)
 
 ## MATH WORKING
 Some results in probability theory.  
@@ -69,5 +68,5 @@ Some results in probability theory.
 [A Generalization of Teicher's Poisson Tail Inequality](5.Math_Working/Teicher.html)
 
 ```
-##------ Wed May 25 13:06:59 2022 ------##
+##------ Sun Jun 12 07:23:46 2022 ------##
 ```
