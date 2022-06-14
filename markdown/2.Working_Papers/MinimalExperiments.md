@@ -20,5 +20,5 @@ Healy, P.J. and Leo, Greg, Minimal Experiments
 
 ## Presentation
 
-[Slides- 20 Min](../files/Presentations/minex.mp4)
+[Slides- 20 Min](../files/Presentations/minex.pptx)
 
