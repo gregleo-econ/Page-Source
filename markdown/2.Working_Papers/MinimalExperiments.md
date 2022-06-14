@@ -18,3 +18,7 @@ Healy, P.J. and Leo, Greg, Minimal Experiments
 
 [Minimal Experiment App](https://gregleo-econ.shinyapps.io/minimalexperiments/)
 
+## Presentation
+
+[Slides- 20 Min](../files/Presentations/minex.mp4)
+
