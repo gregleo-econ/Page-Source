@@ -1,6 +1,6 @@
-+3
++6
 
-# Subgame Perfect Coalition Formation (R&R)
+# Subgame Perfect Coalition Formation (Dynamic Games and Applications)
 
 ## Abstract
 
